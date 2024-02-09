@@ -79,7 +79,7 @@ function useLanguage(locale: WritableComputedRef<'en' | 'de'>) {
         <li class="hidden flex-1 md:block"></li>
         <li>
           <a
-            class="hover:opacity-60"
+            class="hover:opacity-60 font-medium"
             href="https://github.com/web-dev-sam?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
@@ -89,7 +89,7 @@ function useLanguage(locale: WritableComputedRef<'en' | 'de'>) {
         </li>
         <li>
           <a
-            class="hover:opacity-60"
+            class="hover:opacity-60 font-medium"
             href="https://webry.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -99,7 +99,7 @@ function useLanguage(locale: WritableComputedRef<'en' | 'de'>) {
         </li>
         <li>
           <a
-            class="hover:opacity-60"
+            class="hover:opacity-60 font-medium"
             href="mailto:office.samigo.a@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
