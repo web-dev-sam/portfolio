@@ -166,7 +166,7 @@ function useLanguage(locale: WritableComputedRef<'en' | 'de'>) {
     </main>
     <section>
       <h2 class="!lg:mt-32 !mt-16 text-center text-h4 font-bold">Socials</h2>
-      <ul class="mt-8 flex justify-center gap-8">
+      <ul class="mt-8 mb-16 flex justify-center gap-8">
         <li>
           <a
             class="hover:opacity-85"
