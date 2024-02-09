@@ -133,22 +133,24 @@ function useLanguage(locale: WritableComputedRef<'en' | 'de'>) {
           >{{ t('hero.intro2') }}
         </p>
         <h2 class="!lg:mt-32 !mt-16 text-h6 font-medium">Main Stack</h2>
-        <ul class="flex justify-center gap-6 align-middle lg:justify-start lg:gap-8">
+        <ul class="flex justify-center gap-4 md:gap-6 align-middle lg:justify-start lg:gap-8 max-w-[40ch] mx-auto lg:mx-0">
           <li>
             <IconHTML5 />
           </li>
           <li>
             <IconCSS3 />
           </li>
-          <li class="pr-8">
+          <li>
             <IconTailwind />
           </li>
+          <li class="flex-1"></li>
           <li>
             <IconTypeScript />
           </li>
-          <li class="pr-8">
+          <li>
             <IconVue />
           </li>
+          <li class="flex-1"></li>
           <li>
             <IconVercel />
           </li>
