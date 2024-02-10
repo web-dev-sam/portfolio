@@ -13,7 +13,7 @@ const props = defineProps<{
       <slot />
     </div>
     <div>
-      <a :href="link" class="group-hover:opacity-60">{{ props.title }}</a>
+      <a :href="link" class="group-hover:opacity-60 select-none">{{ props.title }}</a>
     </div>
   </div>
 </template>

@@ -5,3 +5,7 @@
 .text-overline {
     @apply text-small uppercase;
 }
+
+::selection {
+    @apply bg-text text-white;
+}
