@@ -3,7 +3,7 @@ import PageHeader from './components/base/PageHeader.vue'
 </script>
 
 <template>
-  <div class="container px-4 text-center font-sans text-text lg:text-left">
+  <div class="container px-4 font-sans text-text">
     <PageHeader />
     <router-view></router-view>
   </div>

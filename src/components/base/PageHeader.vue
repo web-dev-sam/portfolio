@@ -23,7 +23,7 @@ const langFlag = computed(() => `/assets/flags/${lang.value === 'en' ? 'de' : 'e
 </script>
 
 <template>
-  <header class="py-8">
+  <header class="py-8 text-center lg:text-left">
     <ul class="flex items-center justify-between gap-8 leading-10">
       <li>
         <router-link to="/">
