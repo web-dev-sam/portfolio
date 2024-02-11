@@ -9,11 +9,6 @@ import IconTypeScript from '@/components/icons/IconTypeScript.vue'
 
 const { t } = useTranslator({
   en: {
-    header: {
-      projects: 'Projects',
-      blog: 'Blog',
-      contact: 'Contact',
-    },
     hero: {
       webdev: 'Web Developer',
       intro: 'Hi, I am Samuel. A passionate ',
@@ -25,11 +20,6 @@ const { t } = useTranslator({
     },
   },
   de: {
-    header: {
-      projects: 'Projekte',
-      blog: 'Blog',
-      contact: 'Kontakt',
-    },
     hero: {
       webdev: 'Web Entwickler',
       intro: 'Hey, ich bin Samuel. Ein leidenschaftlicher ',
