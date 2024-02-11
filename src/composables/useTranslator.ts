@@ -21,6 +21,7 @@ export function useTranslator<T extends Record<string, any>>(messages: { en: T; 
   watch(currentLanguage, (newLang) => {
     locale.value = newLang
     localStorage.setItem('lang', newLang)
+    document.documentElement.lang = newLang
   })
 
   return {
