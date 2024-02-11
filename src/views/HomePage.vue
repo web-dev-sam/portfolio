@@ -68,11 +68,11 @@ const { t } = useTranslator({
           <li>
             <IconTypeScript />
           </li>
-          <li>
+          <li class="min-w-12">
             <IconTailwind />
           </li>
           <li class="text-muted">
-            <router-link to="/skills" class="hover:text-text">{{ t('stack.more') }}</router-link>
+            <router-link to="/skills" class="hover:text-text rounded px-3 py-2 hover:bg-light">{{ t('stack.more') }}</router-link>
           </li>
         </ul>
       </div>

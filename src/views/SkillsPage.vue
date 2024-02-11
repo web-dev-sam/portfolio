@@ -29,6 +29,20 @@ import IconVite from '@/components/icons/IconVite.vue'
 import IconVue from '@/components/icons/IconVue.vue'
 import IconWebpack from '@/components/icons/IconWebpack.vue'
 import SkillBadge from '@/components/views/SkillBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
+
+const { t } = useTranslator({
+  en: {
+    love: 'I love',
+    worked: 'Worked with',
+    forget: 'Want to forget',
+  },
+  de: {
+    love: 'Ich liebe',
+    worked: 'Gearbeitet mit',
+    forget: 'Möchte vergessen',
+  },
+})
 </script>
 
 <template>
@@ -40,48 +54,48 @@ import SkillBadge from '@/components/views/SkillBadge.vue'
 
         <div class="flex flex-col justify-around sm:flex-row md:flex-col">
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">I love</h3>
+            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('love') }}</h3>
             <div class="space-y-2">
-              <SkillBadge title="Vue" link="#">
+              <SkillBadge title="Vue" link="https://vuejs.org/">
                 <IconVue />
               </SkillBadge>
-              <SkillBadge title="Astro" link="#">
+              <SkillBadge title="Astro" link="https://astro.build/">
                 <IconAstro />
               </SkillBadge>
             </div>
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">Worked with</h3>
+            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('worked') }}</h3>
             <div class="space-y-2">
-              <SkillBadge title="Lit" link="#">
+              <SkillBadge title="Lit" link="https://lit.dev/">
                 <IconLit />
               </SkillBadge>
-              <SkillBadge title="Nuxt" link="#">
+              <SkillBadge title="Nuxt" link="https://nuxt.com/">
                 <IconNuxt />
               </SkillBadge>
-              <SkillBadge title="Svelte" link="#">
+              <SkillBadge title="Svelte" link="https://svelte.dev/">
                 <IconSvelte />
               </SkillBadge>
-              <SkillBadge title="React" link="#">
+              <SkillBadge title="React" link="https://reactjs.org/">
                 <IconReact />
               </SkillBadge>
-              <SkillBadge title="Next" link="#">
+              <SkillBadge title="Next" link="https://nextjs.org/">
                 <IconNext />
               </SkillBadge>
-              <SkillBadge title="Angular" link="#">
+              <SkillBadge title="Angular" link="https://angular.io/">
                 <IconAngular />
               </SkillBadge>
-              <SkillBadge title="Solid" link="#">
+              <SkillBadge title="Solid" link="https://solidjs.com/">
                 <IconSolid />
               </SkillBadge>
             </div>
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">Want to forget</h3>
+            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('forget') }}</h3>
             <div class="space-y-2 opacity-85 grayscale-[1]">
-              <SkillBadge title="Django" link="#">
+              <SkillBadge title="Django" link="https://www.djangoproject.com/">
                 <IconDjango />
               </SkillBadge>
             </div>
@@ -93,51 +107,48 @@ import SkillBadge from '@/components/views/SkillBadge.vue'
 
         <div class="flex flex-col justify-around sm:flex-row md:flex-col">
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">I love</h3>
+            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('love') }}</h3>
             <div class="space-y-2">
-              <SkillBadge title="Tailwind" link="#">
+              <SkillBadge title="Tailwind" link="https://tailwindcss.com/">
                 <IconTailwind />
               </SkillBadge>
-              <SkillBadge title="Font Awesome" link="#">
-                <IconFontawesome />
-              </SkillBadge>
-              <SkillBadge title="Shadcn" link="#">
-                <IconShadcn />
-              </SkillBadge>
-              <SkillBadge title="Flowbite" link="#">
+              <SkillBadge title="Flowbite" link="https://flowbite.com/">
                 <IconFlowbite />
               </SkillBadge>
-              <SkillBadge title="Supabase" link="#">
+              <SkillBadge title="Supabase" link="https://supabase.io/">
                 <IconSupabase />
               </SkillBadge>
-              <SkillBadge title="tRPC" link="#">
+              <SkillBadge title="tRPC" link="https://trpc.io/">
                 <IconTrpc />
               </SkillBadge>
             </div>
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">Worked with</h3>
+            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('worked') }}</h3>
             <div class="space-y-2">
-              <SkillBadge title="Firebase" link="#">
+              <SkillBadge title="Firebase" link="https://firebase.google.com/">
                 <IconFirebase />
               </SkillBadge>
-              <SkillBadge title="SASS" link="#">
+              <SkillBadge title="SASS" link="https://sass-lang.com/">
                 <IconSass />
+              </SkillBadge>
+              <SkillBadge title="Font Awesome" link="https://fontawesome.com/">
+                <IconFontawesome />
               </SkillBadge>
             </div>
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">Want to forget</h3>
+            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('forget') }}</h3>
             <div class="space-y-2 opacity-85 grayscale-[1]">
-              <SkillBadge title="Bootstrap" link="#">
+              <SkillBadge title="Bootstrap" link="https://getbootstrap.com/">
                 <IconBootstrap />
               </SkillBadge>
-              <SkillBadge title="JQuery" link="#">
+              <SkillBadge title="JQuery" link="https://jquery.com/">
                 <IconJquery />
               </SkillBadge>
-              <SkillBadge title="Jinja" link="#">
+              <SkillBadge title="Jinja" link="https://jinja.palletsprojects.com/">
                 <IconJinja />
               </SkillBadge>
             </div>
@@ -149,42 +160,45 @@ import SkillBadge from '@/components/views/SkillBadge.vue'
 
         <div class="flex flex-col justify-around sm:flex-row md:flex-col">
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">I love</h3>
+            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('love') }}</h3>
             <div class="space-y-2">
-              <SkillBadge title="Vercel" link="#">
+              <SkillBadge title="Vercel" link="https://vercel.com/">
                 <IconVercel />
               </SkillBadge>
-              <SkillBadge title="Vite" link="#">
-                <IconVite />
+              <SkillBadge title="Shadcn" link="https://ui.shadcn.com/">
+                <IconShadcn />
               </SkillBadge>
-              <SkillBadge title="Figma" link="#">
+              <SkillBadge title="Figma" link="https://www.figma.com/">
                 <IconFigma />
+              </SkillBadge>
+              <SkillBadge title="Vite" link="https://vitejs.dev/">
+                <IconVite />
               </SkillBadge>
             </div>
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">Worked with</h3>
+            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('worked') }}</h3>
             <div class="space-y-2">
-              <SkillBadge title="Git" link="#">
+              <SkillBadge title="Git" link="https://git-scm.com/">
                 <IconGit />
               </SkillBadge>
-              <SkillBadge title="Docker" link="#">
+              <SkillBadge title="Docker" link="https://www.docker.com/">
                 <IconDocker />
               </SkillBadge>
-              <SkillBadge title="PostCSS" link="#">
+              <SkillBadge title="PostCSS" link="https://postcss.org/">
                 <IconPostcss />
               </SkillBadge>
-              <SkillBadge title="Rollup" link="#">
+              <SkillBadge title="Rollup" link="https://rollupjs.org/">
                 <IconRollup />
               </SkillBadge>
             </div>
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">Want to forget</h3>
+            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('forget') }}</h3>
             <div class="space-y-2 opacity-85 grayscale-[1]">
-              <SkillBadge title="Webpack" link="#">
+              <SkillBadge title="Webpack" link="https://webpack.js.org/">
                 <IconWebpack />
               </SkillBadge>
             </div>
