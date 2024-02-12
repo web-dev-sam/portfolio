@@ -1,0 +1,22 @@
+<script setup lang="ts">
+import { defineProps, useSlots } from 'vue'
+
+const slots = useSlots()
+const props = defineProps<{
+  class: string
+}>()
+</script>
+
+<template>
+  <div
+    :class="`group flex w-fit items-center justify-center gap-2 rounded px-2 py-1.5 text-small md:justify-start ${props.class}`"
+  >
+    <div>
+      <slot />
+    </div>
+    <div v-if="slots.desc" class="h-4 border-r-[1px] border-[#dedede]"></div>
+    <div v-if="slots.desc">
+      <slot name="desc" />
+    </div>
+  </div>
+</template>

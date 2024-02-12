@@ -31,6 +31,8 @@ import IconWebpack from '@/components/icons/IconWebpack.vue'
 import SkillBadge from '@/components/views/SkillBadge.vue'
 import { useTranslator } from '@/composables/useTranslator'
 
+// TODO: ESLint, Prettier
+
 const { t } = useTranslator({
   en: {
     love: 'I love',
