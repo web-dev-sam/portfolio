@@ -52,10 +52,10 @@ const { t } = useTranslator({
         <ul
           class="mx-auto flex max-w-[40ch] items-center justify-center gap-4 align-middle md:gap-6 lg:mx-0 lg:justify-start lg:gap-8"
         >
-          <li>
+          <li class="min-w-8">
             <IconVue />
           </li>
-          <li>
+          <li class="min-w-8">
             <IconTypeScript />
           </li>
           <li class="min-w-12">

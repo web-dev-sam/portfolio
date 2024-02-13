@@ -9,3 +9,7 @@
 ::selection {
     @apply bg-text text-white;
 }
+
+p {
+    @apply leading-normal;
+}

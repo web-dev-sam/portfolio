@@ -7,11 +7,12 @@ const props = defineProps<{
   description: string
   name: string
   cover: string
+  link: string
 }>()
 </script>
 
 <template>
-  <router-link to="/" class="-mx-8 block rounded p-8 hover:bg-light">
+  <router-link :to="props.link" class="-mx-8 block rounded p-8 hover:bg-light">
     <div class="flex gap-8">
       <div>
         <img
@@ -32,7 +33,7 @@ const props = defineProps<{
             <slot name="difficulty" />
           </div>
         </div>
-        <p class="mb-8 text-muted max-w-[60ch]">
+        <p class="text-muted max-w-[60ch]">
           {{ props.description }}
         </p>
       </div>
