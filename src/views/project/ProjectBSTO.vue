@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import BaseProjectPage from './BaseProjectPage.vue'
+import { ref } from 'vue'
 import TextBadge from '@/components/views/TextBadge.vue'
 import IconVue from '@/components/icons/IconVue.vue'
 import IconTypeScript from '@/components/icons/IconTypeScript.vue'
 import { useTranslator } from '@/composables/useTranslator'
+
+const imageModalVisible = ref(false)
+const imageModalSrc = ref('')
 
 const { t, lang } = useTranslator({
   en: {
@@ -19,6 +23,11 @@ const { t, lang } = useTranslator({
     next: 'Was würde ich anders machen',
   },
 })
+
+function openModal(src: string) {
+  imageModalSrc.value = src
+  imageModalVisible.value = !imageModalVisible.value
+}
 </script>
 
 <template>
@@ -27,6 +36,9 @@ const { t, lang } = useTranslator({
     githubLink="https://github.com/mgtourney/overlay"
     githubName="GitHub"
     demoLink="https://www.youtube.com/watch?v=-ejMSWVJk8M"
+    :imageModalVisible="imageModalVisible"
+    :imageModalSrc="imageModalSrc"
+    @modal-close="imageModalVisible = false"
   >
     <template #badges>
       <div class="flex gap-2">
@@ -109,6 +121,33 @@ const { t, lang } = useTranslator({
             Overlay für sie so nützlich wie möglich ist.
           </span>
         </p>
+      </div>
+
+      <div>
+        <h2 class="mb-4 text-h4 font-bold">Gallery</h2>
+        <div class="flex flex-wrap gap-4">
+          <img
+            src="/assets/projects/bsto/bsto1.jpg"
+            alt="Screenshot 1"
+            class="max-h-64 cursor-pointer rounded object-cover duration-150 hover:scale-[101%]"
+            @click="openModal('/assets/projects/bsto/bsto1.jpg')"
+          />
+          <img
+            src="/assets/projects/bsto/bsto2.jpg"
+            alt="Screenshot 2"
+            class="max-h-64 cursor-pointer rounded object-cover duration-150 hover:scale-[101%]"
+            @click="openModal('/assets/projects/bsto/bsto2.jpg')"
+          />
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/-ejMSWVJk8M?si=4iXAe-hG6MUqV2kD"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </template>
   </BaseProjectPage>

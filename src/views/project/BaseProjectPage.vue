@@ -7,6 +7,8 @@ const props = defineProps<{
   githubLink: string
   demoLink: string
   githubName: string
+  imageModalVisible: boolean
+  imageModalSrc: string
 }>()
 
 const { t } = useTranslator({
@@ -58,6 +60,15 @@ const { t } = useTranslator({
 
     <h2 class="!mt-16 hidden text-h4 font-bold">Gallery</h2>
     <slot name="gallery" />
+    <div>
+      <div
+        v-if="imageModalVisible"
+        class="bg-black fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-[#000] bg-opacity-50 backdrop-blur-sm"
+        @click="$emit('modal-close')"
+      >
+        <img :src="imageModalSrc" class="max-h-[90vh] max-w-[90vw] rounded" />
+      </div>
+    </div>
   </main>
 </template>
 

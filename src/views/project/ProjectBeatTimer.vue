@@ -5,6 +5,10 @@ import TextBadge from '@/components/views/TextBadge.vue'
 import IconTypeScript from '@/components/icons/IconTypeScript.vue'
 import IconTailwind from '@/components/icons/IconTailwind.vue'
 import { useTranslator } from '@/composables/useTranslator'
+import { ref } from 'vue'
+
+const imageModalVisible = ref(false)
+const imageModalSrc = ref('')
 
 const { t, lang } = useTranslator({
   en: {
@@ -20,6 +24,11 @@ const { t, lang } = useTranslator({
     next: 'Was würde ich anders machen',
   },
 })
+
+function openModal(src: string) {
+  imageModalSrc.value = src
+  imageModalVisible.value = !imageModalVisible.value
+}
 </script>
 
 <template>
@@ -28,6 +37,9 @@ const { t, lang } = useTranslator({
     githubLink="https://github.com/web-dev-sam/beat-timer"
     githubName="GitHub"
     demoLink="https://beat-timer.webry.com/"
+    :imageModalVisible="imageModalVisible"
+    :imageModalSrc="imageModalSrc"
+    @modal-close="imageModalVisible = false"
   >
     <template #badges>
       <div class="flex gap-2">
@@ -155,7 +167,7 @@ const { t, lang } = useTranslator({
                 <strong>Interactions:</strong>
                 <img
                   src="/assets/projects/beat-timer/thisisfine.gif"
-                  class="float-right w-32"
+                  class="float-right w-32 rounded"
                   alt="😅"
                 />
                 I thought I was done with math after all the audio stuff, but then I had to figure
@@ -168,7 +180,7 @@ const { t, lang } = useTranslator({
                 <strong>Interaktionen:</strong>
                 <img
                   src="/assets/projects/beat-timer/thisisfine.gif"
-                  class="float-right w-32"
+                  class="float-right w-32 rounded"
                   alt="😅"
                 />
                 Ich dachte, ich wäre mit der Mathematik nach all dem Audiozeugs fertig, aber dann
@@ -198,7 +210,7 @@ const { t, lang } = useTranslator({
         </div>
       </div>
 
-      <div class="leading-normal">
+      <div>
         <h2 class="mb-2 text-body font-bold uppercase">{{ t('next') }}</h2>
         <p class="max-w-[80ch] text-body text-muted">
           <span v-if="lang === 'en'">
@@ -214,6 +226,36 @@ const { t, lang } = useTranslator({
             außer Interaktionen und Visualisierungen zu handhaben. Aber das wäre langweilig, oder?
           </span>
         </p>
+      </div>
+
+      <div>
+        <h2 class="mb-4 text-h4 font-bold">Gallery</h2>
+        <div class="flex flex-wrap gap-4">
+          <img
+            src="/assets/projects/beat-timer/bt0.jpg"
+            alt="Screenshot 1"
+            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            @click="openModal('/assets/projects/beat-timer/bt0.jpg')"
+          />
+          <img
+            src="/assets/projects/beat-timer/bt1.jpg"
+            alt="Screenshot 2"
+            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            @click="openModal('/assets/projects/beat-timer/bt1.jpg')"
+          />
+          <img
+            src="/assets/projects/beat-timer/bt2.jpg"
+            alt="Screenshot 3"
+            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            @click="openModal('/assets/projects/beat-timer/bt2.jpg')"
+          />
+          <img
+            src="/assets/projects/beat-timer/bt3.jpg"
+            alt="Screenshot 4"
+            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            @click="openModal('/assets/projects/beat-timer/bt3.jpg')"
+          />
+        </div>
       </div>
     </template>
   </BaseProjectPage>

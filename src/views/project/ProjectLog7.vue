@@ -3,6 +3,10 @@ import BaseProjectPage from './BaseProjectPage.vue'
 import TextBadge from '@/components/views/TextBadge.vue'
 import IconJavascript from '@/components/icons/IconJavascript.vue'
 import { useTranslator } from '@/composables/useTranslator'
+import { ref } from 'vue'
+
+const imageModalVisible = ref(false)
+const imageModalSrc = ref('')
 
 const { t, lang } = useTranslator({
   en: {
@@ -18,6 +22,10 @@ const { t, lang } = useTranslator({
     next: 'Was würde ich anders machen',
   },
 })
+function openModal(src: string) {
+  imageModalSrc.value = src
+  imageModalVisible.value = !imageModalVisible.value
+}
 </script>
 
 <template>
@@ -26,6 +34,9 @@ const { t, lang } = useTranslator({
     githubLink="https://bitbucket.org/samuel-braun/technical-glossary/src/master/"
     githubName="Bitbucket"
     demoLink="https://glossary.webry.com/"
+    :imageModalVisible="imageModalVisible"
+    :imageModalSrc="imageModalSrc"
+    @modal-close="imageModalVisible = false"
   >
     <template #badges>
       <div class="flex gap-2">
@@ -93,6 +104,24 @@ const { t, lang } = useTranslator({
             Einen Timer für die Implementierung nutzen, um das Projekt herausfordernder zu machen.
           </span>
         </p>
+      </div>
+
+      <div>
+        <h2 class="mb-4 text-h4 font-bold">Gallery</h2>
+        <div class="flex flex-wrap gap-4">
+          <img
+            src="/assets/projects/log7/gl1.jpg"
+            alt="Screenshot 1"
+            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            @click="openModal('/assets/projects/log7/gl1.jpg')"
+          />
+          <img
+            src="/assets/projects/log7/gl2.jpg"
+            alt="Screenshot 2"
+            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            @click="openModal('/assets/projects/log7/gl2.jpg')"
+          />
+        </div>
       </div>
     </template>
   </BaseProjectPage>
