@@ -25,6 +25,7 @@ const { t, lang } = useTranslator({
   <BaseProjectPage
     title="BeatSaber Tournament Overlay"
     githubLink="https://github.com/mgtourney/overlay"
+    githubName="GitHub"
     demoLink="https://www.youtube.com/watch?v=-ejMSWVJk8M"
   >
     <template #badges>

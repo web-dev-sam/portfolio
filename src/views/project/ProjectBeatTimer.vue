@@ -26,6 +26,7 @@ const { t, lang } = useTranslator({
   <BaseProjectPage
     title="Beat Timer"
     githubLink="https://github.com/web-dev-sam/beat-timer"
+    githubName="GitHub"
     demoLink="https://beat-timer.webry.com/"
   >
     <template #badges>

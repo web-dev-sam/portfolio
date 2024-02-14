@@ -26,6 +26,7 @@ const { t, lang } = useTranslator({
   <BaseProjectPage
     title="Dictionary"
     githubLink="https://bitbucket.org/samuel-braun/solidjs-dictionary/"
+    githubName="Bitbucket"
     demoLink="https://dictionary.webry.com/"
   >
     <template #badges>

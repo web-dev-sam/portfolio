@@ -24,6 +24,7 @@ const { t, lang } = useTranslator({
   <BaseProjectPage
     title="Log7 Glossary"
     githubLink="https://bitbucket.org/samuel-braun/technical-glossary/src/master/"
+    githubName="Bitbucket"
     demoLink="https://glossary.webry.com/"
   >
     <template #badges>

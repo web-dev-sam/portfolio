@@ -26,6 +26,7 @@ const { t, lang } = useTranslator({
   <BaseProjectPage
     title="Planets Fact Site"
     githubLink="https://bitbucket.org/samuel-braun/nuxtjs-planets-fact-site/"
+    githubName="Bitbucket"
     demoLink="https://planets.webry.com/"
   >
     <template #badges>

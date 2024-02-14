@@ -24,6 +24,7 @@ const { t, lang } = useTranslator({
   <BaseProjectPage
     title="BeatStats"
     githubLink="https://github.com/web-dev-sam/beat-stats"
+    githubName="GitHub"
     demoLink="https://dashboard.twitch.tv/extensions/61o5horkcyf4v7hvu181y3dj7s637v"
   >
     <template #badges>

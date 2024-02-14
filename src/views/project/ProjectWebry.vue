@@ -26,6 +26,7 @@ const { t, lang } = useTranslator({
   <BaseProjectPage
     title="Webry"
     githubLink="https://github.com/web-dev-sam/blog"
+    githubName="GitHub"
     demoLink="https://www.webry.com/"
   >
     <template #badges>

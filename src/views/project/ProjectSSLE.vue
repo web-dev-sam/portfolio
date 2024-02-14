@@ -24,6 +24,7 @@ const { t, lang } = useTranslator({
   <BaseProjectPage
     title="ScoreSaber Leaderboard Extension"
     githubLink="https://github.com/web-dev-sam/beatsaver-leaderboard-buttons"
+    githubName="GitHub"
     demoLink="https://chromewebstore.google.com/detail/scoresaber-buttons/mjpdbfngmbgokogdekgacbonopbkaclc"
   >
     <template #badges>

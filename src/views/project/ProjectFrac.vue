@@ -26,6 +26,7 @@ const { t, lang } = useTranslator({
   <BaseProjectPage
     title="Frac"
     githubLink="https://github.com/web-dev-sam/Frac"
+    githubName="GitHub"
     demoLink="https://frac.webry.com/"
   >
     <template #badges>

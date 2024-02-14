@@ -8,6 +8,7 @@ const props = defineProps<{
   title: string
   githubLink: string
   demoLink: string
+  githubName: string
 }>()
 
 const { t } = useTranslator({
@@ -38,7 +39,7 @@ const { t } = useTranslator({
     </div>
 
     <div class="flex gap-2">
-      <UButton variant="ghost" :to="githubLink" type="link">GitHub</UButton>
+      <UButton variant="ghost" :to="githubLink" type="link">{{ githubName }}</UButton>
       <UButton variant="primary" :to="demoLink" type="link">{{ t('demo') }}</UButton>
     </div>
 
