@@ -32,14 +32,9 @@ const langFlag = computed(() => `/assets/flags/${lang.value === 'en' ? 'de' : 'e
       </li>
       <li class="hidden flex-1 md:block"></li>
       <li>
-        <a
-          class="font-medium hover:opacity-60"
-          href="https://github.com/web-dev-sam?tab=repositories"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <router-link to="/projects" class="font-medium hover:opacity-60">
           {{ t('header.projects') }}
-        </a>
+        </router-link>
       </li>
       <li>
         <a

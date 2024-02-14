@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       lineHeight: {
-        normal: '1.6',
+        normal: '1.8',
       },
     },
     container: {
@@ -23,6 +23,10 @@ export default {
       primary: '#FF3FA2',
       text: '#1A0E14',
       muted: '#949192',
+      easy: '#16a34a',
+      medium: '#f98f16',
+      hard: '#dc2626',
+      extreme: '#9333ea',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],

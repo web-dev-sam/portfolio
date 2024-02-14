@@ -9,3 +9,17 @@
 ::selection {
     @apply bg-text text-white;
 }
+
+p {
+    @apply leading-normal;
+}
+
+[tooltip] {
+    display: inline;
+    position: relative;
+}
+
+[tooltip]:hover:after {
+    content: attr(tooltip);
+    @apply absolute px-4 py-2 bg-text text-white rounded bottom-5 max-w-[30ch] w-max z-40 -translate-x-1/2 left-1/2;
+}
