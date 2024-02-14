@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import TextBadge from '@/components/views/TextBadge.vue'
 
 const props = defineProps<{

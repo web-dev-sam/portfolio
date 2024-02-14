@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, useSlots } from 'vue'
+import { useSlots } from 'vue'
 
 const slots = useSlots()
 const props = defineProps<{
