@@ -66,7 +66,7 @@ const { t, lang } = useTranslator({
       <div>
         <h2 class="mb-2 text-body font-bold uppercase">{{ t('chall') }}</h2>
         <div class="max-w-[80ch] text-body text-muted">
-          <ul class="ml-4 list-inside list-disc space-y-2">
+          <ul class="ml-0 list-outside list-none space-y-2 md:ml-8 md:list-disc">
             <li v-if="lang === 'en'">Learning Astro.</li>
             <li v-else>Das Erlernen von Astro.</li>
             <li v-if="lang === 'en'">Optimizing SEO.</li>

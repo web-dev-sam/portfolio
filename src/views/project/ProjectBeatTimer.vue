@@ -95,7 +95,7 @@ const { t, lang } = useTranslator({
         <div class="max-w-[80ch] text-body text-muted">
           <p class="mb-4" v-if="lang === 'en'">Oh boy, here we go:</p>
           <p class="mb-4" v-else>Oh Gott, los geht's:</p>
-          <ul class="ml-4 list-inside list-disc space-y-2">
+          <ul class="ml-0 list-outside list-none space-y-2 md:ml-8 md:list-disc">
             <li>
               <span v-if="lang === 'en'">
                 <strong>Custom Spectogram visualisation:</strong> I have tried dozens of spectrogram

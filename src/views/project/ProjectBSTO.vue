@@ -72,7 +72,7 @@ const { t, lang } = useTranslator({
       <div>
         <h2 class="mb-2 text-body font-bold uppercase">{{ t('chall') }}</h2>
         <div class="max-w-[80ch] text-body text-muted">
-          <ul class="ml-4 list-inside list-disc space-y-2">
+          <ul class="ml-0 list-outside list-none space-y-2 md:ml-8 md:list-disc">
             <li v-if="lang === 'en'">
               I had to work in close collaboration with other tournament organizers as well as the
               developer of the tournament assistant mod for Beat Saber so that the overlay could

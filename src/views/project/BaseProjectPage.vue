@@ -28,25 +28,26 @@ const { t } = useTranslator({
     <a
       @click="$router.go(-1)"
       to="/projects"
-      class="mt-4 inline-block cursor-pointer rounded bg-light px-4 py-2 text-small text-muted hover:opacity-85"
+      class="mt-4 hidden cursor-pointer rounded bg-light px-4 py-2 text-small text-muted hover:opacity-85 md:inline-block"
       type="link"
     >
       {{ t('back') }}
     </a>
+
     <div>
       <span class="-mb-2 mt-4 inline-block text-body uppercase text-muted">{{ t('project') }}</span>
-      <div class="-mt-2 flex items-center justify-between">
+      <div class="-mt-2 flex flex-col items-center justify-between md:flex-row">
         <h1 class="text-h1 font-bold">{{ props.title }}</h1>
         <div>
           <slot name="badges" />
         </div>
       </div>
-      <div class="text-body text-muted">
+      <div class="mt-4 text-body text-muted md:mt-0">
         <slot name="description" />
       </div>
     </div>
 
-    <div class="flex gap-2">
+    <div class="flex justify-center gap-2 md:justify-start">
       <UButton variant="ghost" :to="githubLink" type="link">{{ githubName }}</UButton>
       <UButton variant="primary" :to="demoLink" type="link">{{ t('demo') }}</UButton>
     </div>

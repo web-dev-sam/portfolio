@@ -71,7 +71,7 @@ const { t, lang } = useTranslator({
       <div>
         <h2 class="mb-2 text-body font-bold uppercase">{{ t('chall') }}</h2>
         <div class="max-w-[80ch] text-body text-muted">
-          <ul class="ml-8 list-outside list-disc space-y-2">
+          <ul class="ml-0 list-outside list-none space-y-2 md:ml-8 md:list-disc">
             <li v-if="lang === 'en'">
               Sigh. Twitch makes the absolute dumbest APIs ever created by living beings. The
               documentation isn't better.
