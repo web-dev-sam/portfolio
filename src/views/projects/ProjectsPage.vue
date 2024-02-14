@@ -47,9 +47,9 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4"><IconVue /></div>
-            <div class="w-4"><IconTypeScript /></div>
-            <div class="w-4"><IconTailwind /></div>
+            <div class="w-4" tooltip="Vue"><IconVue /></div>
+            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
+            <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
           </div>
         </template>
         <template #difficulty>
@@ -69,13 +69,35 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4"><IconAstro /></div>
-            <div class="w-4"><IconTypeScript /></div>
-            <div class="w-4"><IconTailwind /></div>
+            <div class="w-4" tooltip="Astro"><IconAstro /></div>
+            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
+            <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
           </div>
         </template>
         <template #difficulty>
           <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
+        </template>
+      </ProjectCard>
+      <ProjectCard
+        name="Frac"
+        :description="
+          lang === 'en'
+            ? `A website for exploring beautiful visual patterns of so-called mandelbrot and julia sets.`
+            : `Eine Website zum Erkunden schöner visueller Muster sogenannter Mandelbrot- und Julia-Mengen.`
+        "
+        cover="/assets/projects/frac/fr2.jpg"
+        link="/project/frac"
+        class="flex-1"
+      >
+        <template #stack>
+          <div class="flex items-center gap-2">
+            <div class="w-4" tooltip="Angular"><IconAngular /></div>
+            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
+            <div class="w-4" tooltip="SCSS"><IconSass /></div>
+          </div>
+        </template>
+        <template #difficulty>
+          <TextBadge class="bg-[#dc2626] text-white">{{ t('hard') }}</TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
@@ -85,14 +107,14 @@ const { t, lang } = useTranslator({
             ? `An streaming overlay for Beat Saber tournaments to display the players perspectives and their current score.`
             : `Ein Streaming-Overlay für Beat Saber Turniere, um die Perspektiven der Spieler und ihren aktuellen Punktestand anzuzeigen.`
         "
-        cover="/assets/projects/webry/cover.jpg"
+        cover="/assets/projects/bsto/bsto1.jpg"
         link="/project/bs-tournament-overlay"
         class="flex-1"
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4"><IconVue /></div>
-            <div class="w-4"><IconTypeScript /></div>
+            <div class="w-4" tooltip="Vue"><IconVue /></div>
+            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
           </div>
         </template>
         <template #difficulty>
@@ -107,15 +129,15 @@ const { t, lang } = useTranslator({
             ? `A beautifully animated website to explore the planets of our solar system.`
             : `Dies ist eine animierte Bildungswebsite über die Planeten in unserem Sonnensystem.`
         "
-        cover="/assets/projects/webry/cover.jpg"
+        cover="/assets/projects/planets/pl4.jpg"
         link="/project/planets"
         class="flex-1"
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4"><IconNuxt /></div>
-            <div class="w-4"><IconTypeScript /></div>
-            <div class="w-4"><IconTailwind /></div>
+            <div class="w-4" tooltip="Nuxt"><IconNuxt /></div>
+            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
+            <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
           </div>
         </template>
         <template #difficulty>
@@ -129,58 +151,15 @@ const { t, lang } = useTranslator({
             ? `This is a dictionary web app built with SolidJS.`
             : `Dies ist eine englische Wörterbuch-Web-App, die mit SolidJS erstellt wurde.`
         "
-        cover="/assets/projects/webry/cover.jpg"
+        cover="/assets/projects/dict/dt2.jpg"
         link="/project/dictionary"
         class="flex-1"
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4"><IconSolid /></div>
-            <div class="w-4"><IconTypeScript /></div>
-            <div class="w-4"><IconTailwind /></div>
-          </div>
-        </template>
-        <template #difficulty>
-          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
-        </template>
-      </ProjectCard>
-      <ProjectCard
-        name="Frac"
-        :description="
-          lang === 'en'
-            ? `A website for exploring beautiful visual patterns of so-called mandelbrot and julia sets.`
-            : `Eine Website zum Erkunden schöner visueller Muster sogenannter Mandelbrot- und Julia-Mengen.`
-        "
-        cover="/assets/projects/frac/cover.png"
-        link="/project/frac"
-        class="flex-1"
-      >
-        <template #stack>
-          <div class="flex items-center gap-2">
-            <div class="w-4"><IconAngular /></div>
-            <div class="w-4"><IconTypeScript /></div>
-            <div class="w-4"><IconSass /></div>
-          </div>
-        </template>
-        <template #difficulty>
-          <TextBadge class="bg-[#dc2626] text-white">{{ t('hard') }}</TextBadge>
-        </template>
-      </ProjectCard>
-
-      <ProjectCard
-        name="ScoreSaber Leaderboard Extension"
-        :description="
-          lang === 'en'
-            ? `A browser extension for a leaderboard site of the popular VR game Beat Saber.`
-            : `Eine Browser-Erweiterung für eine Leaderboard-Website des beliebten VR-Spiels Beat Saber.`
-        "
-        cover="/assets/projects/webry/cover.jpg"
-        link="/project/ss-leaderboard-extension"
-        class="flex-1"
-      >
-        <template #stack>
-          <div class="flex items-center gap-2">
-            <div class="w-4"><IconJavascript /></div>
+            <div class="w-4" tooltip="SolidJS (React-like)"><IconSolid /></div>
+            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
+            <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
           </div>
         </template>
         <template #difficulty>
@@ -194,13 +173,13 @@ const { t, lang } = useTranslator({
             ? `A twitch extension for displaying ranking statistics of the streamer's profile on ScoreSaber (A leaderboard site for the game Beat Saber).`
             : `Eine Twitch-Erweiterung zum Anzeigen von Ranglistenstatistiken des Streamer-Profils auf ScoreSaber (einem online Leaderboard für das Spiel Beat Saber).`
         "
-        cover="/assets/projects/webry/cover.jpg"
+        cover="/assets/projects/bss/bss1.jpg"
         link="/project/beat-stats"
         class="flex-1"
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4"><IconJavascript /></div>
+            <div class="w-4" tooltip="JavaScript"><IconJavascript /></div>
           </div>
         </template>
         <template #difficulty>
@@ -208,19 +187,40 @@ const { t, lang } = useTranslator({
         </template>
       </ProjectCard>
       <ProjectCard
+        name="ScoreSaber Leaderboard Extension"
+        :description="
+          lang === 'en'
+            ? `A browser extension for a leaderboard site of the popular VR game Beat Saber.`
+            : `Eine Browser-Erweiterung für eine Leaderboard-Website des beliebten VR-Spiels Beat Saber.`
+        "
+        cover="/assets/projects/bse/be1.jpg"
+        link="/project/ss-leaderboard-extension"
+        class="flex-1"
+      >
+        <template #stack>
+          <div class="flex items-center gap-2">
+            <div class="w-4" tooltip="JavaScript"><IconJavascript /></div>
+          </div>
+        </template>
+        <template #difficulty>
+          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
+        </template>
+      </ProjectCard>
+
+      <ProjectCard
         name="Log7 Glossary"
         :description="
           lang === 'en'
             ? `This was a project for a university course to create a glossary for the fictional company Log7 with basic HTML, CSS and JavaScript.`
             : `Dies war ein Projekt für einen Universitätskurs, um ein Glossar für das fiktive Unternehmen Log7 mit grundlegendem HTML, CSS und JavaScript zu erstellen.`
         "
-        cover="/assets/projects/webry/cover.jpg"
+        cover="/assets/projects/log7/gl3.jpg"
         link="/project/log7-glossary"
         class="flex-1"
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4"><IconJavascript /></div>
+            <div class="w-4" tooltip="JavaScript"><IconJavascript /></div>
           </div>
         </template>
         <template #difficulty>

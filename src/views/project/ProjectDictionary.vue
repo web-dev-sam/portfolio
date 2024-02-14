@@ -47,9 +47,9 @@ function openModal(src: string) {
           Stack
           <template #desc>
             <div class="flex items-center gap-2">
-              <div class="w-4"><IconSolid /></div>
-              <div class="w-4"><IconTypeScript /></div>
-              <div class="w-4"><IconTailwind /></div>
+              <div class="w-4" tooltip="SolidJS"><IconSolid /></div>
+              <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
+              <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
             </div>
           </template>
         </TextBadge>

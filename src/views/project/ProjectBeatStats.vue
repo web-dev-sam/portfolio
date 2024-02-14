@@ -45,7 +45,7 @@ function openModal(src: string) {
           Stack
           <template #desc>
             <div class="flex items-center gap-2">
-              <div class="w-4"><IconJavascript /></div>
+              <div class="w-4" tooltip="JavaScript"><IconJavascript /></div>
             </div>
           </template>
         </TextBadge>
