@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { useTranslator } from '@/composables/useTranslator'
-import TextBadge from '@/components/views/TextBadge.vue'
-import IconGitHub from '@/components/icons/IconGitHub.vue'
 import UButton from '@/components/base/UButton.vue'
 
 const props = defineProps<{
@@ -15,19 +13,29 @@ const { t } = useTranslator({
   en: {
     project: 'Project',
     demo: 'Open Live Demo',
+    back: 'Back',
   },
   de: {
     project: 'Projekt',
     demo: 'Zur Webseite',
+    back: 'Zurück',
   },
 })
 </script>
 
 <template>
-  <main class="!lg:my-32 !my-16 space-y-8 text-center leading-normal md:text-left">
+  <main class="!lg:mb-32 !mb-16 space-y-8 text-center leading-normal md:text-left">
+    <a
+      @click="$router.go(-1)"
+      to="/projects"
+      class="mt-4 inline-block cursor-pointer rounded bg-light px-4 py-2 text-small text-muted hover:opacity-85"
+      type="link"
+    >
+      {{ t('back') }}
+    </a>
     <div>
-      <span class="text-body uppercase text-muted">{{ t('project') }}</span>
-      <div class="flex items-center justify-between">
+      <span class="-mb-2 mt-4 inline-block text-body uppercase text-muted">{{ t('project') }}</span>
+      <div class="-mt-2 flex items-center justify-between">
         <h1 class="text-h1 font-bold">{{ props.title }}</h1>
         <div>
           <slot name="badges" />
