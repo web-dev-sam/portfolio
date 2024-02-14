@@ -7,14 +7,14 @@ const { t, lang } = useTranslator({
     header: {
       projects: 'Projects',
       blog: 'Blog',
-      contact: 'Contact',
+      skills: 'Skills',
     },
   },
   de: {
     header: {
       projects: 'Projekte',
       blog: 'Blog',
-      contact: 'Kontakt',
+      skills: 'Skills',
     },
   },
 })
@@ -32,6 +32,11 @@ const langFlag = computed(() => `/assets/flags/${lang.value === 'en' ? 'de' : 'e
       </li>
       <li class="hidden flex-1 md:block"></li>
       <li>
+        <router-link to="/skills" class="font-medium hover:opacity-60">
+          {{ t('header.skills') }}
+        </router-link>
+      </li>
+      <li>
         <router-link to="/projects" class="font-medium hover:opacity-60">
           {{ t('header.projects') }}
         </router-link>
@@ -44,16 +49,6 @@ const langFlag = computed(() => `/assets/flags/${lang.value === 'en' ? 'de' : 'e
           rel="noopener noreferrer"
         >
           {{ t('header.blog') }}
-        </a>
-      </li>
-      <li>
-        <a
-          class="font-medium hover:opacity-60"
-          href="mailto:office.samigo.a@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{ t('header.contact') }}
         </a>
       </li>
       <li>
