@@ -2,6 +2,22 @@
 import BaseProjectPage from './BaseProjectPage.vue'
 import TextBadge from '@/components/views/TextBadge.vue'
 import IconJavascript from '@/components/icons/IconJavascript.vue'
+import { useTranslator } from '@/composables/useTranslator'
+
+const { t, lang } = useTranslator({
+  en: {
+    diff: 'Easy',
+    solved: 'Problems Solved',
+    chall: 'Challenges I ran into',
+    next: "What I'd do differently next time",
+  },
+  de: {
+    diff: 'Einfach',
+    solved: 'Gelöste Probleme',
+    chall: 'Herausforderungen',
+    next: 'Was würde ich anders machen',
+  },
+})
 </script>
 
 <template>
@@ -20,29 +36,48 @@ import IconJavascript from '@/components/icons/IconJavascript.vue'
             </div>
           </template>
         </TextBadge>
-        <TextBadge class="bg-easy text-white">Easy</TextBadge>
+        <TextBadge class="bg-easy text-white">{{ t('diff') }}</TextBadge>
       </div>
     </template>
     <template #description>
-      <p>
+      <p v-if="lang === 'en'">
         A browser extension for a leaderboard site of the popular VR game Beat Saber which adds some
         shortcuts to other related sites.
+      </p>
+      <p v-else>
+        Eine Browser-Erweiterung für eine Leaderboard-Website des beliebten VR-Spiels Beat Saber,
+        die einige Verknüpfungen zu anderen verwandten Websites bietet.
       </p>
     </template>
     <template #content>
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">Problems Solved</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">{{ t('solved') }}</h2>
         <p class="max-w-[80ch] text-body text-muted">
-          For the game Beat Saber, there are a few related sites that are frequently used together.
-          Like BeatSaver, ScoreSaber, and BeatLeader. I wanted to make it easier to switch between
-          these sites for specific songs so no one has to manually search for the song on each site.
+          <span v-if="lang === 'en'">
+            For the game Beat Saber, there are a few related sites that are frequently used
+            together. Like BeatSaver, ScoreSaber, and BeatLeader. I wanted to make it easier to
+            switch between these sites for specific songs so no one has to manually search for the
+            song on each site.
+          </span>
+          <span v-else>
+            Für das Spiel Beat Saber gibt es einige verwandte Websites, die häufig zusammen
+            verwendet werden. Wie BeatSaver, ScoreSaber und BeatLeader. Ich wollte es einfacher
+            machen, zwischen diesen Websites für bestimmte Songs zu wechseln, damit niemand manuell
+            nach dem Song auf jeder Website suchen muss.
+          </span>
         </p>
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">What I'd do differently next time</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">{{ t('next') }}</h2>
         <p class="max-w-[80ch] text-body text-muted">
-          Maybe adding some more features for other pages and not only for songs.
+          <span v-if="lang === 'en'">
+            Maybe adding some more features for other pages and not only for songs.
+          </span>
+          <span v-else>
+            Vielleicht einige weitere Funktionen für andere Seiten hinzufügen und nicht nur für
+            Songs.
+          </span>
         </p>
       </div>
     </template>

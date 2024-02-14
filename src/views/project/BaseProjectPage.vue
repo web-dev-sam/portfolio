@@ -13,15 +13,17 @@ const props = defineProps<{
 const { t } = useTranslator({
   en: {
     project: 'Project',
+    demo: 'Open Live Demo',
   },
   de: {
     project: 'Projekt',
+    demo: 'Zur Webseite',
   },
 })
 </script>
 
 <template>
-  <main class="!lg:my-32 !my-16 space-y-8 text-center md:text-left">
+  <main class="!lg:my-32 !my-16 space-y-8 text-center leading-normal md:text-left">
     <div>
       <span class="text-body uppercase text-muted">{{ t('project') }}</span>
       <div class="flex items-center justify-between">
@@ -37,14 +39,14 @@ const { t } = useTranslator({
 
     <div class="flex gap-2">
       <UButton variant="ghost" :to="githubLink" type="link">GitHub</UButton>
-      <UButton variant="primary" :to="demoLink" type="link">Open Live Demo</UButton>
+      <UButton variant="primary" :to="demoLink" type="link">{{ t('demo') }}</UButton>
     </div>
 
     <div class="!mt-16 space-y-8">
       <slot name="content" />
     </div>
 
-    <h2 class="!mt-16 text-h4 font-bold hidden">Gallery</h2>
+    <h2 class="!mt-16 hidden text-h4 font-bold">Gallery</h2>
     <slot name="gallery" />
   </main>
 </template>

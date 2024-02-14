@@ -2,6 +2,22 @@
 import BaseProjectPage from './BaseProjectPage.vue'
 import TextBadge from '@/components/views/TextBadge.vue'
 import IconJavascript from '@/components/icons/IconJavascript.vue'
+import { useTranslator } from '@/composables/useTranslator'
+
+const { t, lang } = useTranslator({
+  en: {
+    diff: 'Easy',
+    solved: 'Problems Solved',
+    chall: 'Challenges I ran into',
+    next: "What I'd do differently next time",
+  },
+  de: {
+    diff: 'Einfach',
+    solved: 'Gelöste Probleme',
+    chall: 'Herausforderungen',
+    next: 'Was würde ich anders machen',
+  },
+})
 </script>
 
 <template>
@@ -20,37 +36,61 @@ import IconJavascript from '@/components/icons/IconJavascript.vue'
             </div>
           </template>
         </TextBadge>
-        <TextBadge class="bg-easy text-white">Easy</TextBadge>
+        <TextBadge class="bg-easy text-white">{{ t('diff') }}</TextBadge>
       </div>
     </template>
     <template #description>
-      <p>
+      <p v-if="lang === 'en'">
         This was a project for a university course to create a glossary for the fictional company
         Log7 with basic HTML, CSS and JavaScript.
+      </p>
+      <p v-else>
+        Dies war ein Projekt für einen Universitätskurs, um ein Glossar für das fiktive Unternehmen
+        Log7 mit grundlegendem HTML, CSS und JavaScript zu erstellen.
       </p>
     </template>
     <template #content>
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">Problems Solved</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">{{ t('solved') }}</h2>
         <p class="max-w-[80ch] text-body text-muted">
-          The university course was about learning the basics of web development. This project is
-          supposed to help a fictional company to keep track of technical terms and their meanings.
+          <span v-if="lang === 'en'">
+            The university course was about learning the basics of web development. This project is
+            supposed to help a fictional company to keep track of technical terms and their
+            meanings.
+          </span>
+          <span v-else>
+            Der Universitätskurs behandelte die Grundlagen der Webentwicklung. Dieses Projekt soll
+            einem fiktiven Unternehmen helfen, technische Begriffe und ihre Bedeutungen im Auge zu
+            behalten.
+          </span>
         </p>
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">Challenges I ran into</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">{{ t('chall') }}</h2>
         <div class="max-w-[80ch] text-body text-muted">
           <ul class="ml-4 list-inside list-disc space-y-2">
-            <li>Emotional Damage: Not being allowed to use wonderful frameworks like Vue. 🥲</li>
+            <li v-if="lang === 'en'">
+              <strong>Emotional Damage:</strong> Not being allowed to use wonderful frameworks like
+              Vue. 🥲
+            </li>
+            <li v-else>
+              <strong>Emotional Damage:</strong> Ich durfte keine wunderbaren Frameworks wie Vue
+              verwenden. 🥲
+            </li>
           </ul>
         </div>
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">What I'd do differently next time</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">{{ t('next') }}</h2>
         <p class="max-w-[80ch] text-body text-muted">
-          Put a timer on for the implementation to make it more challenging.
+          <span v-if="lang === 'en'">
+            Put a timer on for the implementation to make it more challenging.
+          </span>
+          <span v-else>
+            Einen Timer für die Implementierung nutzen, um das Projekt herausfordernder zu machen.
+          </span>
         </p>
       </div>
     </template>

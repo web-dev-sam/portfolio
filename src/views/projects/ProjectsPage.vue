@@ -9,22 +9,38 @@ import IconTypeScript from '@/components/icons/IconTypeScript.vue'
 import IconJavascript from '@/components/icons/IconJavascript.vue'
 import IconVue from '@/components/icons/IconVue.vue'
 import TextBadge from '@/components/views/TextBadge.vue'
-import { useTranslator } from '@/composables/useTranslator'
 import ProjectCard from '@/views/projects/components/ProjectCard.vue'
+import { useTranslator } from '@/composables/useTranslator'
 
-const { t } = useTranslator({
-  en: {},
-  de: {},
+const { t, lang } = useTranslator({
+  en: {
+    projects: 'Projects',
+    easy: 'Easy',
+    medium: 'Tricky',
+    hard: 'Challenging',
+    extreme: 'Hardcore',
+  },
+  de: {
+    projects: 'Projekte',
+    easy: 'Einfach',
+    medium: 'Knifflig',
+    hard: 'Herausfordernd',
+    extreme: 'Hardcore',
+  },
 })
 </script>
 
 <template>
   <main class="mb-16 text-center md:text-left">
-    <h1 class="!lg:my-32 !my-16 text-center text-h3 font-bold">Projects</h1>
+    <h1 class="!lg:my-32 !my-16 text-center text-h3 font-bold">{{ t('projects') }}</h1>
     <section class="flex flex-col gap-4">
       <ProjectCard
         name="Beat Timer"
-        description="A web application for rythm game level creators to perfectly sync their audio with the game as easily as possible."
+        :description="
+          lang === 'en'
+            ? `A web application for rythm game level creators to perfectly sync their audio with the game as easily as possible.`
+            : `Eine Webanwendung für Level-Ersteller von Rhythmusspielen, die dabei hilft, Audiodateien so einfach wie möglich perfekt mit dem Spiel zu synchronisieren.`
+        "
         cover="/assets/projects/beat-timer/cover.png"
         link="/project/beat-timer"
         class="flex-1"
@@ -37,12 +53,16 @@ const { t } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-[#9333ea] text-white">Hardcore</TextBadge>
+          <TextBadge class="bg-extreme text-white">{{ t('extreme') }}</TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
         name="Webry"
-        description="This is my blog all about the modern web."
+        :description="
+          lang === 'en'
+            ? `This is my blog all about the modern web.`
+            : `Dies ist mein Blog rund um das moderne Web.`
+        "
         cover="/assets/projects/webry/cover.jpg"
         link="/project/webry"
         class="flex-1"
@@ -55,12 +75,16 @@ const { t } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-easy text-white">Easy</TextBadge>
+          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
         name="BeatSaber Tournament Overlay"
-        description="An streaming overlay for Beat Saber tournaments to display the players perspectives and their current score."
+        :description="
+          lang === 'en'
+            ? `An streaming overlay for Beat Saber tournaments to display the players perspectives and their current score.`
+            : `Ein Streaming-Overlay für Beat Saber Turniere, um die Perspektiven der Spieler und ihren aktuellen Punktestand anzuzeigen.`
+        "
         cover="/assets/projects/webry/cover.jpg"
         link="/project/bs-tournament-overlay"
         class="flex-1"
@@ -72,13 +96,17 @@ const { t } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-hard text-white">Challenging</TextBadge>
+          <TextBadge class="bg-hard text-white">{{ t('hard') }}</TextBadge>
         </template>
       </ProjectCard>
 
       <ProjectCard
         name="Planets"
-        description="A beautifully animated website to explore the planets of our solar system."
+        :description="
+          lang === 'en'
+            ? `A beautifully animated website to explore the planets of our solar system.`
+            : `Dies ist eine animierte Bildungswebsite über die Planeten in unserem Sonnensystem.`
+        "
         cover="/assets/projects/webry/cover.jpg"
         link="/project/planets"
         class="flex-1"
@@ -91,12 +119,16 @@ const { t } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-medium text-white">Tricky</TextBadge>
+          <TextBadge class="bg-medium text-white">{{ t('medium') }}</TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
         name="Dictionary"
-        description="An accessible and easy to use english dictionary."
+        :description="
+          lang === 'en'
+            ? `This is a dictionary web app built with SolidJS.`
+            : `Dies ist eine englische Wörterbuch-Web-App, die mit SolidJS erstellt wurde.`
+        "
         cover="/assets/projects/webry/cover.jpg"
         link="/project/dictionary"
         class="flex-1"
@@ -109,12 +141,16 @@ const { t } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-easy text-white">Easy</TextBadge>
+          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
         name="Frac"
-        description="A website to explore and save beautiful visual patterns of so-called mandelbrot and julia sets."
+        :description="
+          lang === 'en'
+            ? `A website for exploring beautiful visual patterns of so-called mandelbrot and julia sets.`
+            : `Eine Website zum Erkunden schöner visueller Muster sogenannter Mandelbrot- und Julia-Mengen.`
+        "
         cover="/assets/projects/frac/cover.png"
         link="/project/frac"
         class="flex-1"
@@ -127,13 +163,17 @@ const { t } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-[#dc2626] text-white">Challenging</TextBadge>
+          <TextBadge class="bg-[#dc2626] text-white">{{ t('hard') }}</TextBadge>
         </template>
       </ProjectCard>
 
       <ProjectCard
         name="ScoreSaber Leaderboard Extension"
-        description="A browser extension for a leaderboard site of the popular VR game Beat Saber which adds some shortcuts to other related sites."
+        :description="
+          lang === 'en'
+            ? `A browser extension for a leaderboard site of the popular VR game Beat Saber.`
+            : `Eine Browser-Erweiterung für eine Leaderboard-Website des beliebten VR-Spiels Beat Saber.`
+        "
         cover="/assets/projects/webry/cover.jpg"
         link="/project/ss-leaderboard-extension"
         class="flex-1"
@@ -144,12 +184,16 @@ const { t } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-easy text-white">Easy</TextBadge>
+          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
         name="BeatStats"
-        description="A twitch extension for displaying ranking statistics of the streamer's profile on ScoreSaber (A leaderboard site for the game Beat Saber)."
+        :description="
+          lang === 'en'
+            ? `A twitch extension for displaying ranking statistics of the streamer's profile on ScoreSaber (A leaderboard site for the game Beat Saber).`
+            : `Eine Twitch-Erweiterung zum Anzeigen von Ranglistenstatistiken des Streamer-Profils auf ScoreSaber (einem online Leaderboard für das Spiel Beat Saber).`
+        "
         cover="/assets/projects/webry/cover.jpg"
         link="/project/beat-stats"
         class="flex-1"
@@ -160,12 +204,16 @@ const { t } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-medium text-white">Tricky</TextBadge>
+          <TextBadge class="bg-medium text-white">{{ t('medium') }}</TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
         name="Log7 Glossary"
-        description="This was a project for a university course to create a glossary for the fictional company Log7 with basic HTML, CSS and JavaScript."
+        :description="
+          lang === 'en'
+            ? `This was a project for a university course to create a glossary for the fictional company Log7 with basic HTML, CSS and JavaScript.`
+            : `Dies war ein Projekt für einen Universitätskurs, um ein Glossar für das fiktive Unternehmen Log7 mit grundlegendem HTML, CSS und JavaScript zu erstellen.`
+        "
         cover="/assets/projects/webry/cover.jpg"
         link="/project/log7-glossary"
         class="flex-1"
@@ -176,7 +224,7 @@ const { t } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-easy text-white">Easy</TextBadge>
+          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
         </template>
       </ProjectCard>
     </section>

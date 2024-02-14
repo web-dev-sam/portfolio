@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       lineHeight: {
-        normal: '1.6',
+        normal: '1.8',
       },
     },
     container: {

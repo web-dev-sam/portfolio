@@ -4,6 +4,22 @@ import IconTypeScript from '@/components/icons/IconTypeScript.vue'
 import IconTailwind from '@/components/icons/IconTailwind.vue'
 import BaseProjectPage from './BaseProjectPage.vue'
 import TextBadge from '@/components/views/TextBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
+
+const { t, lang } = useTranslator({
+  en: {
+    diff: 'Easy',
+    solved: 'Problems Solved',
+    chall: 'Challenges I ran into',
+    next: "What I'd do differently next time",
+  },
+  de: {
+    diff: 'Einfach',
+    solved: 'Gelöste Probleme',
+    chall: 'Herausforderungen',
+    next: 'Was würde ich anders machen',
+  },
+})
 </script>
 
 <template>
@@ -24,28 +40,39 @@ import TextBadge from '@/components/views/TextBadge.vue'
             </div>
           </template>
         </TextBadge>
-        <TextBadge class="bg-easy text-white">Easy</TextBadge>
+        <TextBadge class="bg-easy text-white">{{ t('diff') }}</TextBadge>
       </div>
     </template>
     <template #description>
-      <p>
+      <p v-if="lang === 'en'">
         This is a dictionary web app built with SolidJS. It allows users to search for the meaning
         of words and also provides the pronunciation and synonyms of the word.
+      </p>
+      <p v-else>
+        Dies ist eine englische Wörterbuch-Web-App, die mit SolidJS erstellt wurde. Benutzer können
+        nach der Bedeutung von Wörtern suchen und erhalten auch die Aussprache und Synonyme des
+        Wortes.
       </p>
     </template>
     <template #content>
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">Problems Solved</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">{{ t('solved') }}</h2>
         <p class="max-w-[80ch] text-body text-muted">
-          Now, when someone argues with me, I can quickly send them a link to the word's definition.
-          It's like my 'hush, I'm right' shortcut!
+          <span v-if="lang === 'en'"> My boredom. 🙃 </span>
+          <span v-else> Meine Langeweile. 🙃 </span>
         </p>
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">What I'd do differently next time</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">{{ t('next') }}</h2>
         <p class="max-w-[80ch] text-body text-muted">
-          I'd try to think of useful features to make the mini project more challenging.
+          <span v-if="lang === 'en'">
+            I'd try to think of useful features to make the mini project more challenging.
+          </span>
+          <span v-else>
+            Ich würde versuchen mehr nützliche Funktionen hinzuzufügen um das Mini-Projekt
+            herausfordernder zu gestalten.
+          </span>
         </p>
       </div>
     </template>
