@@ -16,6 +16,10 @@ const router = createRouter({
       component: () => import('../views/projects/ProjectsPage.vue'),
     },
     {
+      path: '/blogs',
+      component: () => import('../views/blogs/BlogsPage.vue'),
+    },
+    {
       path: '/project/webry',
       component: () => import('../views/project/ProjectWebry.vue'),
     },

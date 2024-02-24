@@ -42,14 +42,9 @@ const langFlag = computed(() => `/assets/flags/${lang.value === 'en' ? 'de' : 'e
         </router-link>
       </li>
       <li>
-        <a
-          class="font-medium hover:opacity-60"
-          href="https://webry.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <router-link class="font-medium hover:opacity-60" to="/blogs">
           {{ t('header.blog') }}
-        </a>
+        </router-link>
       </li>
       <li>
         <button
