@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import UButton from '@/components/base/UButton.vue'
 import TextBadge from '@/components/views/TextBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
 
 const props = withDefaults(
   defineProps<{
@@ -15,6 +16,15 @@ const props = withDefaults(
     class: '',
   },
 )
+
+const { t } = useTranslator({
+  en: {
+    readMore: 'Read more',
+  },
+  de: {
+    readMore: 'Mehr lesen',
+  },
+})
 </script>
 
 <template>
@@ -42,7 +52,7 @@ const props = withDefaults(
                 :to="props.link"
                 class="ml-2 hidden text-text hover:opacity-60 md:inline-block"
               >
-                Read more ...
+                {{ t('readMore') }}...
               </router-link>
             </span>
           </p>
@@ -51,7 +61,7 @@ const props = withDefaults(
     </router-link>
     <div class="mb-8 md:hidden">
       <router-link :to="props.link" class="mt-8 block text-center md:text-left">
-        <UButton variant="primary" type="visual">Read more</UButton>
+        <UButton variant="primary" type="visual">{{ t('readMore') }}</UButton>
       </router-link>
     </div>
   </div>
