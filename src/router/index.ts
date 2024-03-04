@@ -50,7 +50,23 @@ const router = createRouter({
     {
       path: '/project/log7-glossary',
       component: () => import('../views/project/ProjectLog7.vue'),
-    }
+    },
+    {
+      path: '/blogs',
+      component: () => import('../views/blogs/BlogsPage.vue'),
+    },
+    {
+      path: '/blog/exploring-css-where-it-doesnt-make-sense',
+      component: () => import('../views/blog/3/ArticlePage.vue'),
+    },
+    {
+      path: '/blog/naming-every-developers-nightmare',
+      component: () => import('../views/blog/2/ArticlePage.vue'),
+    },
+    {
+      path: '/blog/boost-your-javascript-with-jsdoc-typing',
+      component: () => import('../views/blog/1/ArticlePage.vue'),
+    },
   ],
 })
 

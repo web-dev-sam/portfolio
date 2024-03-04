@@ -1,9 +1,5 @@
 <template>
-  <svg
-    viewBox="0 0 160 200"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_347_74)">
       <path d="M40 120L60 60L150 150L120 200L80 160H60" fill="#00E8FF" />
       <path d="M80 160V80L120 40V120M0 160L40 200L60 160L40 120H20" fill="#283198" />

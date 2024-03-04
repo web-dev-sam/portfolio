@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useTranslator } from '@/composables/useTranslator'
 
-const { t, lang } = useTranslator({
+const { t, lang, cantTranslate } = useTranslator({
   en: {
     header: {
       projects: 'Projects',
@@ -19,7 +19,9 @@ const { t, lang } = useTranslator({
   },
 })
 
-const langFlag = computed(() => `/assets/flags/${lang.value === 'en' ? 'de' : 'en'}.svg`)
+const langFlag = computed(
+  () => `/assets/flags/${cantTranslate.value ? 'en' : lang.value === 'en' ? 'de' : 'en'}.svg`,
+)
 </script>
 
 <template>
@@ -42,21 +44,23 @@ const langFlag = computed(() => `/assets/flags/${lang.value === 'en' ? 'de' : 'e
         </router-link>
       </li>
       <li>
-        <a
-          class="font-medium hover:opacity-60"
-          href="https://webry.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <router-link class="font-medium hover:opacity-60" to="/blogs">
           {{ t('header.blog') }}
-        </a>
+        </router-link>
       </li>
       <li>
         <button
           class="flex h-full items-center"
+          :class="cantTranslate ? 'cursor-not-allowed opacity-40' : ''"
           @click="lang = lang === 'en' ? 'de' : 'en'"
           :aria-label="lang === 'en' ? 'Deutsch' : 'English'"
-          :title="lang === 'en' ? 'Deutsch' : 'English'"
+          :title="
+            cantTranslate
+              ? 'This page currently has no translations.'
+              : lang === 'en'
+                ? 'Deutsch'
+                : 'English'
+          "
         >
           <img :src="langFlag" width="32" height="32" />
         </button>
