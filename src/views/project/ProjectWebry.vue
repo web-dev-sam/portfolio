@@ -36,7 +36,7 @@ function openModal(src: string) {
     title="Webry"
     githubLink="https://github.com/web-dev-sam/blog"
     githubName="GitHub"
-    demoLink="https://www.webry.com/"
+    demoLink="https://www.old.webry.com/"
     :imageModalVisible="imageModalVisible"
     :imageModalSrc="imageModalSrc"
     @modal-close="imageModalVisible = false"
