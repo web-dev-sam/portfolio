@@ -23,10 +23,6 @@ const { t, lang } = useTranslator({
     title: "Exploring CSS where it doesn't make sense",
     date: '23 Feb',
   },
-  de: {
-    title: 'CSS erkunden, wo es keinen Sinn ergibt',
-    date: '23. Februar',
-  },
 })
 </script>
 
@@ -187,7 +183,7 @@ display: inline-flex; /* display: inline flex; */
 display: grid; /* display: block grid; */
 display: inline-grid; /* display: inline grid; */
 display: flow-root; /* display: block flow-root; */`"></code></pre>
-        <p>This brings us to the next core concept...</p>
+        <p>This brings us to the next core concept&hellip;</p>
 
         <h3>Layout Modes</h3>
         <p>
@@ -266,11 +262,11 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
                 <code>clip</code> (<code>hidden</code>, <code>auto</code>, <code>scroll</code>, or
                 <code>overlay</code>).
               </li>
-              <li>...</li>
+              <li>&hellip;</li>
             </ul>
           </li>
           <li>If one of the elements is empty or its height is zero.</li>
-          <li>...</li>
+          <li>&hellip;</li>
         </ul>
         <p>
           As you can see you don't want to ever see this list again. So let me just give you an
@@ -387,7 +383,7 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
             A flex or grid item with a <code>z-index</code> value other than <code>auto</code>.
           </li>
           <li>An element with a <code>will-change</code> value of any of the above properties.</li>
-          <li>And a few more...</li>
+          <li>And a few more&hellip;</li>
         </ul>
         <video
           class="mx-auto max-h-96 rounded-lg"
@@ -688,6 +684,6 @@ pre {
 }
 
 .content {
-  @apply text-justify leading-8;
+  @apply text-center leading-8 sm:text-justify;
 }
 </style>

@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useTranslator } from '@/composables/useTranslator'
-import IconGitHub from '@/components/icons/IconGitHub.vue'
-import IconLinkedIn from '@/components/icons/IconLinkedIn.vue'
-import IconDevTo from '@/components/icons/IconDevTo.vue'
+import PageFooter from '@/components/base/PageFooter.vue'
 import IconVue from '@/components/icons/IconVue.vue'
 import IconTailwind from '@/components/icons/IconTailwind.vue'
 import IconTypeScript from '@/components/icons/IconTypeScript.vue'
@@ -16,7 +14,7 @@ const { t } = useTranslator({
       intro2: ' web developer with over 5 years of experience.',
     },
     stack: {
-      more: 'see more...',
+      more: 'see more',
     },
   },
   de: {
@@ -27,7 +25,7 @@ const { t } = useTranslator({
       intro2: 'Webentwickler mit mehr als 5 Jahren Erfahrung.',
     },
     stack: {
-      more: 'und mehr...',
+      more: 'und mehr',
     },
   },
 })
@@ -48,7 +46,7 @@ const { t } = useTranslator({
           <span class="font-medium text-primary">{{ t('hero.highlight') }}</span
           >{{ t('hero.intro2') }}
         </p>
-        <h2 class="!lg:mt-32 !mt-16 text-h6 font-medium">Main Stack</h2>
+        <h2 class="!lg:mt-32 !mt-16 text-h6 font-bold">Main Stack</h2>
         <ul
           class="mx-auto flex max-w-[40ch] items-center justify-center gap-4 align-middle md:gap-6 lg:mx-0 lg:justify-start lg:gap-8"
         >
@@ -62,7 +60,9 @@ const { t } = useTranslator({
             <IconTailwind />
           </li>
           <li class="text-muted">
-            <router-link to="/skills" class="hover:text-text rounded px-3 py-2 hover:bg-light">{{ t('stack.more') }}</router-link>
+            <router-link to="/skills" class="rounded px-3 py-2 hover:bg-light hover:text-text"
+              >{{ t('stack.more') }}&hellip;</router-link
+            >
           </li>
         </ul>
       </div>
@@ -74,40 +74,5 @@ const { t } = useTranslator({
         />
       </div>
     </main>
-    <section>
-      <h2 class="!lg:mt-32 !mt-16 text-center text-h4 font-bold">Socials</h2>
-      <ul class="mb-16 mt-8 flex justify-center gap-8">
-        <li>
-          <a
-            class="hover:opacity-85"
-            href="https://github.com/web-dev-sam/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconGitHub />
-          </a>
-        </li>
-        <li>
-          <a
-            class="hover:opacity-85"
-            href="https://www.linkedin.com/in/samuel-braun/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconLinkedIn />
-          </a>
-        </li>
-        <li>
-          <a
-            class="hover:opacity-85"
-            href="https://dev.to/samuel-braun"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconDevTo />
-          </a>
-        </li>
-      </ul>
-    </section>
   </div>
 </template>

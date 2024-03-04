@@ -14,7 +14,7 @@ const props = defineProps<{
 <template>
   <router-link
     :to="props.link"
-    class="pointer-events-none md:pointer-events-auto -mx-8 block rounded p-8 pb-0 hover:bg-white md:pb-8 md:hover:bg-light"
+    class="pointer-events-none -mx-8 block rounded p-8 pb-0 hover:bg-white md:pointer-events-auto md:pb-8 md:hover:bg-light"
   >
     <div class="flex flex-col gap-4 md:flex-row md:gap-8">
       <div class="flex justify-center md:justify-start">

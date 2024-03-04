@@ -16,10 +16,6 @@ const { t, lang } = useTranslator({
     title: "Naming: Every Developer's Nightmare",
     date: 'Apr 18 2023',
   },
-  de: {
-    title: 'Benennen: Der Alptraum jeden Entwicklers',
-    date: '18. April 2023',
-  },
 })
 </script>
 
@@ -460,6 +456,6 @@ pre {
 }
 
 .content {
-  @apply text-justify leading-8;
+  @apply text-center leading-8 sm:text-justify;
 }
 </style>

@@ -21,9 +21,6 @@ const { t } = useTranslator({
   en: {
     readMore: 'Read more',
   },
-  de: {
-    readMore: 'Mehr lesen',
-  },
 })
 </script>
 
@@ -52,7 +49,7 @@ const { t } = useTranslator({
                 :to="props.link"
                 class="ml-2 hidden text-text hover:opacity-60 md:inline-block"
               >
-                {{ t('readMore') }}...
+                {{ t('readMore') }}&hellip;
               </router-link>
             </span>
           </p>

@@ -16,10 +16,6 @@ const { t, lang } = useTranslator({
     title: 'Boost Your JavaScript with JSDoc Typing',
     date: 'Apr 8 2023',
   },
-  de: {
-    title: 'Boosten Sie Ihr JavaScript mit JSDoc',
-    date: '8. April 2023',
-  },
 })
 </script>
 
@@ -997,6 +993,6 @@ pre {
 }
 
 .content {
-  @apply text-justify leading-8;
+  @apply text-center leading-8 sm:text-justify;
 }
 </style>
