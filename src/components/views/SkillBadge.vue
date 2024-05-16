@@ -15,10 +15,10 @@ const props = defineProps<{
     <div
       class="group flex h-12 -translate-x-3 items-center justify-center gap-4 rounded px-3 py-2 hover:bg-light md:justify-start"
     >
-      <div class="max-h-8 w-8">
+      <div class="flex justify-center max-h-8 w-8">
         <slot />
       </div>
-      <div>
+      <div class="md:flex-1 text-left">
         {{ props.title }}
       </div>
     </div>
