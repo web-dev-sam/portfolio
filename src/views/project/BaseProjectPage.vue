@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useTranslator } from '@/composables/useTranslator'
 import UButton from '@/components/base/UButton.vue'
+import { RouterLink } from 'vue-router'
 
 const props = defineProps<{
   title: string
@@ -27,14 +28,13 @@ const { t } = useTranslator({
 
 <template>
   <main class="!lg:mb-32 !mb-16 space-y-8 text-center leading-normal md:text-left">
-    <a
-      @click="$router.go(-1)"
+    <RouterLink
       to="/projects"
       class="mt-4 hidden cursor-pointer rounded bg-light px-4 py-2 text-small text-muted hover:opacity-85 md:inline-block"
       type="link"
     >
       {{ t('back') }}
-    </a>
+    </RouterLink>
 
     <div>
       <span class="-mb-2 mt-4 inline-block text-body uppercase text-muted">{{ t('project') }}</span>
