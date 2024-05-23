@@ -2,13 +2,24 @@
 import IconGitHub from '@/components/icons/IconGitHub.vue'
 import IconLinkedIn from '@/components/icons/IconLinkedIn.vue'
 import IconDevTo from '@/components/icons/IconDevTo.vue'
+import IconEmail from '@/components/icons/IconEmail.vue'
 </script>
 
 <template>
   <footer>
     <ul class="flex justify-center gap-8 py-8">
-      <li>&copy; 2024 Samuel Braun</li>
+      <li>&copy; {{ new Date().getFullYear() }} Samuel Braun</li>
       <li class="flex-1"></li>
+      <li>
+        <a
+          class="hover:opacity-85"
+          href="mailto:sam@webry.com?subject=Hey there!"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IconEmail class="w-6" />
+        </a>
+      </li>
       <li>
         <a
           class="hover:opacity-85"
