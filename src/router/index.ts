@@ -12,6 +12,10 @@ const router = createRouter({
       component: () => import('../views/bookmarks/BookmarksPage.vue'),
     },
     {
+      path: '/bs',
+      component: () => import('../views/bookmarks/BSBookmarksPage.vue'),
+    },
+    {
       path: '/skills',
       component: () => import('../views/skills/SkillsPage.vue'),
     },
