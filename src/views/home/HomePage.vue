@@ -11,7 +11,7 @@ const { t } = useTranslator({
       webdev: 'Web Developer',
       intro: 'Hi, I am Samuel. A passionate ',
       highlight: 'frontend',
-      intro2: ' web developer with over 5 years of experience.',
+      intro2: ' web developer with over 6 years of experience.',
     },
     stack: {
       more: 'see more',
