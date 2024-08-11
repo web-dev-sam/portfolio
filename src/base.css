@@ -24,3 +24,7 @@ p {
   content: attr(tooltip);
   @apply absolute bottom-5 left-1/2 z-40 w-max max-w-[30ch] -translate-x-1/2 rounded bg-text px-4 py-2 text-white;
 }
+
+img {
+  @apply select-none;
+}

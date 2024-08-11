@@ -56,7 +56,7 @@ const { t } = useTranslator({
             <IconTailwind />
           </li>
           <li class="text-muted">
-            <router-link to="/skills" class="rounded px-3 py-2 hover:bg-light hover:text-text"
+            <router-link to="/skills" class="rounded px-3 py-2 hover:bg-light hover:text-text select-none"
               >{{ t('stack.more') }}&hellip;</router-link
             >
           </li>
@@ -64,7 +64,7 @@ const { t } = useTranslator({
       </div>
       <div>
         <img
-          class="hidden aspect-square h-96 rounded-lg lg:block"
+          class="hidden aspect-square h-96 rounded-lg lg:block select-none"
           src="/assets/branding/me.jpg"
           alt="Samuel Braun"
         />
