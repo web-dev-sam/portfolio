@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useTranslator } from '@/composables/useTranslator'
-import PageFooter from '@/components/base/PageFooter.vue'
 import IconVue from '@/components/icons/IconVue.vue'
 import IconTailwind from '@/components/icons/IconTailwind.vue'
 import IconTypeScript from '@/components/icons/IconTypeScript.vue'
@@ -9,9 +8,8 @@ const { t } = useTranslator({
   en: {
     hero: {
       webdev: 'Web Developer',
-      intro: 'Hi, I am Samuel. A passionate ',
-      highlight: 'frontend',
-      intro2: ' web developer with over 6 years of experience.',
+      intro:
+        'Hi, I am Samuel. A passionate <span class="font-medium text-primary">frontend</span> web developer with over <span class="font-medium text-primary">6 years</span> of experience.',
     },
     stack: {
       more: 'see more',
@@ -20,9 +18,8 @@ const { t } = useTranslator({
   de: {
     hero: {
       webdev: 'Web Entwickler',
-      intro: 'Hey, ich bin Samuel. Ein leidenschaftlicher ',
-      highlight: 'Frontend ',
-      intro2: 'Webentwickler mit mehr als 5 Jahren Erfahrung.',
+      intro:
+        'Hey, ich bin Samuel. Ein leidenschaftlicher <span class="font-medium text-primary">Frontend</span> Webentwickler mit mehr als <span class="font-medium text-primary">6 Jahren</span> Erfahrung.',
     },
     stack: {
       more: 'und mehr',
@@ -41,11 +38,10 @@ const { t } = useTranslator({
           alt="Samuel Braun"
         />
         <h1 class="text-h1 font-bold">{{ t('hero.webdev') }}</h1>
-        <p class="mx-auto max-w-[50ch] text-balance text-h6 text-muted lg:mx-0">
-          {{ t('hero.intro') }}
-          <span class="font-medium text-primary">{{ t('hero.highlight') }}</span
-          >{{ t('hero.intro2') }}
-        </p>
+        <p
+          class="mx-auto max-w-[50ch] text-balance text-h6 text-muted lg:mx-0"
+          v-html="t('hero.intro')"
+        ></p>
         <h2 class="!lg:mt-32 !mt-16 text-h6 font-bold">Main Stack</h2>
         <ul
           class="mx-auto flex max-w-[40ch] items-center justify-center gap-4 align-middle md:gap-6 lg:mx-0 lg:justify-start lg:gap-8"

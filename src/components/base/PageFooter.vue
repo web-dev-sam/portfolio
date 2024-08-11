@@ -3,6 +3,7 @@ import IconGitHub from '@/components/icons/IconGitHub.vue'
 import IconLinkedIn from '@/components/icons/IconLinkedIn.vue'
 import IconDevTo from '@/components/icons/IconDevTo.vue'
 import IconEmail from '@/components/icons/IconEmail.vue'
+import IconCodersRank from '@/components/icons/IconCodersRank.vue'
 </script>
 
 <template>
@@ -18,6 +19,16 @@ import IconEmail from '@/components/icons/IconEmail.vue'
           rel="noopener noreferrer"
         >
           <IconEmail class="w-6" />
+        </a>
+      </li>
+      <li>
+        <a
+          class="hover:opacity-85"
+          href="https://profile.codersrank.io/user/web-dev-sam"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IconCodersRank />
         </a>
       </li>
       <li>

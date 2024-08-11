@@ -4,7 +4,6 @@ import PageFooter from './components/base/PageFooter.vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-console.log(router.currentRoute.value.name)
 </script>
 
 <template>
