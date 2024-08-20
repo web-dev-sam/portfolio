@@ -18,7 +18,7 @@ onMounted(() => {
   Prism.highlightAll()
 })
 
-const { t, lang } = useTranslator({
+const { t } = useTranslator({
   en: {
     title: "Exploring CSS where it doesn't make sense",
     date: '23 Feb',

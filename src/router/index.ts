@@ -13,7 +13,7 @@ const router = createRouter({
     },
     {
       path: '/bs',
-      name: "ext",
+      name: 'ext',
       component: () => import('../views/bookmarks/BSBookmarksPage.vue'),
     },
     {

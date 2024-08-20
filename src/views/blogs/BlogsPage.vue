@@ -2,7 +2,7 @@
 import BlogCard from '@/views/blogs/components/BlogCard.vue'
 import { useTranslator } from '@/composables/useTranslator'
 
-const { t, lang } = useTranslator({
+const { t } = useTranslator({
   en: {
     blogs: 'Blogs',
   },

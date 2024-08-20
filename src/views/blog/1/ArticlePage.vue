@@ -11,7 +11,7 @@ onMounted(() => {
   Prism.highlightAll()
 })
 
-const { t, lang } = useTranslator({
+const { t } = useTranslator({
   en: {
     title: 'Boost Your JavaScript with JSDoc Typing',
     date: 'Apr 8 2023',

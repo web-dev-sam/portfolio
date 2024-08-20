@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import SkillBadge from '@/components/views/SkillBadge.vue'
-
 type Tag = 'framework' | 'db' | 'icon' | 'learn' | 'tool' | 'ui'
 type Bookmark = {
   img: string
@@ -1232,22 +1230,17 @@ const data: Bookmark[] = [
     img: '',
     title: 'The W3C Markup Validation Service',
     link: 'https://validator.w3.org',
-    description:
-      "W3C's easy-to-use markup validation service, based on SGML and XML parsers.",
+    description: "W3C's easy-to-use markup validation service, based on SGML and XML parsers.",
   },
   {
-    img: [
-      'https://vueschool.io/img/favicons/favicon-32x32.png',
-    ],
+    img: ['https://vueschool.io/img/favicons/favicon-32x32.png'],
     title: 'Vue School | The #1 source for learning Vue.js from experts',
     link: 'https://vueschool.io',
     description:
       'Basic to advanced Vue.js training from core team members & industry experts. In-depth lessons with weekly updates on Pinia, Typescript, Vue Use, Laravel, & more',
   },
   {
-    img: [
-      'https://wakatime.com/favicon-32x32.png',
-    ],
+    img: ['https://wakatime.com/favicon-32x32.png'],
     title: 'WakaTime - Dashboards for developers',
     link: 'https://wakatime.com',
     description: 'Open source IDE plugins for programmers.',
@@ -1281,18 +1274,14 @@ const data: Bookmark[] = [
       'Worldvectorlogo has the largest SVG logo vector collection. All logos work with EPS, AI, PSD and Adobe PDF. No account and unlimited downloads for free.',
   },
   {
-    img: [
-      'https://www.algolia.com/algoliaweb-static-favicons/light-mode/favicon-32x32.png',
-    ],
+    img: ['https://www.algolia.com/algoliaweb-static-favicons/light-mode/favicon-32x32.png'],
     title: 'AI search that understands | Algolia',
     link: 'https://www.algolia.com',
     description:
       'Enterprises and developers use Algolia\u2019s AI search infrastructure to understand users and show them what they\u2019re looking for.',
   },
   {
-    img: [
-      'https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico',
-    ],
+    img: ['https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico'],
     title: 'Cloud Computing Services - Amazon Web Services (AWS)',
     link: 'https://www.aws.com',
     description:
@@ -1305,9 +1294,7 @@ const data: Bookmark[] = [
     description: '',
   },
   {
-    img: [
-      'https://www.blobmaker.app/icons/icon-48x48.png?v=d2064a4d23cc375c9a373bc2d9f2aa35',
-    ],
+    img: ['https://www.blobmaker.app/icons/icon-48x48.png?v=d2064a4d23cc375c9a373bc2d9f2aa35'],
     title: 'Blobmaker - Make organic SVG shapes for your next design',
     link: 'https://www.blobmaker.app',
     description:
@@ -1331,9 +1318,7 @@ const data: Bookmark[] = [
       'A coding practice website for all programming levels \u00e2\u0080\u0093 Join a community of over 3 million developers and improve your coding skills in over 55 programming languages!',
   },
   {
-    img: [
-      'https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-32x32.png',
-    ],
+    img: ['https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-32x32.png'],
     title: 'Coursera | Degrees, Certificates, & Free Online Courses ',
     link: 'https://www.coursera.org',
     description:
@@ -1379,9 +1364,7 @@ const data: Bookmark[] = [
       'Free typography for your next design project (Google Fonts, Fontshare, Fontesk, Font Squirrel, and more)',
   },
   {
-    img: [
-      'https://www.founderandlightning.com/hubfs/web/images/id/favicons/favicon.png',
-    ],
+    img: ['https://www.founderandlightning.com/hubfs/web/images/id/favicons/favicon.png'],
     title: 'Founder and Lightning - launch your tech start-up.',
     link: 'https://www.founderandlightning.com',
     description:
@@ -1727,7 +1710,7 @@ const data: Bookmark[] = [
           target="_blank"
         >
           <div
-            class="group group flex h-12 -translate-x-3 items-center justify-center gap-4 rounded px-3 py-2 hover:bg-light md:justify-start"
+            class="group flex h-12 -translate-x-3 items-center justify-center gap-4 rounded px-3 py-2 hover:bg-light md:justify-start"
           >
             <div class="flex max-h-8 min-w-8 justify-center">
               <img :src="bookmarkItem.img" width="32px" />
