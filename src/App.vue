@@ -7,7 +7,7 @@ const router = useRouter()
 </script>
 
 <template>
-  <div v-if="router.currentRoute.value.name !== 'ext'" class="container px-4 font-sans text-text">
+  <div v-if="router.currentRoute.value.name !== 'ext'" class="container mx-auto px-4 font-sans text-text">
     <div class="flex min-h-lvh flex-col">
       <PageHeader />
       <router-view />
