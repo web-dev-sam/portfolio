@@ -49,7 +49,7 @@ const { t } = useTranslator({
 
 <template>
   <main class="mb-16 text-center md:text-left">
-    <h1 class="!lg:my-32 !my-16 text-center text-h3 font-bold">Skills</h1>
+    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">Skills</h1>
     <div class="flex flex-col justify-around gap-16 md:flex-row md:gap-0 xl:justify-between">
       <section>
         <h2 class="mb-4 text-h6 font-bold">Frameworks</h2>
@@ -213,6 +213,7 @@ const { t } = useTranslator({
 
 <style scoped>
 svg {
-  @apply max-h-8 max-w-8;
+  max-height: calc(var(--spacing) * 8);
+  max-width: calc(var(--spacing) * 8);
 }
 </style>

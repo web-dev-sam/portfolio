@@ -8,7 +8,7 @@ const router = useRouter()
 
 <template>
   <div class="container px-4 font-sans text-text" v-if="router.currentRoute.value.name !== 'ext'">
-    <div class="flex min-h-[100lvh] flex-col">
+    <div class="flex min-h-lvh flex-col">
       <PageHeader />
       <router-view></router-view>
       <span class="flex-1"></span>

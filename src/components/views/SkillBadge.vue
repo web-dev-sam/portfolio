@@ -13,7 +13,7 @@ const props = defineProps<{
     target="_blank"
   >
     <div
-      class="group flex h-12 -translate-x-3 items-center justify-center gap-4 rounded px-3 py-2 hover:bg-light md:justify-start"
+      class="group flex h-12 -translate-x-3 items-center justify-center gap-4 rounded-sm px-3 py-2 hover:bg-light md:justify-start"
     >
       <div class="flex max-h-8 w-8 justify-center">
         <slot />

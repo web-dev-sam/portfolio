@@ -32,7 +32,7 @@ const { t, lang } = useTranslator({
 
 <template>
   <main class="mb-16 text-center md:text-left">
-    <h1 class="!lg:my-32 !my-16 text-center text-h3 font-bold">{{ t('projects') }}</h1>
+    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">{{ t('projects') }}</h1>
     <section class="flex flex-col gap-4">
       <ProjectCard
         name="Beat Timer"
@@ -97,7 +97,7 @@ const { t, lang } = useTranslator({
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-[#dc2626] text-white">{{ t('hard') }}</TextBadge>
+          <TextBadge class="bg-hard text-white">{{ t('hard') }}</TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
@@ -233,6 +233,7 @@ const { t, lang } = useTranslator({
 
 <style scoped>
 svg {
-  @apply max-h-8 max-w-8;
+  max-height: calc(var(--spacing) * 8);
+  max-width: calc(var(--spacing) * 8);
 }
 </style>

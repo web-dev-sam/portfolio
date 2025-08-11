@@ -20,8 +20,8 @@ const { t } = useTranslator({
 </script>
 
 <template>
-  <main class="mb-16 text-center">
-    <div class="!lg:mt-24 !mb-12 !mt-12">
+  <main class="mb-16 prose lg:prose-lg prose-p:text-justify max-w-full">
+    <div class="!lg:mt-24 mb-12! mt-12!">
       <img
         class="w-full rounded-lg object-cover"
         src="/assets/blogs/2/cover.jpg"
@@ -29,7 +29,7 @@ const { t } = useTranslator({
       />
     </div>
     <h1 class="text-center text-h3 font-bold">{{ t('title') }}</h1>
-    <span class="mt-4 block text-muted">{{ t('date') }}</span>
+    <span class="mt-4 block text-muted text-center">{{ t('date') }}</span>
     <div class="mt-6 flex justify-center gap-2">
       <TextBadge class="bg-light">
         <span class="text-[1.1em] text-[#c743ff]">#</span> webdev
@@ -426,36 +426,8 @@ if (isCurrentFieldOnRight && valueOfRightField) {
 </template>
 
 <style scoped>
-h2 {
-  @apply !mt-12 mb-3 text-h4 font-bold;
-}
-
-h3 {
-  @apply !mt-8 mb-2 text-h5 font-bold;
-}
-
-ol {
-  @apply my-2 ml-4 list-inside list-decimal;
-}
-
-ul {
-  @apply my-2 ml-4 list-inside list-disc;
-}
-
-a {
-  @apply underline;
-}
-
 pre {
   border: none !important;
   background-color: #141414 !important;
-}
-
-:not(pre) > code {
-  @apply text-nowrap rounded bg-light px-2 py-1;
-}
-
-.content {
-  @apply text-center leading-8 sm:text-justify;
 }
 </style>

@@ -51,7 +51,7 @@ const langFlag = computed(
       <li>
         <button
           class="flex h-full items-center"
-          :class="cantTranslate ? 'cursor-not-allowed opacity-40' : ''"
+          :class="cantTranslate ? 'cursor-not-allowed opacity-40' : 'cursor-pointer'"
           @click="lang = lang === 'en' ? 'de' : 'en'"
           :aria-label="lang === 'en' ? 'Deutsch' : 'English'"
           :title="

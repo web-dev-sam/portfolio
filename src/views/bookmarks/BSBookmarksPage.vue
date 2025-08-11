@@ -193,7 +193,7 @@ const data: Bookmark[] = [
 
 <template>
   <main class="mb-16 text-center md:text-left">
-    <h1 class="!lg:my-32 !my-16 text-center text-h3 font-bold">BeatSaber Links</h1>
+    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">BeatSaber Links</h1>
     <div class="flex flex-col justify-around gap-16">
       <div class="space-y-2">
         <a
@@ -205,7 +205,7 @@ const data: Bookmark[] = [
           target="_blank"
         >
           <div
-            class="group flex h-12 -translate-x-3 items-center justify-center gap-4 rounded px-3 py-2 hover:bg-light md:justify-start"
+            class="group flex h-12 -translate-x-3 items-center justify-center gap-4 rounded-sm px-3 py-2 hover:bg-light md:justify-start"
           >
             <div class="flex max-h-8 min-w-8 justify-center">
               <img :src="bookmarkItem.img" width="32px" />
@@ -227,6 +227,7 @@ const data: Bookmark[] = [
 
 <style scoped>
 svg {
-  @apply max-h-8 max-w-8;
+  max-height: calc(var(--spacing) * 8);
+  max-width: calc(var(--spacing) * 8);
 }
 </style>

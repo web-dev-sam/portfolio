@@ -167,7 +167,7 @@ function openModal(src: string) {
                 <strong>Interactions:</strong>
                 <img
                   src="/assets/projects/beat-timer/thisisfine.gif"
-                  class="float-right w-32 rounded"
+                  class="float-right w-32 rounded-sm"
                   alt="😅"
                 />
                 I thought I was done with math after all the audio stuff, but then I had to figure
@@ -180,7 +180,7 @@ function openModal(src: string) {
                 <strong>Interaktionen:</strong>
                 <img
                   src="/assets/projects/beat-timer/thisisfine.gif"
-                  class="float-right w-32 rounded"
+                  class="float-right w-32 rounded-sm"
                   alt="😅"
                 />
                 Ich dachte, ich wäre mit der Mathematik nach all dem Audiozeugs fertig, aber dann
@@ -234,25 +234,25 @@ function openModal(src: string) {
           <img
             src="/assets/projects/beat-timer/bt0.jpg"
             alt="Screenshot 1"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/beat-timer/bt0.jpg')"
           />
           <img
             src="/assets/projects/beat-timer/bt1.jpg"
             alt="Screenshot 2"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/beat-timer/bt1.jpg')"
           />
           <img
             src="/assets/projects/beat-timer/bt2.jpg"
             alt="Screenshot 3"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/beat-timer/bt2.jpg')"
           />
           <img
             src="/assets/projects/beat-timer/bt3.jpg"
             alt="Screenshot 4"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/beat-timer/bt3.jpg')"
           />
         </div>
