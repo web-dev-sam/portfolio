@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Prism from 'prismjs'
-import { useTranslator } from '@/composables/useTranslator'
-import TextBadge from '@/components/views/TextBadge.vue'
 import { onMounted } from 'vue'
+import TextBadge from '@/components/views/TextBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
 
 import 'prismjs/components/prism-scss'
 import '@/views/blogs/styles/prism.css'
@@ -20,7 +20,7 @@ onMounted(() => {
 
 const { t } = useTranslator({
   en: {
-    title: "Exploring CSS where it doesn't make sense",
+    title: 'Exploring CSS where it doesn\'t make sense',
     date: '23 Feb',
   },
 })
@@ -33,9 +33,11 @@ const { t } = useTranslator({
         class="w-full rounded-lg object-cover"
         src="/assets/blogs/3/cover 2x.jpg"
         alt="Boost Your JavaScript with JSDoc Typing"
-      />
+      >
     </div>
-    <h1 class="text-center text-h3 font-bold">{{ t('title') }}</h1>
+    <h1 class="text-center text-h3 font-bold">
+      {{ t('title') }}
+    </h1>
     <span class="mt-4 block text-muted text-center">{{ t('date') }}</span>
     <div class="mt-6 flex justify-center gap-2">
       <TextBadge class="bg-light">
@@ -73,16 +75,14 @@ const { t } = useTranslator({
           autoplay
           loop
           muted
-        ></video>
+        />
 
         <h2>Understanding the core of CSS</h2>
         <p>
           Before we dive into more specific CSS traps, let's have a look at core concepts to build a
           fundamental intuition on how CSS works.
-          <em
-            >Having the right mental model helps a lot in predicting how CSS will behave in
-            different scenarios.</em
-          >
+          <em>Having the right mental model helps a lot in predicting how CSS will behave in
+            different scenarios.</em>
         </p>
         <p>
           CSS started as a simple language to style documents. You could write paragraphs, headings,
@@ -158,10 +158,8 @@ const { t } = useTranslator({
             up as much width as it needs and will continue on the same line if there is enough
             space. These elements are called inline-level elements. Examples are <code>span</code>,
             <code>a</code>, <code>strong</code>, <code>em</code>, etc.
-            <em
-              >You can't change the width or height of inline-level elements nor can you add top and
-              bottom margins.</em
-            >
+            <em>You can't change the width or height of inline-level elements nor can you add top and
+              bottom margins.</em>
           </li>
         </ul>
         <p>
@@ -174,7 +172,8 @@ const { t } = useTranslator({
           last element if there is enough space and the children will behave like flex items. Here
           are a few more:
         </p>
-        <pre><code class="language-css" v-html="`/* Current */ /* New Syntax */
+        <pre><code
+class="language-css" v-html="`/* Current */ /* New Syntax */
 display: block; /* display: block flow; */
 display: inline; /* display: inline flow; */
 display: inline-block; /* display: inline flow-root; */
@@ -182,7 +181,8 @@ display: flex; /* display: block flex; */
 display: inline-flex; /* display: inline flex; */
 display: grid; /* display: block grid; */
 display: inline-grid; /* display: inline grid; */
-display: flow-root; /* display: block flow-root; */`"></code></pre>
+display: flow-root; /* display: block flow-root; */`"
+        /></pre>
         <p>This brings us to the next core concept&hellip;</p>
 
         <h3>Layout Modes</h3>
@@ -239,7 +239,7 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
           autoplay
           loop
           muted
-        ></video>
+        />
         <p>Margins collapse happens in the following scenarios (these are not all of the rules):</p>
         <ul>
           <li>The elements are adjacent.</li>
@@ -289,12 +289,10 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
             padding: 1em;
           "
         >
-          <span
-            >See the Pen
+          <span>See the Pen
             <a href="https://codepen.io/web-dev-sam/pen/JjzQyPj"> Margin Collapse Demo</a> by Samuel
             Braun (<a href="https://codepen.io/web-dev-sam">@web-dev-sam</a>) on
-            <a href="https://codepen.io">CodePen</a>.</span
-          >
+            <a href="https://codepen.io">CodePen</a>.</span>
         </p>
         <p>
           Generally, you shouldn't use margins for everything. When you have a card, section,
@@ -314,10 +312,12 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
           one essentially putting a margin between all children just like the
           <code>gap</code> property of flex.
         </p>
-        <pre><code class="language-css" v-html="`/* Add margin-top to all children except the first one */
+        <pre><code
+class="language-css" v-html="`/* Add margin-top to all children except the first one */
 .section > * + * {
   margin-top: 1rem;
-}`"></code></pre>
+}`"
+        /></pre>
         <p>
           If you use Tailwind CSS you can use the <code>space-y</code> class to achieve the same
           effect.
@@ -391,7 +391,7 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
           autoplay
           loop
           muted
-        ></video>
+        />
         <p>
           Oof, that's a lot of ways to create a stacking context. So how can we avoid this? Well,
           you can't really avoid it but you can decrease the chance of fighting with z-index in the
@@ -418,13 +418,15 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
           which styles will win. To understand specificity, consider an example where we have an
           HTML element with both a class and an ID selector applied to it:
         </p>
-        <pre><code class="language-css" v-html="`#product-highlight {
+        <pre><code
+class="language-css" v-html="`#product-highlight {
   background-color: yellow;
 }
 
 .product {
   background-color: blue;
-}`"></code></pre>
+}`"
+        /></pre>
         <p>
           Despite both styles applying to the same element, the background color will be yellow
           because ID selectors have a higher specificity than class selectors. The same goes for
@@ -458,7 +460,8 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
   &lt;h2 class=&quot;card__title&quot;&gt;Product Name&lt;/h2&gt;
   &lt;p class=&quot;card__description&quot;&gt;Product Description&lt;/p&gt;
 &lt;/div></code></pre>
-        <pre><code class="language-css" v-html="`.card {
+        <pre><code
+class="language-css" v-html="`.card {
   ...;
 }
 
@@ -471,7 +474,8 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
 }
 .card__description {
   ...;
-}`"></code></pre>
+}`"
+        /></pre>
         <p>
           By using only class selectors, all selectors have the same specificity level and you won't
           run into specificity issues. Another issue I've often seen is with using SCSS. People
@@ -483,7 +487,8 @@ display: flow-root; /* display: block flow-root; */`"></code></pre>
   &lt;h2 class=&quot;card__title&quot;&gt;Product Name&lt;/h2&gt;
   &lt;p class=&quot;card__description&quot;&gt;Product Description&lt;/p&gt;
 &lt;/div></code></pre>
-        <pre><code class="language-scss" v-html="`/* I'm sorry but this just hurts to look at */
+        <pre><code
+class="language-scss" v-html="`/* I'm sorry but this just hurts to look at */
 section {
   .card {
     .title {
@@ -492,14 +497,15 @@ section {
       }
     }
   }
-}`"></code></pre>
+}`"
+        /></pre>
         <video
           class="mx-auto max-h-96 rounded-lg"
           src="/assets/blogs/3/burn.mp4"
           autoplay
           loop
           muted
-        ></video>
+        />
         <h3>Floats</h3>
         <p>
           For the last gotcha, I want to talk about floats. Floats were mainly used to wrap text
@@ -527,10 +533,8 @@ section {
           are affected (like text) don't use floats.
         </p>
         <p>
-          <em
-            >Instead, use Flexbox or Grid. They are much more powerful and easier to use. For
-            aligning inline-level elements use <code>text-align</code> instead.</em
-          >
+          <em>Instead, use Flexbox or Grid. They are much more powerful and easier to use. For
+            aligning inline-level elements use <code>text-align</code> instead.</em>
         </p>
         <h3>Conclusion</h3>
         <p>
@@ -551,7 +555,7 @@ section {
           autoplay
           loop
           muted
-        ></video>
+        />
         <h2>Resources</h2>
         <ul>
           <li>
@@ -559,93 +563,80 @@ section {
               href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model"
               target="_blank"
               rel="noopener noreferrer"
-              >Box Model</a
-            >
+            >Box Model</a>
           </li>
           <li>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context"
               target="_blank"
               rel="noopener noreferrer"
-              >Stacking Context</a
-            >
+            >Stacking Context</a>
           </li>
           <li>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_mode"
               target="_blank"
               rel="noopener noreferrer"
-              >Layout Mode</a
-            >
+            >Layout Mode</a>
           </li>
           <li>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"
               target="_blank"
               rel="noopener noreferrer"
-              >Display</a
-            >
+            >Display</a>
           </li>
           <li>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing"
               target="_blank"
               rel="noopener noreferrer"
-              >Margin Collapse</a
-            >
+            >Margin Collapse</a>
           </li>
           <li>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block"
               target="_blank"
               rel="noopener noreferrer"
-              >Containing Block</a
-            >
+            >Containing Block</a>
           </li>
           <li>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity"
               target="_blank"
               rel="noopener noreferrer"
-              >Specificity</a
-            >
+            >Specificity</a>
           </li>
           <li>
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/float"
               target="_blank"
               rel="noopener noreferrer"
-              >Float</a
-            >
+            >Float</a>
           </li>
           <li>
             <a
               href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"
               target="_blank"
               rel="noopener noreferrer"
-              >Flexbox</a
-            >
+            >Flexbox</a>
           </li>
           <li>
             <a
               href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids"
               target="_blank"
               rel="noopener noreferrer"
-              >Grid</a
-            >
+            >Grid</a>
           </li>
           <li>
-            <a href="https://getbem.com/introduction/" target="_blank" rel="noopener noreferrer"
-              >BEM</a
-            >
+            <a href="https://getbem.com/introduction/" target="_blank" rel="noopener noreferrer">BEM</a>
           </li>
           <li>
             <a
               href="https://css-tricks.com/lobotomized-owls/"
               target="_blank"
               rel="noopener noreferrer"
-              >Lobotomized Owl</a
-            >
+            >Lobotomized Owl</a>
           </li>
         </ul>
       </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 type Tag = 'framework' | 'db' | 'icon' | 'learn' | 'tool' | 'ui'
-type Bookmark = {
+interface Bookmark {
   img: string
   title: string
   link: string
@@ -141,7 +141,7 @@ const data: Bookmark[] = [
   {
     title: 'Vitest',
     link: 'https://vitest.dev/',
-    description: "A Vite-native testing framework. It's fast!",
+    description: 'A Vite-native testing framework. It\'s fast!',
     img: 'https://vitest.dev/favicon.ico',
     tags: ['tool', 'testing'],
   },
@@ -513,7 +513,7 @@ const data: Bookmark[] = [
     title: 'Flaticon',
     link: 'https://www.flaticon.com/',
     description:
-      "Download now the free icon pack 'Flaticon'. Available source files and icon fonts for both personal and commercial use.",
+      'Download now the free icon pack \'Flaticon\'. Available source files and icon fonts for both personal and commercial use.',
     img: 'https://www.flaticon.com/favicon.ico',
     tags: ['icon'],
   },
@@ -596,7 +596,7 @@ const data: Bookmark[] = [
     title: 'Font Awesome',
     link: 'https://fontawesome.com/',
     description:
-      "The world's most popular and easiest to use icon set just got an upgrade. More icons. More styles. More Options.",
+      'The world\'s most popular and easiest to use icon set just got an upgrade. More icons. More styles. More Options.',
     img: 'https://fontawesome.com/favicon.ico',
     tags: ['icon'],
   },
@@ -626,7 +626,7 @@ const data: Bookmark[] = [
   {
     title: 'Octicons',
     link: 'https://primer.style/octicons/',
-    description: "Your project. GitHub's icons.",
+    description: 'Your project. GitHub\'s icons.',
     img: 'https://primer.style/favicon-32x32.png',
     tags: ['icon'],
   },
@@ -642,7 +642,7 @@ const data: Bookmark[] = [
     title: 'Material Deez Icons (MDI)',
     link: 'https://pictogrammers.com/library/mdi/',
     description:
-      "Material Design Icons' growing icon collection allows designers and developers targeting various platforms to download icons in the format, color and size they need for any project.",
+      'Material Design Icons\' growing icon collection allows designers and developers targeting various platforms to download icons in the format, color and size they need for any project.',
     img: 'https://pictogrammers.com/images/apple-touch-icon.png',
     tags: ['icon'],
   },
@@ -703,7 +703,7 @@ const data: Bookmark[] = [
   {
     title: 'Carbon Components',
     link: 'https://www.carbondesignsystem.com/',
-    description: "Carbon is IBM's open-source design system for products and digital experiences.",
+    description: 'Carbon is IBM\'s open-source design system for products and digital experiences.',
     img: 'https://carbondesignsystem.com/favicon-32x32.png',
     tags: ['ui'],
   },
@@ -748,7 +748,7 @@ const data: Bookmark[] = [
     img: 'https://www.w3schools.com/favicon.ico',
     title: 'W3Schools',
     link: 'https://www.w3schools.com/',
-    description: "The world's largest web developer site",
+    description: 'The world\'s largest web developer site',
     tags: ['learn'],
   },
   {
@@ -770,7 +770,7 @@ const data: Bookmark[] = [
     title: 'Web.dev',
     link: 'https://web.dev/',
     description:
-      "Get the web's modern capabilities on your own sites and apps with useful guidance and analysis from web.dev",
+      'Get the web\'s modern capabilities on your own sites and apps with useful guidance and analysis from web.dev',
     tags: ['learn'],
   },
   {
@@ -793,7 +793,7 @@ const data: Bookmark[] = [
     title: 'Google Ads',
     link: 'https://ads.google.com',
     description:
-      'Sehen Sie sich an, wie Sie mit Google Ads f\u00fcr Ihr Unternehmen werben k\u00f6nnen. Nutzen Sie unsere digitale Werbeplattform f\u00fcr die Kundenakquisition und den Verkauf.',
+      'Sehen Sie sich an, wie Sie mit Google Ads f\u00FCr Ihr Unternehmen werben k\u00F6nnen. Nutzen Sie unsere digitale Werbeplattform f\u00FCr die Kundenakquisition und den Verkauf.',
   },
   {
     img: 'https://lf-adcdn-useast2a.tiktokcdn.com/obj/i18nblog-euttp/favicon_1572925880490.ico',
@@ -984,7 +984,7 @@ const data: Bookmark[] = [
     title: 'Font Flipper',
     link: 'https://fontflipper.com',
     description:
-      "Preview 800+ Google Fonts on top of your own designs, without having to download the fonts first. You'll play 'Hot or Not' to collect fonts you like, and then download them for free for both personal and commercial projects.",
+      'Preview 800+ Google Fonts on top of your own designs, without having to download the fonts first. You\'ll play \'Hot or Not\' to collect fonts you like, and then download them for free for both personal and commercial projects.',
   },
   {
     img: 'https://fontjoy.com/favicon32.gif',
@@ -1014,7 +1014,7 @@ const data: Bookmark[] = [
       'A free SVG wave generator to make unique SVG waves for your next web design. Choose a curve, adjust complexity, randomize!',
   },
   {
-    img: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><mask id='stripes'><rect height='40%' width='100%' fill='white' /><rect height='7%' y='41%' width='100%' fill='white' /><rect height='6%' y='50%' width='100%' fill='white' /><rect height='5%' y='59%' width='100%' fill='white' /><rect height='4%' y='68%' width='100%' fill='white' /><rect height='3%' y='78%' width='100%' fill='white' /><rect height='2%' y='90%' width='100%' fill='white' /><rect height='1%' y='99%' width='100%' fill='white' /></mask><circle mask='url(%23stripes)' fill='rgb(100% 9.5383% 84%)' cx='50' cy='50' r='50'/></svg>",
+    img: 'data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><mask id=\'stripes\'><rect height=\'40%\' width=\'100%\' fill=\'white\' /><rect height=\'7%\' y=\'41%\' width=\'100%\' fill=\'white\' /><rect height=\'6%\' y=\'50%\' width=\'100%\' fill=\'white\' /><rect height=\'5%\' y=\'59%\' width=\'100%\' fill=\'white\' /><rect height=\'4%\' y=\'68%\' width=\'100%\' fill=\'white\' /><rect height=\'3%\' y=\'78%\' width=\'100%\' fill=\'white\' /><rect height=\'2%\' y=\'90%\' width=\'100%\' fill=\'white\' /><rect height=\'1%\' y=\'99%\' width=\'100%\' fill=\'white\' /></mask><circle mask=\'url(%23stripes)\' fill=\'rgb(100% 9.5383% 84%)\' cx=\'50\' cy=\'50\' r=\'50\'/></svg>',
     title: 'GradientStyle',
     link: 'https://gradient.style',
     description: 'Wide gamut Color 4 compliant CSS gradient builder.',
@@ -1116,7 +1116,7 @@ const data: Bookmark[] = [
     title: 'Spotify Advertising',
     link: 'https://ads.spotify.com',
     description:
-      'Du bietest Produkte und Dienstleistungen an. Wir sorgen daf\u00fcr, dass Millionen von H\u00f6rer*innen davon erfahren. Mach Werbung mit Ad Studio f\u00fcr nur 250 \u20ac.',
+      'Du bietest Produkte und Dienstleistungen an. Wir sorgen daf\u00FCr, dass Millionen von H\u00F6rer*innen davon erfahren. Mach Werbung mit Ad Studio f\u00FCr nur 250 \u20AC.',
   },
   {
     img: 'https://playcss.app/assets/favicon.ico',
@@ -1230,7 +1230,7 @@ const data: Bookmark[] = [
     img: '',
     title: 'The W3C Markup Validation Service',
     link: 'https://validator.w3.org',
-    description: "W3C's easy-to-use markup validation service, based on SGML and XML parsers.",
+    description: 'W3C\'s easy-to-use markup validation service, based on SGML and XML parsers.',
   },
   {
     img: ['https://vueschool.io/img/favicons/favicon-32x32.png'],
@@ -1315,7 +1315,7 @@ const data: Bookmark[] = [
     title: 'Codewars - Achieve mastery through coding practice and developer mentorship',
     link: 'https://www.codewars.com',
     description:
-      'A coding practice website for all programming levels \u00e2\u0080\u0093 Join a community of over 3 million developers and improve your coding skills in over 55 programming languages!',
+      'A coding practice website for all programming levels \u00E2\u0080\u0093 Join a community of over 3 million developers and improve your coding skills in over 55 programming languages!',
   },
   {
     img: ['https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-32x32.png'],
@@ -1343,7 +1343,7 @@ const data: Bookmark[] = [
     title: 'Meta for Business: Marketing auf Facebook',
     link: 'https://ads.facebook.com',
     description:
-      'Meta\u00a0for\u00a0Business bietet dir die aktuellsten Neuigkeiten, Werbetipps, Best Practices und Fallstudien zur Verwendung von Facebook, damit du deine Gesch\u00e4ftsziele leichter erreichen kannst.',
+      'Meta\u00A0for\u00A0Business bietet dir die aktuellsten Neuigkeiten, Werbetipps, Best Practices und Fallstudien zur Verwendung von Facebook, damit du deine Gesch\u00E4ftsziele leichter erreichen kannst.',
   },
   {
     img: [
@@ -1373,10 +1373,10 @@ const data: Bookmark[] = [
   {
     img: ['https://www.google.com/images/branding/product/1x/ads_24dp.png'],
     title:
-      '\n      Google Ads\u00a0\u2012 Mit Onlinewerbung Kund*innen gewinnen und mehr Umsatz\n      erzielen\n    ',
+      '\n      Google Ads\u00A0\u2012 Mit Onlinewerbung Kund*innen gewinnen und mehr Umsatz\n      erzielen\n    ',
     link: 'https://ads.google.com',
     description:
-      'Sehen Sie sich an, wie Sie mit Google Ads f\u00fcr Ihr Unternehmen werben k\u00f6nnen. Nutzen Sie unsere digitale Werbeplattform f\u00fcr die Kundenakquisition und den Verkauf.',
+      'Sehen Sie sich an, wie Sie mit Google Ads f\u00FCr Ihr Unternehmen werben k\u00F6nnen. Nutzen Sie unsere digitale Werbeplattform f\u00FCr die Kundenakquisition und den Verkauf.',
   },
   {
     img: [
@@ -1396,7 +1396,7 @@ const data: Bookmark[] = [
     title: 'Compliance Solutions for Websites, Apps and Organizations | iubenda',
     link: 'https://www.iubenda.com',
     description:
-      'iubenda is your 360\u00b0 compliance solution for global data privacy laws. Privacy policy generator, cookie consent management, ROPA, Terms and more.',
+      'iubenda is your 360\u00B0 compliance solution for global data privacy laws. Privacy policy generator, cookie consent management, ROPA, Terms and more.',
   },
   {
     img: ['https://www.kaggle.com/static/images/favicon.ico'],
@@ -1444,7 +1444,7 @@ const data: Bookmark[] = [
     title: 'MingCute Icon _ Carefully Designed Icon Library',
     link: 'https://www.mingcute.com#icons',
     description:
-      "MingCute Icon is a set of simple and exquisite open-source icon library. Whether you're a designer or a developer, it's perfect for use in web and mobile.",
+      'MingCute Icon is a set of simple and exquisite open-source icon library. Whether you\'re a designer or a developer, it\'s perfect for use in web and mobile.',
   },
   {
     img: ['https://www.permit.io/favicon.ico'],
@@ -1461,7 +1461,7 @@ const data: Bookmark[] = [
     title: ' Product Hunt \u2013 The best new products in tech. ',
     link: 'https://www.producthunt.com',
     description:
-      "Product Hunt is a curation of the best new products, every day. Discover the latest mobile apps, websites, and technology products that everyone's talking about.",
+      'Product Hunt is a curation of the best new products, every day. Discover the latest mobile apps, websites, and technology products that everyone\'s talking about.',
   },
   {
     img: [
@@ -1472,7 +1472,7 @@ const data: Bookmark[] = [
     title: 'RecipeTin Eats - A Food Blog Serving Up Quick & Easy Dinner Recipes',
     link: 'https://www.recipetineats.com',
     description:
-      "A food blog with 1500+ delicious, free recipes. Quick and easy dinners, classics done right, incredible one-pot wonders, Asian takeout at home and holiday feasting \u2013 it's all here!",
+      'A food blog with 1500+ delicious, free recipes. Quick and easy dinners, classics done right, incredible one-pot wonders, Asian takeout at home and holiday feasting \u2013 it\'s all here!',
   },
   {
     img: [
@@ -1512,10 +1512,10 @@ const data: Bookmark[] = [
       'https://www.scribbr.de/apple-touch-icon-120x120.png',
       'https://www.scribbr.de/favicon-16x16.png',
     ],
-    title: 'Wir korrigieren Dokumente f\u00fcr Schule, Studium und Job',
+    title: 'Wir korrigieren Dokumente f\u00FCr Schule, Studium und Job',
     link: 'https://www.scribbr.de',
     description:
-      'Nutze unser professionelles Lektorat, unsere Plagiatspr\u00fcfung, unsere Schreibtools und unsere Wissensdatenbank f\u00fcr deine Texte.',
+      'Nutze unser professionelles Lektorat, unsere Plagiatspr\u00FCfung, unsere Schreibtools und unsere Wissensdatenbank f\u00FCr deine Texte.',
   },
   {
     img: [],
@@ -1573,14 +1573,14 @@ const data: Bookmark[] = [
     title: 'UserTesting Human Insight Platform | Improve Customer Experience (CX)',
     link: 'https://www.usertesting.com',
     description:
-      "Whether you're focused on UI, UX Research, Design, or CX, with the UserTesting Platform you can get customer feedback to improve digital experiences and drive innovation",
+      'Whether you\'re focused on UI, UX Research, Design, or CX, with the UserTesting Platform you can get customer feedback to improve digital experiences and drive innovation',
   },
   {
     img: ['https://www.wolframalpha.com/_next/static/images/favicon_1zbE9hjk.ico'],
     title: 'Wolfram|Alpha: Computational Intelligence',
     link: 'https://www.wolframalpha.com',
     description:
-      "Compute answers using Wolfram's breakthrough technology & knowledgebase, relied on by millions of students & professionals. For math, science, nutrition, history, geography, engineering, mathematics, linguistics, sports, finance, music\u2026",
+      'Compute answers using Wolfram\'s breakthrough technology & knowledgebase, relied on by millions of students & professionals. For math, science, nutrition, history, geography, engineering, mathematics, linguistics, sports, finance, music\u2026',
   },
   {
     img: [
@@ -1597,7 +1597,7 @@ const data: Bookmark[] = [
       'https://bookface-static.ycombinator.com/assets/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico',
     ],
     title:
-      "Startup Jobs at YC Companies in Engineering, Product, Design, Remote and more | Y Combinator's Work at a Startup",
+      'Startup Jobs at YC Companies in Engineering, Product, Design, Remote and more | Y Combinator\'s Work at a Startup',
     link: 'https://www.workatastartup.com',
     description: '',
   },
@@ -1684,7 +1684,7 @@ const data: Bookmark[] = [
     title: 'Instagram for Business: Marketing auf Instagram | Instagram for Business',
     link: 'https://business.instagram.com',
     description:
-      'Mehr als zwei Millionen Unternehmen verbinden sich auf Instagram mit Menschen. Erfahre mehr dar\u00fcber, wie du mit Instagram neue Kundschaft erreichst, deine Zielgruppe ausbaust und bestehende Kund*innen ansprichst.',
+      'Mehr als zwei Millionen Unternehmen verbinden sich auf Instagram mit Menschen. Erfahre mehr dar\u00FCber, wie du mit Instagram neue Kundschaft erreichst, deine Zielgruppe ausbaust und bestehende Kund*innen ansprichst.',
   },
   {
     img: ['https://uptimerobot.com/favicon.ico'],
@@ -1698,7 +1698,9 @@ const data: Bookmark[] = [
 
 <template>
   <main class="mb-16 text-center md:text-left">
-    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">My Bookmarks</h1>
+    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">
+      My Bookmarks
+    </h1>
     <div class="flex flex-col justify-around gap-16">
       <div class="space-y-2">
         <a
@@ -1713,7 +1715,7 @@ const data: Bookmark[] = [
             class="group flex h-12 -translate-x-3 items-center justify-center gap-4 rounded-sm px-3 py-2 hover:bg-light md:justify-start"
           >
             <div class="flex max-h-8 min-w-8 justify-center">
-              <img :src="bookmarkItem.img" width="32px" />
+              <img :src="bookmarkItem.img" width="32px">
             </div>
             <div class="min-w-48 truncate text-nowrap text-left">
               {{ bookmarkItem.title }}

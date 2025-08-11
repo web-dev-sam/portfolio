@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import BaseProjectPage from './BaseProjectPage.vue'
-import TextBadge from '@/components/views/TextBadge.vue'
-import IconJavascript from '@/components/icons/IconJavascript.vue'
-import { useTranslator } from '@/composables/useTranslator'
 import { ref } from 'vue'
+import IconJavascript from '@/components/icons/IconJavascript.vue'
+import TextBadge from '@/components/views/TextBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
+import BaseProjectPage from './BaseProjectPage.vue'
 
 const imageModalVisible = ref(false)
 const imageModalSrc = ref('')
@@ -13,7 +13,7 @@ const { t, lang } = useTranslator({
     diff: 'Easy',
     solved: 'Problems Solved',
     chall: 'Challenges I ran into',
-    next: "What I'd do differently next time",
+    next: 'What I\'d do differently next time',
   },
   de: {
     diff: 'Einfach',
@@ -31,11 +31,11 @@ function openModal(src: string) {
 <template>
   <BaseProjectPage
     title="Log7 Glossary"
-    githubLink="https://bitbucket.org/samuel-braun/technical-glossary/src/master/"
-    githubName="Bitbucket"
-    demoLink="https://glossary.webry.com/"
-    :imageModalVisible="imageModalVisible"
-    :imageModalSrc="imageModalSrc"
+    github-link="https://bitbucket.org/samuel-braun/technical-glossary/src/master/"
+    github-name="Bitbucket"
+    demo-link="https://glossary.webry.com/"
+    :image-modal-visible="imageModalVisible"
+    :image-modal-src="imageModalSrc"
     @modal-close="imageModalVisible = false"
   >
     <template #badges>
@@ -44,11 +44,15 @@ function openModal(src: string) {
           Stack
           <template #desc>
             <div class="flex items-center gap-2">
-              <div class="w-4" tooltip="JavaScript"><IconJavascript /></div>
+              <div class="w-4" tooltip="JavaScript">
+                <IconJavascript />
+              </div>
             </div>
           </template>
         </TextBadge>
-        <TextBadge class="bg-easy text-white">{{ t('diff') }}</TextBadge>
+        <TextBadge class="bg-easy text-white">
+          {{ t('diff') }}
+        </TextBadge>
       </div>
     </template>
     <template #description>
@@ -63,7 +67,9 @@ function openModal(src: string) {
     </template>
     <template #content>
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('solved') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('solved') }}
+        </h2>
         <p class="max-w-[80ch] text-body text-muted">
           <span v-if="lang === 'en'">
             The university course was about learning the basics of web development. This project is
@@ -79,7 +85,9 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('chall') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('chall') }}
+        </h2>
         <div class="max-w-[80ch] text-body text-muted">
           <ul class="ml-0 list-outside list-none space-y-2 md:ml-8 md:list-disc">
             <li v-if="lang === 'en'">
@@ -95,7 +103,9 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('next') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('next') }}
+        </h2>
         <p class="max-w-[80ch] text-body text-muted">
           <span v-if="lang === 'en'">
             Put a timer on for the implementation to make it more challenging.
@@ -107,20 +117,22 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-4 text-h4 font-bold">Gallery</h2>
+        <h2 class="mb-4 text-h4 font-bold">
+          Gallery
+        </h2>
         <div class="flex flex-wrap gap-4">
           <img
             src="/assets/projects/log7/gl1.jpg"
             alt="Screenshot 1"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/log7/gl1.jpg')"
-          />
+          >
           <img
             src="/assets/projects/log7/gl2.jpg"
             alt="Screenshot 2"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/log7/gl2.jpg')"
-          />
+          >
         </div>
       </div>
     </template>

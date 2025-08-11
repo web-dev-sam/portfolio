@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import { useTranslator } from '@/composables/useTranslator'
-import UButton from '@/components/base/UButton.vue'
 import { RouterLink } from 'vue-router'
+import UButton from '@/components/base/UButton.vue'
+import { useTranslator } from '@/composables/useTranslator'
 
-const props = defineProps<{
+defineProps<{
   title: string
   githubLink: string
   demoLink: string
   githubName: string
   imageModalVisible: boolean
   imageModalSrc: string
+}>()
+
+defineEmits<{
+  (e: 'modal-close'): void
 }>()
 
 const { t } = useTranslator({
@@ -39,7 +43,9 @@ const { t } = useTranslator({
     <div>
       <span class="-mb-2 mt-4 inline-block text-body uppercase text-muted">{{ t('project') }}</span>
       <div class="-mt-2 flex flex-col items-center justify-between md:flex-row">
-        <h1 class="text-h1 font-bold">{{ props.title }}</h1>
+        <h1 class="text-h1 font-bold">
+          {{ title }}
+        </h1>
         <div>
           <slot name="badges" />
         </div>
@@ -50,15 +56,21 @@ const { t } = useTranslator({
     </div>
 
     <div class="flex justify-center gap-2 md:justify-start">
-      <UButton variant="ghost" :to="githubLink" type="link">{{ githubName }}</UButton>
-      <UButton variant="primary" :to="demoLink" type="link">{{ t('demo') }}</UButton>
+      <UButton variant="ghost" :to="githubLink" type="link">
+        {{ githubName }}
+      </UButton>
+      <UButton variant="primary" :to="demoLink" type="link">
+        {{ t('demo') }}
+      </UButton>
     </div>
 
     <div class="mt-16! space-y-8">
       <slot name="content" />
     </div>
 
-    <h2 class="mt-16! hidden text-h4 font-bold">Gallery</h2>
+    <h2 class="mt-16! hidden text-h4 font-bold">
+      Gallery
+    </h2>
     <slot name="gallery" />
     <div>
       <div
@@ -66,7 +78,7 @@ const { t } = useTranslator({
         class="bg-black fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-[#000]/70 backdrop-blur-sm"
         @click="$emit('modal-close')"
       >
-        <img :src="imageModalSrc" class="max-h-[90vh] max-w-[90vw] rounded-sm" />
+        <img :src="imageModalSrc" class="max-h-[90vh] max-w-[90vw] rounded-sm">
       </div>
     </div>
   </main>

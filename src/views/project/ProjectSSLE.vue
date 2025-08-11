@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import BaseProjectPage from './BaseProjectPage.vue'
-import TextBadge from '@/components/views/TextBadge.vue'
-import IconJavascript from '@/components/icons/IconJavascript.vue'
-import { useTranslator } from '@/composables/useTranslator'
 import { ref } from 'vue'
+import IconJavascript from '@/components/icons/IconJavascript.vue'
+import TextBadge from '@/components/views/TextBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
+import BaseProjectPage from './BaseProjectPage.vue'
 
 const imageModalVisible = ref(false)
 const imageModalSrc = ref('')
@@ -13,7 +13,7 @@ const { t, lang } = useTranslator({
     diff: 'Easy',
     solved: 'Problems Solved',
     chall: 'Challenges I ran into',
-    next: "What I'd do differently next time",
+    next: 'What I\'d do differently next time',
   },
   de: {
     diff: 'Einfach',
@@ -32,11 +32,11 @@ function openModal(src: string) {
 <template>
   <BaseProjectPage
     title="ScoreSaber Leaderboard Extension"
-    githubLink="https://github.com/web-dev-sam/beatsaver-leaderboard-buttons"
-    githubName="GitHub"
-    demoLink="https://chromewebstore.google.com/detail/scoresaber-buttons/mjpdbfngmbgokogdekgacbonopbkaclc"
-    :imageModalVisible="imageModalVisible"
-    :imageModalSrc="imageModalSrc"
+    github-link="https://github.com/web-dev-sam/beatsaver-leaderboard-buttons"
+    github-name="GitHub"
+    demo-link="https://chromewebstore.google.com/detail/scoresaber-buttons/mjpdbfngmbgokogdekgacbonopbkaclc"
+    :image-modal-visible="imageModalVisible"
+    :image-modal-src="imageModalSrc"
     @modal-close="imageModalVisible = false"
   >
     <template #badges>
@@ -45,11 +45,15 @@ function openModal(src: string) {
           Stack
           <template #desc>
             <div class="flex items-center gap-2">
-              <div class="w-4" tooltip="JavaScript"><IconJavascript /></div>
+              <div class="w-4" tooltip="JavaScript">
+                <IconJavascript />
+              </div>
             </div>
           </template>
         </TextBadge>
-        <TextBadge class="bg-easy text-white">{{ t('diff') }}</TextBadge>
+        <TextBadge class="bg-easy text-white">
+          {{ t('diff') }}
+        </TextBadge>
       </div>
     </template>
     <template #description>
@@ -64,7 +68,9 @@ function openModal(src: string) {
     </template>
     <template #content>
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('solved') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('solved') }}
+        </h2>
         <p class="max-w-[80ch] text-body text-muted">
           <span v-if="lang === 'en'">
             For the game Beat Saber, there are a few related sites that are frequently used
@@ -82,7 +88,9 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('next') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('next') }}
+        </h2>
         <p class="max-w-[80ch] text-body text-muted">
           <span v-if="lang === 'en'">
             Maybe adding some more features for other pages and not only for songs.
@@ -95,14 +103,16 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-4 text-h4 font-bold">Gallery</h2>
+        <h2 class="mb-4 text-h4 font-bold">
+          Gallery
+        </h2>
         <div class="flex flex-wrap gap-4">
           <img
             src="/assets/projects/bse/be1.jpg"
             alt="Screenshot 1"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/bse/be1.jpg')"
-          />
+          >
         </div>
       </div>
     </template>

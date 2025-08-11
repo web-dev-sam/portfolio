@@ -4,9 +4,9 @@ const {
   to = '',
   type = 'link',
 } = defineProps<{
-  variant: 'primary' | 'ghost'
+  variant?: 'primary' | 'ghost'
   to?: string
-  type: 'link' | 'button' | 'visual'
+  type?: 'link' | 'button' | 'visual'
 }>()
 </script>
 

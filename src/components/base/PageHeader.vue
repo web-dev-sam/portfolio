@@ -29,10 +29,10 @@ const langFlag = computed(
     <ul class="flex items-center justify-between gap-8 leading-10">
       <li>
         <router-link to="/">
-          <img src="/assets/branding/logo.svg" width="40" alt="Logo" />
+          <img src="/assets/branding/logo.svg" width="40" alt="Logo">
         </router-link>
       </li>
-      <li class="hidden flex-1 md:block"></li>
+      <li class="hidden flex-1 md:block" />
       <li>
         <router-link to="/skills" class="font-medium hover:opacity-60">
           {{ t('header.skills') }}
@@ -52,7 +52,6 @@ const langFlag = computed(
         <button
           class="flex h-full items-center"
           :class="cantTranslate ? 'cursor-not-allowed opacity-40' : 'cursor-pointer'"
-          @click="lang = lang === 'en' ? 'de' : 'en'"
           :aria-label="lang === 'en' ? 'Deutsch' : 'English'"
           :title="
             cantTranslate
@@ -61,8 +60,9 @@ const langFlag = computed(
                 ? 'Deutsch'
                 : 'English'
           "
+          @click="lang = lang === 'en' ? 'de' : 'en'"
         >
-          <img :src="langFlag" width="32" height="32" />
+          <img :src="langFlag" width="32" height="32">
         </button>
       </li>
     </ul>

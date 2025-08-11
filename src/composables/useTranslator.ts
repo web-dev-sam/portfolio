@@ -6,14 +6,15 @@ const cantTranslate = ref(false)
 const localStorageLang = localStorage.getItem('lang') as 'en' | 'de' | null
 if (localStorageLang) {
   currentLanguage.value = localStorageLang
-} else {
+}
+else {
   const browserLang = navigator.language.slice(0, 2).toLowerCase()
   if (browserLang === 'de') {
     currentLanguage.value = 'de'
   }
 }
 
-export function useTranslator<T extends Record<string, any>>(messages: { en: T; de?: T }) {
+export function useTranslator<T extends Record<string, any>>(messages: { en: T, de?: T }) {
   const { t, locale } = useI18n({
     messages,
   })

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import IconVue from '@/components/icons/IconVue.vue'
-import BaseProjectPage from './BaseProjectPage.vue'
-import TextBadge from '@/components/views/TextBadge.vue'
-import IconTypeScript from '@/components/icons/IconTypeScript.vue'
-import IconTailwind from '@/components/icons/IconTailwind.vue'
-import { useTranslator } from '@/composables/useTranslator'
 import { ref } from 'vue'
+import IconTailwind from '@/components/icons/IconTailwind.vue'
+import IconTypeScript from '@/components/icons/IconTypeScript.vue'
+import IconVue from '@/components/icons/IconVue.vue'
+import TextBadge from '@/components/views/TextBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
+import BaseProjectPage from './BaseProjectPage.vue'
 
 const imageModalVisible = ref(false)
 const imageModalSrc = ref('')
@@ -15,7 +15,7 @@ const { t, lang } = useTranslator({
     diff: 'Hardcore',
     solved: 'Problems Solved',
     chall: 'Challenges I ran into',
-    next: "What I'd do differently next time",
+    next: 'What I\'d do differently next time',
   },
   de: {
     diff: 'Hardcore',
@@ -34,11 +34,11 @@ function openModal(src: string) {
 <template>
   <BaseProjectPage
     title="Beat Timer"
-    githubLink="https://github.com/web-dev-sam/beat-timer"
-    githubName="GitHub"
-    demoLink="https://beat-timer.webry.com/"
-    :imageModalVisible="imageModalVisible"
-    :imageModalSrc="imageModalSrc"
+    github-link="https://github.com/web-dev-sam/beat-timer"
+    github-name="GitHub"
+    demo-link="https://beat-timer.webry.com/"
+    :image-modal-visible="imageModalVisible"
+    :image-modal-src="imageModalSrc"
     @modal-close="imageModalVisible = false"
   >
     <template #badges>
@@ -47,13 +47,21 @@ function openModal(src: string) {
           Stack
           <template #desc>
             <div class="flex items-center gap-2">
-              <div class="w-4" tooltip="Vue"><IconVue /></div>
-              <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
-              <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
+              <div class="w-4" tooltip="Vue">
+                <IconVue />
+              </div>
+              <div class="w-4" tooltip="TypeScript">
+                <IconTypeScript />
+              </div>
+              <div class="w-4" tooltip="TailwindCSS">
+                <IconTailwind />
+              </div>
             </div>
           </template>
         </TextBadge>
-        <TextBadge class="bg-extreme text-white">{{ t('diff') }}</TextBadge>
+        <TextBadge class="bg-extreme text-white">
+          {{ t('diff') }}
+        </TextBadge>
       </div>
     </template>
     <template #description>
@@ -70,7 +78,9 @@ function openModal(src: string) {
     </template>
     <template #content>
       <div class="leading-normal">
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('solved') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('solved') }}
+        </h2>
         <p class="mb-4 max-w-[80ch] text-body text-muted">
           <span v-if="lang === 'en'">
             I wanted to create a tool that would make it as easy as possible for rhythm game level
@@ -103,10 +113,16 @@ function openModal(src: string) {
       </div>
 
       <div class="leading-normal">
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('chall') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('chall') }}
+        </h2>
         <div class="max-w-[80ch] text-body text-muted">
-          <p class="mb-4" v-if="lang === 'en'">Oh boy, here we go:</p>
-          <p class="mb-4" v-else>Oh Gott, los geht's:</p>
+          <p v-if="lang === 'en'" class="mb-4">
+            Oh boy, here we go:
+          </p>
+          <p v-else class="mb-4">
+            Oh Gott, los geht's:
+          </p>
           <ul class="ml-0 list-outside list-none space-y-2 md:ml-8 md:list-disc">
             <li>
               <span v-if="lang === 'en'">
@@ -169,7 +185,7 @@ function openModal(src: string) {
                   src="/assets/projects/beat-timer/thisisfine.gif"
                   class="float-right w-32 rounded-sm"
                   alt="😅"
-                />
+                >
                 I thought I was done with math after all the audio stuff, but then I had to figure
                 out the hard way how many factors there are to placing everything pixel perfect on
                 the screen (Spectogram zoom, audio position, beat offset, BPM, mouse position, css
@@ -182,7 +198,7 @@ function openModal(src: string) {
                   src="/assets/projects/beat-timer/thisisfine.gif"
                   class="float-right w-32 rounded-sm"
                   alt="😅"
-                />
+                >
                 Ich dachte, ich wäre mit der Mathematik nach all dem Audiozeugs fertig, aber dann
                 musste ich auf die harte Weise herausfinden, wie viele Faktoren es gibt, um alles
                 pixelgenau auf dem Bildschirm zu platzieren (Spektrogramm-Zoom, Audioposition,
@@ -211,14 +227,15 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('next') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('next') }}
+        </h2>
         <p class="max-w-[80ch] text-body text-muted">
           <span v-if="lang === 'en'">
             I started this project as a challenge to myself to see if I could create something as
             complex as this purely in the browser. I learned a lot, but I in a production
             environment, I would rather use a backend service to handle everything besides
-            interactions and visualizations. But that would be boring, wouldn't it?</span
-          >
+            interactions and visualizations. But that would be boring, wouldn't it?</span>
           <span v-else>
             Ich habe dieses Projekt als Herausforderung an mich selbst begonnen, um zu sehen, ob ich
             etwas so Komplexes rein im Browser erstellen könnte. Ich habe viel gelernt, aber in
@@ -229,32 +246,34 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-4 text-h4 font-bold">Gallery</h2>
+        <h2 class="mb-4 text-h4 font-bold">
+          Gallery
+        </h2>
         <div class="flex flex-wrap gap-4">
           <img
             src="/assets/projects/beat-timer/bt0.jpg"
             alt="Screenshot 1"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/beat-timer/bt0.jpg')"
-          />
+          >
           <img
             src="/assets/projects/beat-timer/bt1.jpg"
             alt="Screenshot 2"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/beat-timer/bt1.jpg')"
-          />
+          >
           <img
             src="/assets/projects/beat-timer/bt2.jpg"
             alt="Screenshot 3"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/beat-timer/bt2.jpg')"
-          />
+          >
           <img
             src="/assets/projects/beat-timer/bt3.jpg"
             alt="Screenshot 4"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/beat-timer/bt3.jpg')"
-          />
+          >
         </div>
       </div>
     </template>

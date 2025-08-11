@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Prism from 'prismjs'
-import { useTranslator } from '@/composables/useTranslator'
-import TextBadge from '@/components/views/TextBadge.vue'
 import { onMounted } from 'vue'
+import TextBadge from '@/components/views/TextBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
 
 import 'prismjs/components/prism-typescript'
 import '@/views/blogs/styles/prism.css'
@@ -26,9 +26,11 @@ const { t } = useTranslator({
         class="w-full rounded-lg object-cover"
         src="/assets/blogs/1/cover.jpg"
         alt="Boost Your JavaScript with JSDoc Typing"
-      />
+      >
     </div>
-    <h1 class="text-center text-h3 font-bold">{{ t('title') }}</h1>
+    <h1 class="text-center text-h3 font-bold">
+      {{ t('title') }}
+    </h1>
     <span class="mt-4 block text-muted text-center">{{ t('date') }}</span>
     <div class="mt-6 flex justify-center gap-2">
       <TextBadge class="bg-light">
@@ -61,7 +63,7 @@ const { t } = useTranslator({
           autoplay
           loop
           muted
-        ></video>
+        />
         <p>
           This is my first blog post so I really appreciate any feedback you have. If you have any
           questions or suggestions, feel free to leave a comment below.
@@ -101,10 +103,10 @@ const { t } = useTranslator({
             target="_blank"
             rel="noopener noreferrer"
           >
-            Modern JavaScript Tutorial</a
-          >.
+            Modern JavaScript Tutorial</a>.
         </p>
-        <pre><code class="language-typescript" v-html="`// TypeScript
+        <pre><code
+class="language-typescript" v-html="`// TypeScript
 const name: string = 'John Doe';
 const age: number = 25;
 const average: number = 3.14;
@@ -131,7 +133,8 @@ nullable = 5;
 
 /** @type {string | undefined} */
 let unassigned;
-unassigned = 'John Doe';`"></code></pre>
+unassigned = 'John Doe';`"
+        /></pre>
         <p>
           Note that JSDoc comments start with two asterisks <code>/**</code> and end with a regular
           asterisk followed by a forward slash <code>*/</code>. If a comment block starts with a
@@ -146,16 +149,19 @@ unassigned = 'John Doe';`"></code></pre>
           common and widely accepted. The second is to use the <code>Array</code> generic type,
           which is less common.
         </p>
-        <pre><code class="language-typescript" v-html="`// arrays
+        <pre><code
+class="language-typescript" v-html="`// arrays
 const numbers: number[] = [1, 2, 3];
-const names: Array&lt;string&gt; = ['John', 'Jane', 'Doe'];`"></code></pre>
+const names: Array&lt;string&gt; = ['John', 'Jane', 'Doe'];`"
+        /></pre>
         <p>
           Though the <code>[]</code> syntax is simpler and easier to read, it becomes harder to read
           when we have multidimensional arrays or complex types. In such cases, the
           <code>Array</code> generic type is more readable. In the end, it's a matter of personal
           preference so you can choose whichever you prefer.
         </p>
-        <pre><code class="language-typescript" v-html="`// More readable as Array<Array<number>> since it
+        <pre><code
+class="language-typescript" v-html="`// More readable as Array<Array<number>> since it
 // clearly shows the nesting structure which makes
 // it easier to visualize the array in our heads
 const matrix: Array<Array<number>> = [[1, 2], [3, 4]];
@@ -166,7 +172,8 @@ const matrix: number[][] = [[1, 2], [3, 4]];
 const numbers = [[1, 2], [3, 4]];
 
 /** @type {Array<Array<number>>} */
-const numbers = [[1, 2], [3, 4]];`"></code></pre>
+const numbers = [[1, 2], [3, 4]];`"
+        /></pre>
         <p>
           Tuples are similar to arrays, but they have a fixed length and each element has a specific
           type. They are useful when you want to represent a value with a fixed number of elements,
@@ -174,7 +181,8 @@ const numbers = [[1, 2], [3, 4]];`"></code></pre>
           coordinate in a 2D plane, where the first element is the x-coordinate and the second
           element is the y-coordinate:
         </p>
-        <pre><code class="language-typescript" v-html="`// tuples
+        <pre><code
+class="language-typescript" v-html="`// tuples
 const coordinates: [number, number] = [40.7128, -74.0060];
 const person: [string, number] = ['John Doe', 30];
 
@@ -183,7 +191,8 @@ const person: [string, number] = ['John Doe', 30];
 const coordinates = [40.7128, -74.0060];
 
 /** @type {[string, number]} */
-const person = ['John Doe', 30];`"></code></pre>
+const person = ['John Doe', 30];`"
+        /></pre>
         <h3>Objects and interfaces 🏢</h3>
         <p>
           TypeScript allows you to define the structure of objects using object types and
@@ -196,7 +205,8 @@ const person = ['John Doe', 30];`"></code></pre>
           more suitable when you want to create ad-hoc types for specific functions or components
           without cluttering your code with separate interface declarations.
         </p>
-        <pre><code class="language-typescript" v-html="`// inline object typing
+        <pre><code
+class="language-typescript" v-html="`// inline object typing
 const user: { name: string; age: number } = {
   name: 'John Doe',
   age: 25,
@@ -214,7 +224,8 @@ const user: User = { name: 'John Doe', age: 25 };
 const user = { name: 'John Doe', age: 25 };
 
 /** @type {User} */
-const user = { name: 'John Doe', age: 25 };`"></code></pre>
+const user = { name: 'John Doe', age: 25 };`"
+        /></pre>
         <p>
           We can define interfaces and custom types in JSDoc using the <code>@typedef</code> tag.
           The tag is followed by the type and the name we want to assign it. There are two ways to
@@ -224,7 +235,8 @@ const user = { name: 'John Doe', age: 25 };`"></code></pre>
           use the <code>@typedef</code> tag to define the type inline. The second method is more
           concise and easier to read, but it doesn't allow you to add descriptions to each property.
         </p>
-        <pre><code class="language-typescript" v-html="`// Using @property tag
+        <pre><code
+class="language-typescript" v-html="`// Using @property tag
 /**
  * @typedef {Object} User
  * @property {string} name The user's full name.
@@ -236,7 +248,8 @@ const user = { name: 'John Doe', age: 25 };
 
 // Using inline type definition
 /** @typedef {{ name: string; age: number }} User */
-const user = { name: 'John Doe', age: 25 };`"></code></pre>
+const user = { name: 'John Doe', age: 25 };`"
+        /></pre>
         <h3>Optional properties 📝</h3>
         <p>
           To mark properties as optional, add a question mark <code>?</code> after the property
@@ -244,7 +257,8 @@ const user = { name: 'John Doe', age: 25 };`"></code></pre>
           can use the <code>@property</code> tag to mark a property as optional in JSDoc by wrapping
           the property name in square brackets <code>[property]</code>.
         </p>
-        <pre><code class="language-typescript" v-html="`// Using optional properties
+        <pre><code
+class="language-typescript" v-html="`// Using optional properties
 interface User {
   name: string;
   age?: number;
@@ -255,7 +269,8 @@ interface User {
  * @typedef {Object} User
  * @property {string} name The user's full name.
  * @property {number} [age] The user's age.
- */`"></code></pre>
+ */`"
+        /></pre>
         <h3>Enums and unions 🎲</h3>
         <p>
           TypeScript introduces enums and unions to help you manage a set of named constants and
@@ -265,7 +280,8 @@ interface User {
           <code>Record&lt;string, string></code> to define an enum, but the <code>@enum</code> tag
           is more concise and readable. More on utility types later.
         </p>
-        <pre><code class="language-typescript" v-html="`// enums
+        <pre><code
+class="language-typescript" v-html="`// enums
 /** @enum {string} */
 const Color = {
   Red: 'red',
@@ -281,7 +297,8 @@ const color = Color.Red;
 /** @typedef {string | number} StringOrNumber */
 /** @type {StringOrNumber} */
 let value = 'Hello'; // Can be a string
-value = 42; // Or a number`"></code></pre>
+value = 42; // Or a number`"
+        /></pre>
         <h3>Type aliases 🏷️</h3>
         <p>
           Type aliases are a way to create a new name for an existing type. They can be used to
@@ -290,7 +307,8 @@ value = 42; // Or a number`"></code></pre>
           JSDoc however, you can use the <code>@typedef</code> tag we have seen before to define a
           type alias.
         </p>
-        <pre><code class="language-typescript" v-html="`// In TypeScript
+        <pre><code
+class="language-typescript" v-html="`// In TypeScript
 type Age = number;
 type Name = string;
 type User = { name: Name; age: Age };
@@ -303,14 +321,16 @@ const user: User = { name: 'John Doe', age: 25 };
 /** @typedef {{ name: Name; age: Age }} User */
 
 /** @type {User} */
-const user = { name: 'John Doe', age: 25 };`"></code></pre>
+const user = { name: 'John Doe', age: 25 };`"
+        /></pre>
         <h3>Literal types 🔠</h3>
         <p>
           Literal types in TypeScript are a way to define types that can only be of a specific
           value. They can be used with strings, numbers, or booleans. To create a literal type,
           simply use the desired value as the type.
         </p>
-        <pre><code class="language-typescript" v-html="`// In TypeScript
+        <pre><code
+class="language-typescript" v-html="`// In TypeScript
 type Red = 'red';
 type Blue = 'blue';
 type Green = 'green';
@@ -323,7 +343,8 @@ color = 'yellow'; // Error: Type 'yellow' is not assignable to type 'Color'
 /** @typedef {'red' | 'blue' | 'green'} Color */
 /** @type {Color} */
 const color3 = 'red'; // Allowed
-color3 = 'yellow'; // Error: Type 'yellow' is not assignable to type 'Color'`"></code></pre>
+color3 = 'yellow'; // Error: Type 'yellow' is not assignable to type 'Color'`"
+        /></pre>
         <h3>Utility types 🧰</h3>
         <p>
           TypeScript provides a set of predefined utility types that can help you manipulate and
@@ -335,10 +356,10 @@ color3 = 'yellow'; // Error: Type 'yellow' is not assignable to type 'Color'`"><
             href="https://www.typescriptlang.org/docs/handbook/utility-types.html"
             target="_blank"
             rel="noopener noreferrer"
-            >TypeScript documentation</a
-          >.
+          >TypeScript documentation</a>.
         </p>
-        <pre><code class="language-typescript" v-html="`interface User {
+        <pre><code
+class="language-typescript" v-html="`interface User {
   name: string;
   age: number;
 }
@@ -375,14 +396,17 @@ type UserWithoutAge = Pick<User, 'name'>;
 type UserWithoutName = Omit<User, 'name'>;
 // {
 //   age: number;
-// }`"></code></pre>
+// }`"
+        /></pre>
         <p>These utility types can be used in JSDoc like this:</p>
-        <pre><code class="language-typescript" v-html="`/** @typedef {{ name: string; age: number }} User */
+        <pre><code
+class="language-typescript" v-html="`/** @typedef {{ name: string; age: number }} User */
 /** @typedef {Partial<User>} PartialUser */
 /** @typedef {Readonly<User>} ReadonlyUser */
 /** @typedef {Record<'admin' | 'user', boolean>} Roles */
 /** @typedef {Pick<User, 'name'>} UserWithoutAge */
-/** @typedef {Omit<User, 'name'>} UserWithoutName */`"></code></pre>
+/** @typedef {Omit<User, 'name'>} UserWithoutName */`"
+        /></pre>
         <h3>Generics 🧬</h3>
         <p>
           Generics are a way to create reusable components that can work with a variety of types.
@@ -394,7 +418,8 @@ type UserWithoutName = Omit<User, 'name'>;
           type definition. To specify multiple generic types use a comma-separated list. In the
           following example <code>T</code> and <code>U</code> are the generic types.
         </p>
-        <pre><code class="language-typescript" v-html="`// In TypeScript
+        <pre><code
+class="language-typescript" v-html="`// In TypeScript
 type TypeT<T> = T;
 type TypeTorU<T, U> = T | U;
 type TypeBoolean = TypeT<boolean>;
@@ -413,7 +438,8 @@ const value2: TypeBoolean = true; // Allowed
  * @typedef {T | U} TypeTorU
  */
 /** @typedef {TypeT<boolean>} TypeBoolean */
-/** @typedef {TypeTorU<string, number>} TypeStringOrNumber */`"></code></pre>
+/** @typedef {TypeTorU<string, number>} TypeStringOrNumber */`"
+        /></pre>
         <h3>Mapped types 🗺️</h3>
         <p>
           Mapped types allow you to create new types by transforming the properties of existing
@@ -428,7 +454,8 @@ const value2: TypeBoolean = true; // Allowed
           <code>P</code> represents the keys of <code>T</code> and <code>T[P]</code> is the type of
           the property <code>P</code> in <code>T</code>:
         </p>
-        <pre><code class="language-typescript" v-html="`type Nullable<T> = {
+        <pre><code
+class="language-typescript" v-html="`type Nullable<T> = {
   [P in keyof T]: T[P] | null;
 };
 
@@ -441,12 +468,14 @@ type NullableUser = Nullable<User>;
 // {
 //   name: string | null;
 //   age: number | null;
-// }`"></code></pre>
+// }`"
+        /></pre>
         <p>
           In JSDoc, you can use the <code>@template</code> tag to define a generic and the
           <code>@typedef</code> tag to define a mapped type.
         </p>
-        <pre><code class="language-typescript" v-html="`/**
+        <pre><code
+class="language-typescript" v-html="`/**
  * @template T
  * @typedef {{ [P in keyof T]: T[P] | null }} Nullable<T>
  */
@@ -456,7 +485,8 @@ type NullableUser = Nullable<User>;
 // {
 //   name: string | null;
 //   age: number | null;
-// }`"></code></pre>
+// }`"
+        /></pre>
         <h3>Conditional types 🌓</h3>
         <p>
           Conditional types in TypeScript enable you to create types based on conditions, allowing
@@ -466,7 +496,8 @@ type NullableUser = Nullable<User>;
           <code>:</code> are used to define the types that will be returned if the condition is true
           or false, respectively.
         </p>
-        <pre><code class="language-typescript" v-html="`type IsString<T> = T extends string ? 'yes' : 'no';
+        <pre><code
+class="language-typescript" v-html="`type IsString<T> = T extends string ? 'yes' : 'no';
 
 type A = IsString<string>; // 'yes'
 type B = IsString<number>; // 'no'
@@ -478,7 +509,8 @@ type B = IsString<number>; // 'no'
  * @typedef {T extends string ? 'yes' : 'no'} IsString<T>
  */
 /** @typedef {IsString<string>} A */ // 'yes'
-/** @typedef {IsString<number>} B */ // 'no'`"></code></pre>
+/** @typedef {IsString<number>} B */ // 'no'`"
+        /></pre>
         <h3>Indexed access types 🔍</h3>
         <p>
           For the last type feature, we'll explore indexed access types. Indexed access types allow
@@ -486,7 +518,8 @@ type B = IsString<number>; // 'no'
           extract the type of a specific property or create more complex types based on the
           properties of existing types.
         </p>
-        <pre><code class="language-typescript" v-html="`interface User {
+        <pre><code
+class="language-typescript" v-html="`interface User {
   name: string;
   age: number;
 }
@@ -497,7 +530,8 @@ type UserAge = User['age']; // number
 // JSDoc
 /** @typedef {{ name: string; age: number }} User */
 /** @typedef {User['name']} UserName */ // string
-/** @typedef {User['age']} UserAge */ // number`"></code></pre>
+/** @typedef {User['age']} UserAge */ // number`"
+        /></pre>
         <h3>Casting Types 🎭</h3>
         <p>
           Now that we have experienced the glory of TypeScript, let's see how we can use type
@@ -506,7 +540,8 @@ type UserAge = User['age']; // number
           <code>@type</code> tag and specify the type you want to cast to. Note that you have to put
           the expression you want to cast in parentheses.
         </p>
-        <pre><code class="language-typescript" v-html="`const input = document.querySelector('input[type=text]');
+        <pre><code
+class="language-typescript" v-html="`const input = document.querySelector('input[type=text]');
 
 // TypeScript infers the type of input to be \`Element | null\`
 // But now if we try to access a property that is not available
@@ -520,7 +555,8 @@ if (input) {
 if (input) {
   const value = /** @type {HTMLInputElement} */ (input).value;
   // Now TypeScript knows that the type of \`value\` is \`string\`
-}`"></code></pre>
+}`"
+        /></pre>
         <p>
           With these powerful features, you can create dynamic and expressive types. One last thing
           I want to mention before moving on, is that you can install libraries with which you can
@@ -529,15 +565,13 @@ if (input) {
             href="https://github.com/sindresorhus/type-fest"
             target="_blank"
             rel="noopener noreferrer"
-            >type-fest</a
-          >
+          >type-fest</a>
           or
           <a
             href="https://github.com/piotrwitek/utility-types"
             target="_blank"
             rel="noopener noreferrer"
-            >utility-types</a
-          >. These libraries contain a lot of useful types that you can use in your project.
+          >utility-types</a>. These libraries contain a lot of useful types that you can use in your project.
         </p>
         <p>
           Great!!! Now that we've explored the different type features that TypeScript has to offer,
@@ -549,7 +583,7 @@ if (input) {
           autoplay
           loop
           muted
-        ></video>
+        />
       </div>
       <div class="space-y-4">
         <h2>More JSDoc Goodness 📚</h2>
@@ -591,26 +625,30 @@ if (input) {
           <code>-</code> symbol to separate the start and end line numbers (e.g.
           <code>#L6-L13</code>).
         </p>
-        <pre><code class="language-typescript" v-html="`/** @typedef {{ name: string; age: number }} Person */
+        <pre><code
+class="language-typescript" v-html="`/** @typedef {{ name: string; age: number }} Person */
 /**
  * @see {Person}
  * @see {@link https://webry.com}
  * @link https://github.com/sindresorhus/type-fest#install
  * @link https://github.com/sindresorhus/type-fest/blob/main/source/primitive.d.ts#L6-L13
- */`"></code></pre>
+ */`"
+        /></pre>
         <h3>The example tag</h3>
         <p>
           The <code>@example</code> tag is used to add examples to your documentation. You can use
           it to show how to use a function or to show how a certain type works. You can also use it
           to show how to use a library or to show how to use a specific feature of a library.
         </p>
-        <pre><code class="language-typescript" v-html="`/**
+        <pre><code
+class="language-typescript" v-html="`/**
  * @param {number} a
  * @param {number} b
  * @returns {number}
  * @example
  * add(1, 2) // 3
- */`"></code></pre>
+ */`"
+        /></pre>
         <h3>The summary and description tags</h3>
         <p>
           The <code>@summary</code> tag is used to add a short description to your documentation.
@@ -618,20 +656,23 @@ if (input) {
           <code>@description</code> tag is used to add a longer description to your documentation.
           It's used to give more detailed information about the item you're documenting.
         </p>
-        <pre><code class="language-typescript" v-html="`/**
+        <pre><code
+class="language-typescript" v-html="`/**
  * @summary Adds two numbers together.
  * @description This function adds two numbers together and returns the result.
  * @param {number} a
  * @param {number} b
  * @returns {number}
- */`"></code></pre>
+ */`"
+        /></pre>
         <h3>Formatting of JSDoc comments 🎨</h3>
         <p>
           You can use Markdown in your JSDoc comments. This means that you can use headings, lists,
           and other Markdown features to make your documentation more readable. You can also use
           some HTML tags like <code>&lt;br></code> to add more styling to your documentation.
         </p>
-        <pre><code class="language-typescript" v-html="`/**
+        <pre><code
+class="language-typescript" v-html="`/**
  * @param {number} a
  * @param {number} b
  * @returns {number}
@@ -644,15 +685,15 @@ if (input) {
  */
 function add(a, b) {
     return a + b;
-}`"></code></pre>
+}`"
+        /></pre>
         <p>
           You can also use more complex Markdown features like lists and tables. Check out the
           <a
             href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
             target="_blank"
             rel="noopener noreferrer"
-            >Markdown Cheatsheet</a
-          >
+          >Markdown Cheatsheet</a>
           from Adam Pritchard for more information.
         </p>
         <h3>Other JSDoc tags 📚</h3>
@@ -695,7 +736,7 @@ function add(a, b) {
           autoplay
           loop
           muted
-        ></video>
+        />
       </div>
       <div class="space-y-4">
         <h2>Using JSDoc in practice 🏄‍♂️</h2>
@@ -716,11 +757,13 @@ function add(a, b) {
           even in JavaScript files. Place it in the root of your project or in the folder where you
           want to enable type checking. This file can look like this:
         </p>
-        <pre><code class="language-typescript" v-html="`{
+        <pre><code
+class="language-typescript" v-html="`{
   &quot;compilerOptions&quot;: {
     &quot;checkJs&quot;: true,
   }
-}`"></code></pre>
+}`"
+        /></pre>
         <p>
           To apply this option across all your projects, access the VSCode settings by pressing
           <code>cmd + ,</code>, search for checkJs, and enable it there. For more strict type
@@ -755,9 +798,7 @@ function add(a, b) {
         </ul>
         <p>
           You can read more about these options in the
-          <a href="https://www.typescriptlang.org/tsconfig#strict" target="_blank"
-            >TypeScript documentation</a
-          >.
+          <a href="https://www.typescriptlang.org/tsconfig#strict" target="_blank">TypeScript documentation</a>.
         </p>
         <p>
           Often you just want to enable a subset of these options. You can do this by enabling
@@ -775,8 +816,7 @@ function add(a, b) {
             <a
               href="https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm"
               target="_blank"
-              >post</a
-            >
+            >post</a>
             from Igor Irianto. In short, you'll most probably want to enable this option if you're
             using a library like jQuery or Lodash and you want to access their global variables $
             and _, respectively without importing them.
@@ -785,20 +825,20 @@ function add(a, b) {
             <code>typeAcquisition</code> allows you to specify which libraries you want to use in
             your project. It will then automatically download the type definitions for these
             libraries from the
-            <a href="https://github.com/DefinitelyTyped/DefinitelyTyped" target="_blank"
-              >DefinitelyTyped</a
-            >
+            <a href="https://github.com/DefinitelyTyped/DefinitelyTyped" target="_blank">DefinitelyTyped</a>
             project. This community project contains type definitions for npm packages that don't
             ship with their own type definitions. This is how it may look like:
           </li>
         </ul>
-        <pre><code class="language-typescript" v-html="`{
+        <pre><code
+class="language-typescript" v-html="`{
   &quot;compilerOptions&quot;: {
     &quot;typeAcquisition&quot;: {
       &quot;include&quot;: [&quot;jquery&quot;, &quot;lodash&quot;]
     }
   }
-}`"></code></pre>
+}`"
+        /></pre>
         <h3>.d.ts files</h3>
         <p>
           TypeScript uses <code>.d.ts</code> files to store type definitions. These files are often
@@ -806,18 +846,22 @@ function add(a, b) {
           definitions. You can also use them to define types for your own JavaScript code. Here's an
           example of what a <code>.d.ts</code> file might look like:
         </p>
-        <pre><code class="language-typescript" v-html="`declare const foo: string;
+        <pre><code
+class="language-typescript" v-html="`declare const foo: string;
 declare function bar(): User;
 declare class Baz {}
 
 interface User {
   name: string;
   age?: number;
-}`"></code></pre>
+}`"
+        /></pre>
         <p>And this is how you can use it in your JavaScript code:</p>
-        <pre><code class="language-typescript" v-html="`foo; // string
+        <pre><code
+class="language-typescript" v-html="`foo; // string
 bar(); // User
-new Baz(); // Baz`"></code></pre>
+new Baz(); // Baz`"
+        /></pre>
         <p>
           In <code>.d.ts</code> files, you can use all the TypeScript features we have seen before
           and more. TypeScript will automatically pick up your <code>.d.ts</code> files as well as
@@ -830,29 +874,32 @@ new Baz(); // Baz`"></code></pre>
           way is to use triple-slash directives. These directives will tell TypeScript to include
           the type definitions from the specified modules. This is how it may look like:
         </p>
-        <pre><code class="language-typescript" v-html="`// If you want to use a .d.ts file
+        <pre><code
+class="language-typescript" v-html="`// If you want to use a .d.ts file
 /// <reference path=&quot;./foo.d.ts&quot; />
 
 // If you want to use jQuery
 /// <reference types=&quot;jquery&quot; />
 
 // If you want to use es2017 string features like .padStart()
-/// <reference lib=&quot;es2017.string&quot; />`"></code></pre>
+/// <reference lib=&quot;es2017.string&quot; />`"
+        /></pre>
         <p>
           More on triple-slash directives can be found in the
           <a
             href="https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html"
             target="_blank"
             rel="noopener noreferrer"
-            >TypeScript documentation</a
-          >.
+          >TypeScript documentation</a>.
         </p>
         <p>
           The second way is to use the <code>import</code> keyword. This will import the type
           definitions from the specified module. Here's an example:
         </p>
-        <pre><code class="language-typescript" v-html="`/** @typedef {import('./foo.d.ts').Foo} Foo */
-/** @typedef {import('type-fest').JsonValue} JsonValue */`"></code></pre>
+        <pre><code
+class="language-typescript" v-html="`/** @typedef {import('./foo.d.ts').Foo} Foo */
+/** @typedef {import('type-fest').JsonValue} JsonValue */`"
+        /></pre>
         <p>
           For the last chapter, I want to share some best practices for writing JSDoc comments. I'll
           also share some resources that you can use to learn more about JSDoc and TypeScript.
@@ -863,7 +910,7 @@ new Baz(); // Baz`"></code></pre>
           autoplay
           loop
           muted
-        ></video>
+        />
       </div>
       <div class="space-y-4">
         <h2>Best Practices</h2>
@@ -915,46 +962,36 @@ new Baz(); // Baz`"></code></pre>
           autoplay
           loop
           muted
-        ></video>
+        />
       </div>
       <div class="space-y-4">
         <h2>Additional Resources</h2>
         <ul>
           <li>
-            <a href="https://jsdoc.app/" target="_blank" rel="noopener noreferrer"
-              >JSDoc documentation</a
-            >
+            <a href="https://jsdoc.app/" target="_blank" rel="noopener noreferrer">JSDoc documentation</a>
           </li>
           <li>
             <a
               href="https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html"
               target="_blank"
               rel="noopener noreferrer"
-              >TypeScripts JSDoc documentation</a
-            >
+            >TypeScripts JSDoc documentation</a>
           </li>
           <li>
-            <a href="https://roadmap.sh/typescript" target="_blank" rel="noopener noreferrer"
-              >TypeScript Roadmap</a
-            >
+            <a href="https://roadmap.sh/typescript" target="_blank" rel="noopener noreferrer">TypeScript Roadmap</a>
           </li>
           <li>
-            <a href="https://roadmap.sh/javascript" target="_blank" rel="noopener noreferrer"
-              >JavaScript Roadmap</a
-            >
+            <a href="https://roadmap.sh/javascript" target="_blank" rel="noopener noreferrer">JavaScript Roadmap</a>
           </li>
           <li>
             <a
               href="https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm"
               target="_blank"
               rel="noopener noreferrer"
-              >What the heck are CJS, AMD, UMD, and ESM in Javascript? by Igor Irianto</a
-            >
+            >What the heck are CJS, AMD, UMD, and ESM in Javascript? by Igor Irianto</a>
           </li>
           <li>
-            <a href="https://javascript.info/" target="_blank" rel="noopener noreferrer"
-              >The Modern JavaScript Tutorial</a
-            >
+            <a href="https://javascript.info/" target="_blank" rel="noopener noreferrer">The Modern JavaScript Tutorial</a>
           </li>
         </ul>
       </div>

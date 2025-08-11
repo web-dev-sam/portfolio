@@ -1,6 +1,6 @@
 <script setup lang="ts">
 type Tag = 'leaderboard'
-type Bookmark = {
+interface Bookmark {
   img: string
   title: string
   link: string
@@ -20,7 +20,7 @@ const data: Bookmark[] = [
   {
     title: 'ScoreSaber',
     link: 'https://scoresaber.com/',
-    description: "We can't program so we are using Svelte. Also we are a leaderboard, I think.",
+    description: 'We can\'t program so we are using Svelte. Also we are a leaderboard, I think.',
     img: 'https://scoresaber.com/favicon-32x32.png',
     tags: ['leaderboard'],
   },
@@ -28,7 +28,7 @@ const data: Bookmark[] = [
     title: 'AccSaber',
     link: 'https://www.accsaber.com/',
     description:
-      "AccSaber is a leaderboard for sane people. We don't have a lot of maps but we have a lot of fun.",
+      'AccSaber is a leaderboard for sane people. We don\'t have a lot of maps but we have a lot of fun.',
     img: 'https://accsaber.com/build/_assets/logo-UCZPKYNX.webp',
     tags: ['leaderboard'],
   },
@@ -36,7 +36,7 @@ const data: Bookmark[] = [
     title: 'HitBloq',
     link: 'https://beatleader.xyz/',
     description:
-      "HitBloq is a leaderboard for people who don't touch grass. We have a lot of maps and we are cool.",
+      'HitBloq is a leaderboard for people who don\'t touch grass. We have a lot of maps and we are cool.',
     img: 'https://hitbloq.com/static/hitbloq.png',
     tags: ['leaderboard'],
   },
@@ -184,7 +184,7 @@ const data: Bookmark[] = [
   {
     title: 'MoonRider',
     link: 'https://moonrider.xyz/',
-    description: "When you're bored of BeatSaber and have too much time.",
+    description: 'When you\'re bored of BeatSaber and have too much time.',
     img: 'https://moonrider.xyz/assets/img/favicon.png',
     tags: [],
   },
@@ -193,7 +193,9 @@ const data: Bookmark[] = [
 
 <template>
   <main class="mb-16 text-center md:text-left">
-    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">BeatSaber Links</h1>
+    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">
+      BeatSaber Links
+    </h1>
     <div class="flex flex-col justify-around gap-16">
       <div class="space-y-2">
         <a
@@ -208,7 +210,7 @@ const data: Bookmark[] = [
             class="group flex h-12 -translate-x-3 items-center justify-center gap-4 rounded-sm px-3 py-2 hover:bg-light md:justify-start"
           >
             <div class="flex max-h-8 min-w-8 justify-center">
-              <img :src="bookmarkItem.img" width="32px" />
+              <img :src="bookmarkItem.img" width="32px">
             </div>
             <div class="min-w-48 truncate text-nowrap text-left">
               {{ bookmarkItem.title }}

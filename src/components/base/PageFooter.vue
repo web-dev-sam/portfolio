@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import IconGitHub from '@/components/icons/IconGitHub.vue'
-import IconLinkedIn from '@/components/icons/IconLinkedIn.vue'
+import IconCodersRank from '@/components/icons/IconCodersRank.vue'
 import IconDevTo from '@/components/icons/IconDevTo.vue'
 import IconEmail from '@/components/icons/IconEmail.vue'
-import IconCodersRank from '@/components/icons/IconCodersRank.vue'
+import IconGitHub from '@/components/icons/IconGitHub.vue'
+import IconLinkedIn from '@/components/icons/IconLinkedIn.vue'
 </script>
 
 <template>
   <footer>
     <ul class="flex justify-center gap-8 py-8">
-      <li class="hidden min-[500px]:block whitespace-nowrap">&copy; {{ new Date().getFullYear() }} Samuel Braun</li>
-      <li class="hidden min-[500px]:block flex-1"></li>
+      <li class="hidden min-[500px]:block whitespace-nowrap">
+        &copy; {{ new Date().getFullYear() }} Samuel Braun
+      </li>
+      <li class="hidden min-[500px]:block flex-1" />
       <li>
         <a
           class="hover:opacity-85"

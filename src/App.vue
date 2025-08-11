@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import PageHeader from './components/base/PageHeader.vue'
-import PageFooter from './components/base/PageFooter.vue'
 import { useRouter } from 'vue-router'
+import PageFooter from './components/base/PageFooter.vue'
+import PageHeader from './components/base/PageHeader.vue'
 
 const router = useRouter()
 </script>
 
 <template>
-  <div class="container px-4 font-sans text-text" v-if="router.currentRoute.value.name !== 'ext'">
+  <div v-if="router.currentRoute.value.name !== 'ext'" class="container px-4 font-sans text-text">
     <div class="flex min-h-lvh flex-col">
       <PageHeader />
-      <router-view></router-view>
-      <span class="flex-1"></span>
+      <router-view />
+      <span class="flex-1" />
       <PageFooter />
     </div>
   </div>
   <div v-else>
     <div class="container">
-      <router-view></router-view>
+      <router-view />
     </div>
   </div>
 </template>

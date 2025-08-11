@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import BaseProjectPage from './BaseProjectPage.vue'
-import TextBadge from '@/components/views/TextBadge.vue'
-import IconAngular from '@/components/icons/IconAngular.vue'
-import IconTypeScript from '@/components/icons/IconTypeScript.vue'
-import IconSass from '@/components/icons/IconSass.vue'
-import { useTranslator } from '@/composables/useTranslator'
 import { ref } from 'vue'
+import IconAngular from '@/components/icons/IconAngular.vue'
+import IconSass from '@/components/icons/IconSass.vue'
+import IconTypeScript from '@/components/icons/IconTypeScript.vue'
+import TextBadge from '@/components/views/TextBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
+import BaseProjectPage from './BaseProjectPage.vue'
 
 const imageModalVisible = ref(false)
 const imageModalSrc = ref('')
@@ -15,7 +15,7 @@ const { t, lang } = useTranslator({
     diff: 'Challenging',
     solved: 'Problems Solved',
     chall: 'Challenges I ran into',
-    next: "What I'd do differently next time",
+    next: 'What I\'d do differently next time',
   },
   de: {
     diff: 'Herausfordernd',
@@ -34,11 +34,11 @@ function openModal(src: string) {
 <template>
   <BaseProjectPage
     title="Frac"
-    githubLink="https://github.com/web-dev-sam/Frac"
-    githubName="GitHub"
-    demoLink="https://frac.webry.com/"
-    :imageModalVisible="imageModalVisible"
-    :imageModalSrc="imageModalSrc"
+    github-link="https://github.com/web-dev-sam/Frac"
+    github-name="GitHub"
+    demo-link="https://frac.webry.com/"
+    :image-modal-visible="imageModalVisible"
+    :image-modal-src="imageModalSrc"
     @modal-close="imageModalVisible = false"
   >
     <template #badges>
@@ -47,13 +47,21 @@ function openModal(src: string) {
           Stack
           <template #desc>
             <div class="flex items-center gap-2">
-              <div class="w-4" tooltip="Angular"><IconAngular /></div>
-              <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
-              <div class="w-4" tooltip="SCSS"><IconSass /></div>
+              <div class="w-4" tooltip="Angular">
+                <IconAngular />
+              </div>
+              <div class="w-4" tooltip="TypeScript">
+                <IconTypeScript />
+              </div>
+              <div class="w-4" tooltip="SCSS">
+                <IconSass />
+              </div>
             </div>
           </template>
         </TextBadge>
-        <TextBadge class="bg-hard text-white">{{ t('diff') }}</TextBadge>
+        <TextBadge class="bg-hard text-white">
+          {{ t('diff') }}
+        </TextBadge>
       </div>
     </template>
     <template #description>
@@ -66,7 +74,9 @@ function openModal(src: string) {
     </template>
     <template #content>
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('solved') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('solved') }}
+        </h2>
         <p class="max-w-[80ch] text-body text-muted">
           <span v-if="lang === 'en'">
             My main goal was to create a mandelbrot and julia set explorer on the web that runs on
@@ -82,11 +92,17 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('chall') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('chall') }}
+        </h2>
         <div class="max-w-[80ch] text-body text-muted">
           <ul class="ml-0 list-outside list-none space-y-2 md:ml-8 md:list-disc">
-            <li v-if="lang === 'en'">Using WebGL and GLSL to render the fractals on the GPU.</li>
-            <li v-else>Verwenden von WebGL und GLSL, um die Fraktale auf der GPU zu rendern.</li>
+            <li v-if="lang === 'en'">
+              Using WebGL and GLSL to render the fractals on the GPU.
+            </li>
+            <li v-else>
+              Verwenden von WebGL und GLSL, um die Fraktale auf der GPU zu rendern.
+            </li>
 
             <li v-if="lang === 'en'">
               Switching canvas contexts between the mandelbrot and julia set.
@@ -99,7 +115,9 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-2 text-body font-bold uppercase">{{ t('next') }}</h2>
+        <h2 class="mb-2 text-body font-bold uppercase">
+          {{ t('next') }}
+        </h2>
         <p class="mb-4 max-w-[80ch] text-body text-muted">
           <span v-if="lang === 'en'">I had two problems with this project:</span>
           <span v-else>Ich hatte zwei Probleme mit diesem Projekt:</span>
@@ -133,32 +151,34 @@ function openModal(src: string) {
       </div>
 
       <div>
-        <h2 class="mb-4 text-h4 font-bold">Gallery</h2>
+        <h2 class="mb-4 text-h4 font-bold">
+          Gallery
+        </h2>
         <div class="flex flex-wrap gap-4">
           <img
             src="/assets/projects/frac/fr1.jpg"
             alt="Screenshot 1"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/frac/fr1.jpg')"
-          />
+          >
           <img
             src="/assets/projects/frac/fr2.jpg"
             alt="Screenshot 2"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/frac/fr2.jpg')"
-          />
+          >
           <img
             src="/assets/projects/frac/fr3.jpg"
             alt="Screenshot 3"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/frac/fr3.jpg')"
-          />
+          >
           <img
             src="/assets/projects/frac/fr4.jpg"
             alt="Screenshot 4"
             class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/frac/fr4.jpg')"
-          />
+          >
         </div>
       </div>
     </template>

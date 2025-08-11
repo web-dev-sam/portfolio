@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Prism from 'prismjs'
-import { useTranslator } from '@/composables/useTranslator'
-import TextBadge from '@/components/views/TextBadge.vue'
 import { onMounted } from 'vue'
+import TextBadge from '@/components/views/TextBadge.vue'
+import { useTranslator } from '@/composables/useTranslator'
 
 import 'prismjs/components/prism-typescript'
 import '@/views/blogs/styles/prism.css'
@@ -13,7 +13,7 @@ onMounted(() => {
 
 const { t } = useTranslator({
   en: {
-    title: "Naming: Every Developer's Nightmare",
+    title: 'Naming: Every Developer\'s Nightmare',
     date: 'Apr 18 2023',
   },
 })
@@ -26,9 +26,11 @@ const { t } = useTranslator({
         class="w-full rounded-lg object-cover"
         src="/assets/blogs/2/cover.jpg"
         alt="Boost Your JavaScript with JSDoc Typing"
-      />
+      >
     </div>
-    <h1 class="text-center text-h3 font-bold">{{ t('title') }}</h1>
+    <h1 class="text-center text-h3 font-bold">
+      {{ t('title') }}
+    </h1>
     <span class="mt-4 block text-muted text-center">{{ t('date') }}</span>
     <div class="mt-6 flex justify-center gap-2">
       <TextBadge class="bg-light">
@@ -60,7 +62,7 @@ const { t } = useTranslator({
           autoplay
           loop
           muted
-        ></video>
+        />
         <h2>A Naming Pattern to Save the Day</h2>
         <p>
           When you find yourself struggling to name a specific variable, function, or class,
@@ -77,17 +79,13 @@ const { t } = useTranslator({
               </li>
               <li>
                 Is this variable specific to any programming language features or conventions?
-                <em
-                  >(e.g., double underscore prefix in Python, dollar sign in jQuery, '@' for
-                  instance variables in Ruby)</em
-                >
+                <em>(e.g., double underscore prefix in Python, dollar sign in jQuery, '@' for
+                  instance variables in Ruby)</em>
               </li>
               <li>
                 Is this variable part of a framework or library that requires a specific naming
                 pattern?
-                <em
-                  >(e.g., Angular's 'ng' prefix for directives, React's 'use' prefix for hooks)</em
-                >
+                <em>(e.g., Angular's 'ng' prefix for directives, React's 'use' prefix for hooks)</em>
               </li>
             </ul>
           </li>
@@ -151,10 +149,8 @@ const { t } = useTranslator({
               <li>
                 Can the variable's role be clarified by adding a suffix for the structure like
                 "Count," "Index," "Sum," "Average," "List," or "Map"?
-                <em
-                  >(e.g., itemCount, currentIndex, totalPriceSum, ratingAverage, userList,
-                  settingsMap)</em
-                >
+                <em>(e.g., itemCount, currentIndex, totalPriceSum, ratingAverage, userList,
+                  settingsMap)</em>
               </li>
             </ul>
           </li>
@@ -210,8 +206,7 @@ const { t } = useTranslator({
         <p>
           There may be times where you need to swap the base name and qualifier in order to give the
           variable a more appropriate and meaningful name. Example:
-          <strong>getLoggedInUser</strong> instead of <strong><s>getUserLoggedIn</s></strong
-          >.
+          <strong>getLoggedInUser</strong> instead of <strong><s>getUserLoggedIn</s></strong>.
         </p>
         <ul>
           <li>
@@ -239,7 +234,7 @@ const { t } = useTranslator({
           autoplay
           loop
           muted
-        ></video>
+        />
         <p>
           Consider this: if your code is incomprehensible without comments, then the problem isn't a
           lack of comments. And if your code is already clear, then you don't need the comments in
@@ -255,7 +250,8 @@ const { t } = useTranslator({
           The other day, I came across a piece of code that took me about 10 minutes to grasp
           completely 🥴.
         </p>
-        <pre><code class="language-javascript" v-html="`if (!row.doc[otherField]) {
+        <pre><code
+class="language-javascript" v-html="`if (!row.doc[otherField]) {
 
 let val;
 
@@ -279,11 +275,13 @@ row.refreshField('left');
 if (currentField === 'right' && row.doc['right'] && row.doc['right'].charAt(0) === '-') {
 row.doc['right'] = row.doc['right'].slice(1);
 row.refreshField('right');
-}`"></code></pre>
+}`"
+        /></pre>
         <p>
           So let's clean it up by putting stuff into variables and giving them meaningful names:
         </p>
-        <pre><code class="language-javascript" v-html="`const valueOfOtherField = row.doc[otherField];
+        <pre><code
+class="language-javascript" v-html="`const valueOfOtherField = row.doc[otherField];
 const valueOfCurrentField = row.doc[currentField];
 const valueOfLeftField = row.doc['left'];
 const valueOfRightField = row.doc['right'];
@@ -319,29 +317,34 @@ if (isCurrentFieldOnLeft && valueOfLeftField && !startsWithMinusSign(valueOfLeft
 if (isCurrentFieldOnRight && valueOfRightField && startsWithMinusSign(valueOfRightField)) {
     row.doc['right'] = removeMinusFromStart(valueOfRightField);
     row.refreshField('right');
-}`"></code></pre>
+}`"
+        /></pre>
         <p>
           With this change, the code reads almost like plain English. However, upon closer
           inspection, we can identify some unnecessary logic steps that can be removed and
           simplified. Take this line, for example:
         </p>
-        <pre><code class="language-javascript" v-html="`val = startsWithMinusSign(valueOfCurrentField) ?
+        <pre><code
+class="language-javascript" v-html="`val = startsWithMinusSign(valueOfCurrentField) ?
             valueOfCurrentField :
-            ensureMinusAtStart(valueOfCurrentField);`"></code></pre>
+            ensureMinusAtStart(valueOfCurrentField);`"
+        /></pre>
         <p>
           Logically, it can be further simplified. If the value starts with a minus sign, we keep
           it; otherwise, we add a new minus sign. Essentially, this means we can simply add a minus
           sign at the beginning. So, the line can be simplified to:
         </p>
-        <pre><code class="language-javascript" v-html="`val = startsWithMinusSign(valueOfCurrentField) ?
+        <pre><code
+class="language-javascript" v-html="`val = startsWithMinusSign(valueOfCurrentField) ?
             valueOfCurrentField :
-            ensureMinusAtStart(valueOfCurrentField);`"></code></pre>
+            ensureMinusAtStart(valueOfCurrentField);`"
+        /></pre>
         <p>
           Logically, it can be further simplified. If the value starts with a minus sign, we keep
           it; otherwise, we add a new minus sign. Essentially, this means we can simply add a minus
           sign at the beginning. So, the line can be simplified to:
         </p>
-        <pre><code class="language-javascript" v-html="`val = ensureMinusAtStart(valueOfCurrentField);`"></code></pre>
+        <pre><code class="language-javascript" v-html="`val = ensureMinusAtStart(valueOfCurrentField);`" /></pre>
         <p>
           Assuming the performance of row.refreshField is negligible, the same logic can be applied
           to the if statements by removing the
@@ -349,7 +352,8 @@ if (isCurrentFieldOnRight && valueOfRightField && startsWithMinusSign(valueOfRig
           <code>&& !startsWithMinusSign(valueOfLeftField)</code> conditions. The entire code should
           now look like this:
         </p>
-        <pre><code class="language-javascript" v-html="`const valueOfOtherField = row.doc[otherField];
+        <pre><code
+class="language-javascript" v-html="`const valueOfOtherField = row.doc[otherField];
 const valueOfCurrentField = row.doc[currentField];
 const valueOfLeftField = row.doc['left'];
 const valueOfRightField = row.doc['right'];
@@ -388,7 +392,8 @@ if (isCurrentFieldOnLeft && valueOfLeftField) {
 if (isCurrentFieldOnRight && valueOfRightField) {
     row.doc['right'] = removeMinusFromStart(valueOfRightField);
     row.refreshField('right');
-}`"></code></pre>
+}`"
+        /></pre>
         <p>
           At this point, we can easily read through the code without tearing our hair out. The code
           accomplishes two main tasks:
@@ -419,7 +424,7 @@ if (isCurrentFieldOnRight && valueOfRightField) {
           autoplay
           loop
           muted
-        ></video>
+        />
       </div>
     </div>
   </main>

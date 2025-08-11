@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   title: string
   link: string
 }>()
@@ -19,7 +19,7 @@ const props = defineProps<{
         <slot />
       </div>
       <div class="text-left md:flex-1">
-        {{ props.title }}
+        {{ title }}
       </div>
     </div>
   </a>

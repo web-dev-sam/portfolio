@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import IconAngular from '@/components/icons/IconAngular.vue'
 import IconAstro from '@/components/icons/IconAstro.vue'
+import IconJavascript from '@/components/icons/IconJavascript.vue'
 import IconNuxt from '@/components/icons/IconNuxt.vue'
 import IconSass from '@/components/icons/IconSass.vue'
 import IconSolid from '@/components/icons/IconSolid.vue'
 import IconTailwind from '@/components/icons/IconTailwind.vue'
 import IconTypeScript from '@/components/icons/IconTypeScript.vue'
-import IconJavascript from '@/components/icons/IconJavascript.vue'
 import IconVue from '@/components/icons/IconVue.vue'
 import TextBadge from '@/components/views/TextBadge.vue'
-import ProjectCard from '@/views/projects/components/ProjectCard.vue'
 import { useTranslator } from '@/composables/useTranslator'
+import ProjectCard from '@/views/projects/components/ProjectCard.vue'
 
 const { t, lang } = useTranslator({
   en: {
@@ -32,7 +32,9 @@ const { t, lang } = useTranslator({
 
 <template>
   <main class="mb-16 text-center md:text-left">
-    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">{{ t('projects') }}</h1>
+    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">
+      {{ t('projects') }}
+    </h1>
     <section class="flex flex-col gap-4">
       <ProjectCard
         name="Beat Timer"
@@ -47,13 +49,21 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4" tooltip="Vue"><IconVue /></div>
-            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
-            <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
+            <div class="w-4" tooltip="Vue">
+              <IconVue />
+            </div>
+            <div class="w-4" tooltip="TypeScript">
+              <IconTypeScript />
+            </div>
+            <div class="w-4" tooltip="TailwindCSS">
+              <IconTailwind />
+            </div>
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-extreme text-white">{{ t('extreme') }}</TextBadge>
+          <TextBadge class="bg-extreme text-white">
+            {{ t('extreme') }}
+          </TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
@@ -69,13 +79,21 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4" tooltip="Astro"><IconAstro /></div>
-            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
-            <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
+            <div class="w-4" tooltip="Astro">
+              <IconAstro />
+            </div>
+            <div class="w-4" tooltip="TypeScript">
+              <IconTypeScript />
+            </div>
+            <div class="w-4" tooltip="TailwindCSS">
+              <IconTailwind />
+            </div>
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
+          <TextBadge class="bg-easy text-white">
+            {{ t('easy') }}
+          </TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
@@ -91,13 +109,21 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4" tooltip="Angular"><IconAngular /></div>
-            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
-            <div class="w-4" tooltip="SCSS"><IconSass /></div>
+            <div class="w-4" tooltip="Angular">
+              <IconAngular />
+            </div>
+            <div class="w-4" tooltip="TypeScript">
+              <IconTypeScript />
+            </div>
+            <div class="w-4" tooltip="SCSS">
+              <IconSass />
+            </div>
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-hard text-white">{{ t('hard') }}</TextBadge>
+          <TextBadge class="bg-hard text-white">
+            {{ t('hard') }}
+          </TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
@@ -113,12 +139,18 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4" tooltip="Vue"><IconVue /></div>
-            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
+            <div class="w-4" tooltip="Vue">
+              <IconVue />
+            </div>
+            <div class="w-4" tooltip="TypeScript">
+              <IconTypeScript />
+            </div>
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-hard text-white">{{ t('hard') }}</TextBadge>
+          <TextBadge class="bg-hard text-white">
+            {{ t('hard') }}
+          </TextBadge>
         </template>
       </ProjectCard>
 
@@ -135,13 +167,21 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4" tooltip="Nuxt"><IconNuxt /></div>
-            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
-            <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
+            <div class="w-4" tooltip="Nuxt">
+              <IconNuxt />
+            </div>
+            <div class="w-4" tooltip="TypeScript">
+              <IconTypeScript />
+            </div>
+            <div class="w-4" tooltip="TailwindCSS">
+              <IconTailwind />
+            </div>
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-medium text-white">{{ t('medium') }}</TextBadge>
+          <TextBadge class="bg-medium text-white">
+            {{ t('medium') }}
+          </TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
@@ -157,13 +197,21 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4" tooltip="SolidJS (React-like)"><IconSolid /></div>
-            <div class="w-4" tooltip="TypeScript"><IconTypeScript /></div>
-            <div class="w-4" tooltip="TailwindCSS"><IconTailwind /></div>
+            <div class="w-4" tooltip="SolidJS (React-like)">
+              <IconSolid />
+            </div>
+            <div class="w-4" tooltip="TypeScript">
+              <IconTypeScript />
+            </div>
+            <div class="w-4" tooltip="TailwindCSS">
+              <IconTailwind />
+            </div>
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
+          <TextBadge class="bg-easy text-white">
+            {{ t('easy') }}
+          </TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
@@ -179,11 +227,15 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4" tooltip="JavaScript"><IconJavascript /></div>
+            <div class="w-4" tooltip="JavaScript">
+              <IconJavascript />
+            </div>
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-medium text-white">{{ t('medium') }}</TextBadge>
+          <TextBadge class="bg-medium text-white">
+            {{ t('medium') }}
+          </TextBadge>
         </template>
       </ProjectCard>
       <ProjectCard
@@ -199,11 +251,15 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4" tooltip="JavaScript"><IconJavascript /></div>
+            <div class="w-4" tooltip="JavaScript">
+              <IconJavascript />
+            </div>
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
+          <TextBadge class="bg-easy text-white">
+            {{ t('easy') }}
+          </TextBadge>
         </template>
       </ProjectCard>
 
@@ -220,11 +276,15 @@ const { t, lang } = useTranslator({
       >
         <template #stack>
           <div class="flex items-center gap-2">
-            <div class="w-4" tooltip="JavaScript"><IconJavascript /></div>
+            <div class="w-4" tooltip="JavaScript">
+              <IconJavascript />
+            </div>
           </div>
         </template>
         <template #difficulty>
-          <TextBadge class="bg-easy text-white">{{ t('easy') }}</TextBadge>
+          <TextBadge class="bg-easy text-white">
+            {{ t('easy') }}
+          </TextBadge>
         </template>
       </ProjectCard>
     </section>
