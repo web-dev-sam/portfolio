@@ -9,7 +9,7 @@ const { t } = useTranslator({
     hero: {
       webdev: 'Web Developer',
       intro:
-        'Hi, I am Samuel. A passionate <span class="font-medium text-primary">frontend</span> web developer with over <span class="font-medium text-primary">6 years</span> of experience.',
+        'Hi, I am Samuel. A passionate <span class="font-medium text-primary">fullstack</span> web developer with over <span class="font-medium text-primary">6 years</span> of experience.',
     },
     stack: {
       more: 'see more',
@@ -19,7 +19,7 @@ const { t } = useTranslator({
     hero: {
       webdev: 'Web Entwickler',
       intro:
-        'Hey, ich bin Samuel. Ein leidenschaftlicher <span class="font-medium text-primary">Frontend</span> Webentwickler mit mehr als <span class="font-medium text-primary">6 Jahren</span> Erfahrung.',
+        'Hey, ich bin Samuel. Ein leidenschaftlicher <span class="font-medium text-primary">Fullstack</span> Webentwickler mit mehr als <span class="font-medium text-primary">6 Jahren</span> Erfahrung.',
     },
     stack: {
       more: 'und mehr',
