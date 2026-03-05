@@ -27,17 +27,17 @@ const { t } = useTranslator({
 </script>
 
 <template>
-  <main class="!lg:mb-32 !mb-16 space-y-8 text-center leading-normal md:text-left">
+  <main class="!lg:mb-32 mb-16! space-y-8 text-center leading-normal md:text-left">
     <RouterLink
       to="/projects"
-      class="mt-4 hidden cursor-pointer rounded bg-light px-4 py-2 text-small text-muted hover:opacity-85 md:inline-block"
+      class="mt-4 hidden cursor-pointer rounded-sm bg-light px-4 py-2 text-small text-muted hover:opacity-85 md:inline-block"
       type="link"
     >
       {{ t('back') }}
     </RouterLink>
 
     <div>
-      <span class="-mb-2 mt-4 inline-block text-body uppercase text-muted">{{ t('project') }}</span>
+      <span class="mt-4 -mb-2 inline-block text-body text-muted uppercase">{{ t('project') }}</span>
       <div class="-mt-2 flex flex-col items-center justify-between md:flex-row">
         <h1 class="text-h1 font-bold">{{ props.title }}</h1>
         <div>
@@ -54,19 +54,19 @@ const { t } = useTranslator({
       <UButton variant="primary" :to="demoLink" type="link">{{ t('demo') }}</UButton>
     </div>
 
-    <div class="!mt-16 space-y-8">
+    <div class="mt-16! space-y-8">
       <slot name="content" />
     </div>
 
-    <h2 class="!mt-16 hidden text-h4 font-bold">Gallery</h2>
+    <h2 class="mt-16! hidden text-h4 font-bold">Gallery</h2>
     <slot name="gallery" />
     <div>
       <div
         v-if="imageModalVisible"
-        class="bg-black fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-[#000] bg-opacity-50 backdrop-blur-sm"
+        class="bg-black bg-opacity-50 fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-[#000] backdrop-blur-xs"
         @click="$emit('modal-close')"
       >
-        <img :src="imageModalSrc" class="max-h-[90vh] max-w-[90vw] rounded" />
+        <img :src="imageModalSrc" class="max-h-[90vh] max-w-[90vw] rounded-sm" />
       </div>
     </div>
   </main>

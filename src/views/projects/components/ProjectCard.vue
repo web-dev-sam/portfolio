@@ -14,11 +14,11 @@ const props = defineProps<{
 <template>
   <router-link
     :to="props.link"
-    class="pointer-events-none -mx-8 block rounded p-8 pb-0 hover:bg-white md:pointer-events-auto md:pb-8 md:hover:bg-light"
+    class="pointer-events-none -mx-8 block rounded-sm p-8 pb-0 hover:bg-white md:pointer-events-auto md:pb-8 md:hover:bg-light"
   >
     <div class="flex flex-col gap-4 md:flex-row md:gap-8">
       <div class="flex justify-center md:justify-start">
-        <img class="h-32 min-h-32 w-32 min-w-32 rounded object-cover" :src="cover" />
+        <img class="h-32 min-h-32 w-32 min-w-32 rounded-sm object-cover" :src="cover" />
       </div>
       <div :class="props.class">
         <div class="mb-4 flex flex-col gap-2 md:flex-row">

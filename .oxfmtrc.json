@@ -1,0 +1,10 @@
+{
+  "experimentalTailwindcss": {
+    "stylesheet": "./src/base.css",
+    "attributes": ["class"],
+    "functions": ["clsx", "cn"],
+    "preserveWhitespace": true
+  },
+  "singleQuote": true,
+  "semi": false
+}

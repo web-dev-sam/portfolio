@@ -119,13 +119,13 @@ function openModal(src: string) {
           <img
             src="/assets/projects/bss/bss1.jpg"
             alt="Screenshot 1"
-            class="max-h-64 cursor-pointer rounded object-cover duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm object-cover duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/bss/bss1.jpg')"
           />
           <img
             src="/assets/projects/bss/bss2.jpg"
             alt="Screenshot 2"
-            class="max-h-64 cursor-pointer rounded object-cover duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm object-cover duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/bss/bss2.jpg')"
           />
         </div>

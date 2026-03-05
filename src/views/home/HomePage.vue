@@ -39,10 +39,10 @@ const { t } = useTranslator({
         />
         <h1 class="text-h1 font-bold">{{ t('hero.webdev') }}</h1>
         <p
-          class="mx-auto max-w-[50ch] text-balance text-h6 text-muted lg:mx-0"
+          class="mx-auto max-w-[50ch] text-h6 text-balance text-muted lg:mx-0"
           v-html="t('hero.intro')"
         ></p>
-        <h2 class="!lg:mt-32 !mt-16 text-h6 font-bold">Main Stack</h2>
+        <h2 class="!lg:mt-32 mt-16! text-h6 font-bold">Main Stack</h2>
         <ul
           class="mx-auto flex max-w-[40ch] items-center justify-center gap-4 align-middle md:gap-6 lg:mx-0 lg:justify-start lg:gap-8"
         >
@@ -58,7 +58,7 @@ const { t } = useTranslator({
           <li class="text-muted">
             <router-link
               to="/skills"
-              class="select-none rounded px-3 py-2 hover:bg-light hover:text-text"
+              class="rounded-sm px-3 py-2 select-none hover:bg-light hover:text-text"
               >{{ t('stack.more') }}&hellip;</router-link
             >
           </li>
@@ -66,7 +66,7 @@ const { t } = useTranslator({
       </div>
       <div>
         <img
-          class="hidden aspect-square h-96 select-none rounded-lg lg:block"
+          class="hidden aspect-square h-96 rounded-lg select-none lg:block"
           src="/assets/branding/me.jpg"
           alt="Samuel Braun"
         />

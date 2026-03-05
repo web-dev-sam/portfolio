@@ -14,10 +14,10 @@ const {
   <a
     v-if="type === 'link'"
     :href="to"
-    class="rounded border-2 px-2 py-1.5 text-small"
+    class="rounded-sm border-2 px-2 py-1.5 text-small"
     :class="{
       'border-text bg-text text-white hover:opacity-85': variant === 'primary',
-      'bg-transparent border border-text text-text hover:opacity-85': variant === 'ghost',
+      'border border-text bg-transparent text-text hover:opacity-85': variant === 'ghost',
     }"
     :target="to.startsWith('http') ? '_blank' : undefined"
     :rel="to.startsWith('http') ? 'noopener noreferrer' : undefined"
@@ -26,20 +26,20 @@ const {
   </a>
   <button
     v-else-if="type === 'button'"
-    class="rounded border-2 px-2 py-1.5 text-small"
+    class="rounded-sm border-2 px-2 py-1.5 text-small"
     :class="{
       'border-text bg-text text-white hover:opacity-85': variant === 'primary',
-      'bg-transparent border border-text text-text hover:opacity-85': variant === 'ghost',
+      'border border-text bg-transparent text-text hover:opacity-85': variant === 'ghost',
     }"
   >
     <slot />
   </button>
   <div
     v-else
-    class="inline-block cursor-pointer rounded border-2 px-2 py-1.5 text-small"
+    class="inline-block cursor-pointer rounded-sm border-2 px-2 py-1.5 text-small"
     :class="{
       'border-text bg-text text-white hover:opacity-85': variant === 'primary',
-      'bg-transparent border border-text text-text hover:opacity-85': variant === 'ghost',
+      'border border-text bg-transparent text-text hover:opacity-85': variant === 'ghost',
     }"
   >
     <slot />

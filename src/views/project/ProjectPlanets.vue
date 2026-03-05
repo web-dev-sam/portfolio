@@ -109,25 +109,25 @@ function openModal(src: string) {
           <img
             src="/assets/projects/planets/pl1.jpg"
             alt="Screenshot 1"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/planets/pl1.jpg')"
           />
           <img
             src="/assets/projects/planets/pl2.jpg"
             alt="Screenshot 2"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/planets/pl2.jpg')"
           />
           <img
             src="/assets/projects/planets/pl3.jpg"
             alt="Screenshot 3"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/planets/pl3.jpg')"
           />
           <img
             src="/assets/projects/planets/pl4.jpg"
             alt="Screenshot 4"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/planets/pl4.jpg')"
           />
         </div>

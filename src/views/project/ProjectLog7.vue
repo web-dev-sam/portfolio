@@ -112,13 +112,13 @@ function openModal(src: string) {
           <img
             src="/assets/projects/log7/gl1.jpg"
             alt="Screenshot 1"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/log7/gl1.jpg')"
           />
           <img
             src="/assets/projects/log7/gl2.jpg"
             alt="Screenshot 2"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/log7/gl2.jpg')"
           />
         </div>

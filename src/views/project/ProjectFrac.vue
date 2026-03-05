@@ -138,25 +138,25 @@ function openModal(src: string) {
           <img
             src="/assets/projects/frac/fr1.jpg"
             alt="Screenshot 1"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/frac/fr1.jpg')"
           />
           <img
             src="/assets/projects/frac/fr2.jpg"
             alt="Screenshot 2"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/frac/fr2.jpg')"
           />
           <img
             src="/assets/projects/frac/fr3.jpg"
             alt="Screenshot 3"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/frac/fr3.jpg')"
           />
           <img
             src="/assets/projects/frac/fr4.jpg"
             alt="Screenshot 4"
-            class="max-h-64 cursor-pointer rounded duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/frac/fr4.jpg')"
           />
         </div>

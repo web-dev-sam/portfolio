@@ -49,14 +49,14 @@ const { t } = useTranslator({
 
 <template>
   <main class="mb-16 text-center md:text-left">
-    <h1 class="!lg:my-32 !my-16 text-center text-h3 font-bold">Skills</h1>
+    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">Skills</h1>
     <div class="flex flex-col justify-around gap-16 md:flex-row md:gap-0 xl:justify-between">
       <section>
         <h2 class="mb-4 text-h6 font-bold">Frameworks</h2>
 
         <div class="flex flex-col justify-around sm:flex-row md:flex-col">
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('love') }}</h3>
+            <h3 class="text-overline mt-8 mb-4 text-muted">{{ t('love') }}</h3>
             <div class="space-y-2">
               <SkillBadge title="Vue" link="https://vuejs.org/">
                 <IconVue />
@@ -68,7 +68,7 @@ const { t } = useTranslator({
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('worked') }}</h3>
+            <h3 class="text-overline mt-8 mb-4 text-muted">{{ t('worked') }}</h3>
             <div class="space-y-2">
               <SkillBadge title="Lit" link="https://lit.dev/">
                 <IconLit />
@@ -95,7 +95,7 @@ const { t } = useTranslator({
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('forget') }}</h3>
+            <h3 class="text-overline mt-8 mb-4 text-muted">{{ t('forget') }}</h3>
             <div class="space-y-2 opacity-85 grayscale-[1]">
               <SkillBadge title="Django" link="https://www.djangoproject.com/">
                 <IconDjango />
@@ -109,7 +109,7 @@ const { t } = useTranslator({
 
         <div class="flex flex-col justify-around sm:flex-row md:flex-col">
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('love') }}</h3>
+            <h3 class="text-overline mt-8 mb-4 text-muted">{{ t('love') }}</h3>
             <div class="space-y-2">
               <SkillBadge title="Tailwind" link="https://tailwindcss.com/">
                 <IconTailwind />
@@ -127,7 +127,7 @@ const { t } = useTranslator({
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('worked') }}</h3>
+            <h3 class="text-overline mt-8 mb-4 text-muted">{{ t('worked') }}</h3>
             <div class="space-y-2">
               <SkillBadge title="Firebase" link="https://firebase.google.com/">
                 <IconFirebase />
@@ -142,7 +142,7 @@ const { t } = useTranslator({
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('forget') }}</h3>
+            <h3 class="text-overline mt-8 mb-4 text-muted">{{ t('forget') }}</h3>
             <div class="space-y-2 opacity-85 grayscale-[1]">
               <SkillBadge title="Bootstrap" link="https://getbootstrap.com/">
                 <IconBootstrap />
@@ -162,7 +162,7 @@ const { t } = useTranslator({
 
         <div class="flex flex-col justify-around sm:flex-row md:flex-col">
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('love') }}</h3>
+            <h3 class="text-overline mt-8 mb-4 text-muted">{{ t('love') }}</h3>
             <div class="space-y-2">
               <SkillBadge title="Vercel" link="https://vercel.com/">
                 <IconVercel />
@@ -180,7 +180,7 @@ const { t } = useTranslator({
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('worked') }}</h3>
+            <h3 class="text-overline mt-8 mb-4 text-muted">{{ t('worked') }}</h3>
             <div class="space-y-2">
               <SkillBadge title="Git" link="https://git-scm.com/">
                 <IconGit />
@@ -198,7 +198,7 @@ const { t } = useTranslator({
           </div>
 
           <div>
-            <h3 class="text-overline mb-4 mt-8 text-muted">{{ t('forget') }}</h3>
+            <h3 class="text-overline mt-8 mb-4 text-muted">{{ t('forget') }}</h3>
             <div class="space-y-2 opacity-85 grayscale-[1]">
               <SkillBadge title="Webpack" link="https://webpack.js.org/">
                 <IconWebpack />
@@ -213,6 +213,7 @@ const { t } = useTranslator({
 
 <style scoped>
 svg {
-  @apply max-h-8 max-w-8;
+  max-width: 2rem;
+  max-height: 2rem;
 }
 </style>

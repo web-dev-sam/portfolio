@@ -11,7 +11,7 @@ const { t } = useTranslator({
 
 <template>
   <main class="mb-16 text-center md:text-left">
-    <h1 class="!lg:my-32 !my-16 text-center text-h3 font-bold">{{ t('blogs') }}</h1>
+    <h1 class="!lg:my-32 my-16! text-center text-h3 font-bold">{{ t('blogs') }}</h1>
     <section class="flex flex-col gap-8">
       <BlogCard
         :name="`Exploring CSS where it doesn't make sense`"

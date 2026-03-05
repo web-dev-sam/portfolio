@@ -20,8 +20,8 @@ const { t } = useTranslator({
 </script>
 
 <template>
-  <main class="mb-16 text-center">
-    <div class="!lg:mt-24 !mb-12 !mt-12">
+  <main class="article mb-16 text-center">
+    <div class="mt-12! mb-12! lg:mt-24!">
       <img
         class="w-full rounded-lg object-cover"
         src="/assets/blogs/1/cover.jpg"
@@ -961,38 +961,3 @@ new Baz(); // Baz`"></code></pre>
     </div>
   </main>
 </template>
-
-<style scoped>
-h2 {
-  @apply !mt-12 mb-3 text-h4 font-bold;
-}
-
-h3 {
-  @apply !mt-8 mb-2 text-h5 font-bold;
-}
-
-ol {
-  @apply my-2 ml-4 list-inside list-decimal;
-}
-
-ul {
-  @apply my-2 ml-4 list-inside list-disc;
-}
-
-a {
-  @apply underline;
-}
-
-pre {
-  border: none !important;
-  background-color: #141414 !important;
-}
-
-:not(pre) > code {
-  @apply text-nowrap rounded bg-light px-2 py-1;
-}
-
-.content {
-  @apply text-center leading-8 sm:text-justify;
-}
-</style>

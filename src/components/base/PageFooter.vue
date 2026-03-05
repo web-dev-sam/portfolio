@@ -9,8 +9,10 @@ import IconCodersRank from '@/components/icons/IconCodersRank.vue'
 <template>
   <footer>
     <ul class="flex justify-center gap-8 py-8">
-      <li class="hidden min-[500px]:block whitespace-nowrap">&copy; {{ new Date().getFullYear() }} Samuel Braun</li>
-      <li class="hidden min-[500px]:block flex-1"></li>
+      <li class="hidden whitespace-nowrap min-[500px]:block">
+        &copy; {{ new Date().getFullYear() }} Samuel Braun
+      </li>
+      <li class="hidden flex-1 min-[500px]:block"></li>
       <li>
         <a
           class="hover:opacity-85"

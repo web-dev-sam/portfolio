@@ -129,13 +129,13 @@ function openModal(src: string) {
           <img
             src="/assets/projects/bsto/bsto1.jpg"
             alt="Screenshot 1"
-            class="max-h-64 cursor-pointer rounded object-cover duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm object-cover duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/bsto/bsto1.jpg')"
           />
           <img
             src="/assets/projects/bsto/bsto2.jpg"
             alt="Screenshot 2"
-            class="max-h-64 cursor-pointer rounded object-cover duration-150 hover:scale-[101%]"
+            class="max-h-64 cursor-pointer rounded-sm object-cover duration-150 hover:scale-[101%]"
             @click="openModal('/assets/projects/bsto/bsto2.jpg')"
           />
           <iframe
@@ -144,7 +144,15 @@ function openModal(src: string) {
             src="https://www.youtube-nocookie.com/embed/-ejMSWVJk8M?si=4iXAe-hG6MUqV2kD"
             title="YouTube video player"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
             allowfullscreen
           ></iframe>
         </div>
