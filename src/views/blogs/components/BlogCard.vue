@@ -5,7 +5,7 @@ import { useTranslator } from '@/composables/useTranslator'
 
 const props = withDefaults(
   defineProps<{
-    class: string
+    class?: string
     description: string
     name: string
     cover: string
