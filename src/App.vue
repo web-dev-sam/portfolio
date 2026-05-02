@@ -11,7 +11,7 @@ const router = useRouter()
     <div class="flex min-h-lvh flex-col">
       <PageHeader />
       <router-view></router-view>
-      <span class="flex-1"></span>
+      <span class="flex-2"></span>
       <PageFooter />
     </div>
   </div>

@@ -16,12 +16,11 @@
 }
 
 @theme {
-  --color-*: initial;
   --color-white: #ffffff;
   --color-light: #f5f5f5;
   --color-primary: #ff3fa2;
   --color-text: #1a0e14;
-  --color-muted: #949192;
+  --color-muted: var(--color-gray-400);
   --color-easy: #16a34a;
   --color-medium: #f98f16;
   --color-hard: #dc2626;
