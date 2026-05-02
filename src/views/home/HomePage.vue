@@ -3,13 +3,16 @@ import { useTranslator } from '@/composables/useTranslator'
 import IconVue from '@/components/icons/IconVue.vue'
 import IconTailwind from '@/components/icons/IconTailwind.vue'
 import IconTypeScript from '@/components/icons/IconTypeScript.vue'
+import { yearsSince } from '@/utils/date'
+
+const yearsExp = yearsSince(2018, 3)
 
 const { t } = useTranslator({
   en: {
     hero: {
       webdev: 'Web Developer',
       intro:
-        'Hi, I am Samuel. A passionate <span class="font-medium text-primary">frontend</span> web developer with over <span class="font-medium text-primary">6 years</span> of experience.',
+        `Hi, I am Samuel. A passionate <span class="font-medium text-primary">fullstack</span> web developer with <span class="font-medium text-primary">${yearsExp} years</span> of experience.`,
     },
     stack: {
       more: 'see more',
@@ -19,7 +22,7 @@ const { t } = useTranslator({
     hero: {
       webdev: 'Web Entwickler',
       intro:
-        'Hey, ich bin Samuel. Ein leidenschaftlicher <span class="font-medium text-primary">Frontend</span> Webentwickler mit mehr als <span class="font-medium text-primary">6 Jahren</span> Erfahrung.',
+        `Hey, ich bin Samuel. Ein leidenschaftlicher <span class="font-medium text-primary">Fullstack</span> Webentwickler mit <span class="font-medium text-primary">${yearsExp} Jahren</span> Erfahrung.`,
     },
     stack: {
       more: 'und mehr',
