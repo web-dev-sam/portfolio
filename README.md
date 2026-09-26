@@ -9,6 +9,9 @@ _Summary of my experiences with projects (outdated, currently updating). 🧑‍
 
 &nbsp;
 
+## Why does this exist?
+To summarize my experience with the projects I've worked on.
+
 ## How to run it
 
 ```sh
